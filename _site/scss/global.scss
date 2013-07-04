@@ -3,8 +3,11 @@
 @import "compass/css3";
 
 @import "bourbon/bourbon";
-
+// Global User Files
 @import "base/vars";
+@import "base/mixins";
+@import "base/general";
+@import "base/typography";
 
 // Global Foundation Settings
 @import "base/settings";
@@ -12,6 +15,7 @@
 /*
 NOTE: comment out what I don't use
 */
+/* FOUNDATION */
 @import "foundation/components/global"; // *always required
 @import "foundation/components/grid";
 @import "foundation/components/visibility";
@@ -47,23 +51,20 @@ NOTE: comment out what I don't use
 @import "foundation/components/thumbs";
 @import "foundation/components/tooltips";
 @import "foundation/components/dropdown";
+/* end FOUNDATION */
 
-// Global User Files
-@import "base/extends"; /*do you need this*/
-@import "base/mixins";
-@import "base/general";
-@import "base/typography";
 
 @import "modules/topbar";
 @import "modules/admin-panel";
 @import "modules/map";
 
 
-/*@import "modules/post-toggle";
-@import "modules/iCheck";
-@import "modules/filter-toggle";
+/*
 @import "modules/search";
-@import "modules/list-view";*/
+@import "modules/list-view";
+*/
 
 @import "base/off-canvas";
+
+/*must be called at bottom*/
 @import "modules/modal";

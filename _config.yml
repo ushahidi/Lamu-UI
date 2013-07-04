@@ -1,4 +1,4 @@
-exclude: [build]
+exclude: ['lamu.sublime-project', 'lamu.sublime-workspace']
 include: ['*.scss']
 site_name: Ushahidi 3.0 - Lamu
 tagline: Ushahidi Platform 3.0
