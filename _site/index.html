@@ -15,7 +15,7 @@
         <![endif]-->
 
         <!-- cachebusted global.css -->
-        <link rel="stylesheet" href="css/global.css?1372953754">
+        <link rel="stylesheet" href="css/global.css?1372965867">
 
         <!-- Font Awesome CSS CDN -->
         <link href="//netdna.bootstrapcdn.com/font-awesome/3.1.1/css/font-awesome.css" rel="stylesheet">
@@ -51,7 +51,7 @@
   <nav role="navigation" class="top-bar" data-options="is_hover:false">
   <ul class="title-area">
     <!-- retina ready logo is a css background image -->
-    <li class="name">
+    <li class="name hide-for-small">
       <div class="logo-image"></div>
       <h1><a href="/">Deployment Name</a></h1>
     </li>
@@ -62,34 +62,29 @@
     <!-- Left Nav Section -->
     <ul class="left">
       <li class="divider"></li>
-      <li class="active"><a href="#" data-dropdown="drop1"><i class="icon-eye-open"></i> VIEWS</a></li>
+      <li class="hide-for-medium-down active"><a class="views" href="#"><i class="icon-eye-open icon-large"></i> VIEWS</a></li>
+      <li class="show-for-medium-down active"><a class="views" href="#"><i class="icon-eye-open"></i><!-- icon only --></a></li>
       <li class="divider"></li>
-      <li><a href="#" data-dropdown="drop2"><i class="icon-th-large"></i> SETS</a></li>
+      <li class="hide-for-medium-down"><a class="sets" href="#"><i class="icon-th-large icon-large"></i> SETS</a></li>
+      <li class="show-for-medium-down"><a class="sets" href="#"><i class="icon-th-large"></i><!-- icon only --></a></li>
       <li class="divider"></li>
-
-      <ul id="drop1" class="f-dropdown" data-dropdown-content>
-        <li><a href="#">This is a link</a></li>
-        <li><a href="#">This is another</a></li>
-        <li><a href="#">Yet another</a></li>
-      </ul>
-
-      <ul id="drop2" class="f-dropdown content" data-dropdown-content>
-        <li><a href="#">This is a link</a></li>
-        <li><a href="#">This is another</a></li>
-        <li><a href="#">Yet another</a></li>
-      </ul>
 
     </ul>
 
     <!-- Right Nav Section -->
     <ul class="right">
-      <li class="create-post show-for-medium-up"><a href="#" data-reveal-id="createPost"><i class="icon-plus"></i> CREATE</a></li>
-      <li class="create-post show-for-small"><a href="#" data-reveal-id="createPost"><i class="icon-plus"></i></a></li>
-      <li class="show-for-medium-up"><a id="admin-panel-button" class="admin-panel-button" href="#admin-panel"><i class="icon-dashboard"></i> WORKSPACE</a><i class="icon-reorder icon-large"></i></li>
-      <li class="show-for-small"><a id="admin-panel-button" class="admin-panel-button" href="#admin-panel"><i class="icon-dashboard"></i></a><span class="triangle-right"></span></li>
+      <li class="create-post hide-for-medium-down"><a id="create-post-button" class="create-post-button" href="#" data-reveal-id="createPost"><i class="icon-plus icon-large"></i> CREATE</a></li>
+      <li class="create-post show-for-medium-down"><a id="create-post-button-small" class="create-post-button" href="#" data-reveal-id="createPost"><i class="icon-plus"></i><!-- icon only --></a></li>
+      <li class="hide-for-medium-down"><a id="admin-panel-button" class="admin-panel-button" href="#admin-panel"><i class="icon-dashboard icon-large"></i> WORKSPACE</a></li>
+      <li class="show-for-medium-down"><a id="admin-panel-button-small" class="admin-panel-button" href="#admin-panel"><i class="icon-dashboard"></i><!-- icon only --></a></li>
     </ul>
   </section>
   </nav>
+
+  <li class="name-small show-for-small">
+    <div class="logo-image"></div>
+    <h4><a href="/">Deployment Name</a></h4>
+  </li>
 
 </div>
 

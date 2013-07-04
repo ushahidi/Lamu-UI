@@ -26,10 +26,27 @@ $em-base: 16px !default;
 
 // Various global styles
 
+// Colors vars
+
+$black:          #000;
+$darkGray:       #1F1F1F;
+
+// Ushahidi Pallette
+$blue:           #14B4D1;
+$green:          #CCDEA3;
+$lightGray:      #EFF0F3;
+$blueGray:       #323A45;
+$white:          #FCFCFC;
+
+$primary-color: $blue;
+$secondary-color: $lightGray;
+$alert-color: #E3AAA9;
+$success-color: $green;
+
 $default-float: left;
 
 $body-bg: $lightGray;
-$body-font-color: #222;
+$body-font-color: $darkGray;
 $body-font-family: "proxima-nova", "Helvetica Neue", "Helvetica", Helvetica, Arial, sans-serif;
 $body-font-weight: normal;
 $body-font-style: normal;
@@ -41,13 +58,6 @@ $font-smoothing: antialiased;
 // Text direction settings
 
 // $text-direction: ltr;
-
-// Colors
-
-$primary-color: #2ba6cb;
-$secondary-color: #e9e9e9;
-$alert-color: #c60f13;
-$success-color: #5da423;
 
 // Make sure border radius matches unless we want it different.
 
@@ -91,12 +101,14 @@ $include-html-tooltip-classes: $include-html-classes;
 // Media Queries
 
 $small-screen: 768px;
-$medium-screen: 1025px;
+$medium-screen: 1024px;
+$medium-up-screen: 1025px;
 $large-screen: 1440px;
 
 $screen: "only screen";
 $small: "only screen and (min-width: #{$small-screen})";
 $medium: "only screen and (min-width: #{$medium-screen})";
+$medium-up: "only screen and (min-width: #{$medium-up-screen})";
 $large: "only screen and (min-width: #{$large-screen})";
 $landscape: "only screen and (orientation: landscape)";
 $portrait: "only screen and (orientation: portrait)";
@@ -1259,7 +1271,7 @@ $topbar-menu-icon-color-toggled: #888;
 // Transitions and breakpoint styles
 
 $topbar-transition-speed: 300ms;
-$topbar-breakpoint: emCalc(940px); // Change to 9999px for always mobile layout
+$topbar-breakpoint: emCalc(0px); // Change to 9999px for always mobile layout or 0px for no mobile layout
 $topbar-media-query: "only screen and (min-width: #{$topbar-breakpoint})";
 
 // Divider Styles

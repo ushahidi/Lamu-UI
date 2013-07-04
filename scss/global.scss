@@ -3,14 +3,16 @@
 @import "compass/css3";
 
 @import "bourbon/bourbon";
+
+// Global Foundation Settings
+@import "base/settings";
+
 // Global User Files
 @import "base/vars";
 @import "base/mixins";
 @import "base/general";
 @import "base/typography";
 
-// Global Foundation Settings
-@import "base/settings";
 
 /*
 NOTE: comment out what I don't use

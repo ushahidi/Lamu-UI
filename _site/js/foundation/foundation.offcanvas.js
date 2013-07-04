@@ -3,9 +3,9 @@
   events = 'click.fndtn';
 
   // Watch for clicks to show the sidebar
-  var $selector2 = $('#admin-panel-button');
+  var $selector2 = $('#admin-panel-button, #admin-panel-button-small');
   if ($selector2.length > 0) {
-    $('#admin-panel-button').on(events, function (e) {
+    $('#admin-panel-button, #admin-panel-button-small').on(events, function (e) {
       e.preventDefault();
       $('body').toggleClass('active');
       console.log('sidebar toggle');
