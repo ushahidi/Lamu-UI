@@ -1,0 +1,10 @@
+{
+	"folders":
+	[
+		{
+			"path": "/Users/M8M/Dropbox/webdesign/localroot_db/htdocs/Lamu-UI",
+      "file_exclude_patterns":["lamu.sublime-workspace", "robots.txt", "MIT-LICENSE.txt"],
+      "folder_exclude_patterns":["images", "fonts", "languages"]
+		}
+	]
+}

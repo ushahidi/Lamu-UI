@@ -1,0 +1,5 @@
+exclude: [build]
+include: ['*.scss']
+site_name: Ushahidi 3.0 - Lamu
+tagline: Ushahidi Platform 3.0
+css: css/global.css

@@ -1,0 +1,117 @@
+/*
+******************************
+* Media Queries
+******************************
+*/
+
+@mixin breakpoint($point) {
+  @if $point == desk {
+    @media (max-width: 1280px) { @content; }
+  }
+
+  @else if $point == admin-break {
+    @media (max-width: 876px) { @content; }
+  }
+
+  @else if $point == landscape {
+    @media (max-width: 1024px) { @content; }
+  }
+
+  @else if $point == menu-break {
+    @media (max-width: 1063px) { @content; }
+  }
+
+  @else if $point == portrait {
+    @media (max-width: 767px) { @content; }
+  }
+
+  @else if $point == mobile-menu {
+    @media (max-width: 481px)  { @content; }
+  }
+
+  @else if $point == mobile {
+    @media (max-width: 480px)  { @content; }
+  }
+
+  @else if $point == 320 {
+    @media (max-width: 479px)  { @content; }
+  }
+
+  @else if $point == 430 {
+    @media (max-width: 430px)  { @content; }
+  }
+}
+
+/*
+******************************
+* Triangles
+******************************
+*/
+
+@mixin triangle-white {
+  content: "";
+  display: block;
+  width: 0;
+  height: 0;
+  border-left: 7px solid transparent;
+  border-right: 7px solid transparent;
+  border-top: 9px solid $white;
+  position: relative;
+  left: 3px;
+  top: -4px;
+  padding: 0;
+  margin-left: 60px;
+  margin-top: -9px;
+}
+
+@mixin triangle-darkGray {
+  content: "";
+  display: block;
+  width: 0;
+  height: 0;
+  border-left: 7px solid transparent;
+  border-right: 7px solid transparent;
+  border-top: 9px solid $darkGray;
+  position: relative;
+  left: 3px;
+  top: -4px;
+  padding: 0;
+  margin-left: 60px;
+  margin-top: -9px;
+}
+
+/*
+******************************
+* Font Family
+******************************
+*/
+
+@mixin font-family-reg {
+  font-family: 'proxima-nova';
+  font-weight: 400;
+}
+
+@mixin font-family-bold {
+  font-family: 'proxima-nova';
+  font-weight: 600;
+}
+
+
+/*
+******************************
+* Buttons
+******************************
+*/
+
+@mixin btn {
+  background: $brand-blue;
+  color: $white;
+  text-transform: uppercase;
+  font-size: 12px;
+  font-weight: 600;
+  &:hover {
+    background: darken($brand-blue, 5);
+  }
+}
+
+

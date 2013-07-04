@@ -1,0 +1,234 @@
+<!DOCTYPE html>
+<!--[if IE 8]>         <html class="no-js lt-ie9" lang="en" > <![endif]-->
+<!--[if gt IE 8]><!--> <html class="no-js" lang="en" > <!--<![endif]-->
+
+    <head>
+        <meta charset="utf-8">
+        <meta http-equiv="X-UA-Compatible" content="IE=edge,chrome=1">
+        <title>Ushahidi 3.0 - Lamu</title>
+        <meta name="description" content="Ushahidi Platform 3.0">
+        <meta name="viewport" content="width=device-width, initial-scale=0.0, user-scalable=no, minimum-scale=1.0, maximum-scale=1.0" />
+        <!-- Leaflet CSS CDN -->
+        <link rel="stylesheet" href="http://cdn.leafletjs.com/leaflet-0.5.1/leaflet.css" />
+        <!--[if lte IE 8]>
+            <link rel="stylesheet" href="http://cdn.leafletjs.com/leaflet-0.5.1/leaflet.ie.css" />
+        <![endif]-->
+
+        <!-- cachebusted global.css -->
+        <link rel="stylesheet" href="css/global.css?1372952551">
+
+        <!-- Font Awesome CSS CDN -->
+        <link href="//netdna.bootstrapcdn.com/font-awesome/3.1.1/css/font-awesome.css" rel="stylesheet">
+
+        <!-- Require.js | the data-main attribute is our entry point, all requires are relative to this entry point -->
+        <script data-main="js/main.js" src="js/vendor/requirejs/require.js"></script>
+
+        <!-- Custom Modernizr Build - add, subtract and rebuild at end of project -->
+        <script src="js/custom.modernizr.js"></script>
+
+        <!-- Place Typekit script here -->
+        <!-- This allow fonts to load asynchronously, but requires custom CSS. The custom css can be found in scss/base/_typography.scss-->
+        <script type="text/javascript">
+          (function() {
+            var config = {
+              kitId: 'nmg4nns',
+              scriptTimeout: 3000
+            };
+            var h=document.getElementsByTagName("html")[0];h.className+=" wf-loading";var t=setTimeout(function(){h.className=h.className.replace(/(\s|^)wf-loading(\s|$)/g," ");h.className+=" wf-inactive"},config.scriptTimeout);var tk=document.createElement("script"),d=false;tk.src='//use.typekit.net/'+config.kitId+'.js';tk.type="text/javascript";tk.async="true";tk.onload=tk.onreadystatechange=function(){var a=this.readyState;if(d||a&&a!="complete"&&a!="loaded")return;d=true;clearTimeout(t);try{Typekit.load(config)}catch(b){}};var s=document.getElementsByTagName("script")[0];s.parentNode.insertBefore(tk,s)
+          })();
+        </script>
+        <!-- end Typekit script -->
+
+    </head>
+
+    <body class="off-canvas">
+        <!--[if lt IE 7]>
+            <p class="chromeframe">You are using an <strong>outdated</strong> browser. Please <a href="http://browsehappy.com/">upgrade your browser</a> or <a href="http://www.google.com/chromeframe/?redirect=true">activate Google Chrome Frame</a> to improve your experience.</p>
+        <![endif]-->
+
+    <div class="sticky">
+
+  <nav role="navigation" class="top-bar" data-options="is_hover:false">
+  <ul class="title-area">
+    <!-- retina ready logo is a css background image -->
+    <li class="name">
+      <div class="logo-image"></div>
+      <h1><a href="/">Deployment Name</a></h1>
+    </li>
+    <!-- <li class="toggle-topbar menu-icon"><a href="#"><span>Menu</span></a></li> -->
+  </ul>
+
+  <section class="top-bar-section">
+    <!-- Left Nav Section -->
+    <ul class="left">
+      <li class="divider"></li>
+      <li class="active"><a href="#" data-dropdown="drop1"><i class="icon-eye-open"></i> VIEWS</a></li>
+      <li class="divider"></li>
+      <li><a href="#" data-dropdown="drop2"><i class="icon-th-large"></i> SETS</a></li>
+      <li class="divider"></li>
+
+      <ul id="drop1" class="f-dropdown" data-dropdown-content>
+        <li><a href="#">This is a link</a></li>
+        <li><a href="#">This is another</a></li>
+        <li><a href="#">Yet another</a></li>
+      </ul>
+
+      <ul id="drop2" class="f-dropdown content" data-dropdown-content>
+        <li><a href="#">This is a link</a></li>
+        <li><a href="#">This is another</a></li>
+        <li><a href="#">Yet another</a></li>
+      </ul>
+
+    </ul>
+
+    <!-- Right Nav Section -->
+    <ul class="right">
+      <li class="create-post show-for-medium-up"><a href="#" data-reveal-id="createPost"><i class="icon-plus"></i> CREATE</a></li>
+      <li class="create-post show-for-small"><a href="#" data-reveal-id="createPost"><i class="icon-plus"></i></a></li>
+      <li class="show-for-medium-up"><a id="admin-panel-button" class="admin-panel-button" href="#admin-panel"><i class="icon-dashboard"></i> WORKSPACE</a><i class="icon-reorder icon-large"></i></li>
+      <li class="show-for-small"><a id="admin-panel-button" class="admin-panel-button" href="#admin-panel"><i class="icon-dashboard"></i></a><span class="triangle-right"></span></li>
+    </ul>
+  </section>
+  </nav>
+
+</div>
+
+
+<section role="main">
+    <div id="map" class="map"></div>
+</section>
+
+<section id="admin-panel" role="complementary">
+  <div class="admin-profile">
+    <div id="admin-avatar" class="admin-avatar"></div>
+    <div class="admin-edit">
+      <!-- NOTE: need dynamic usernames/roles here -->
+      <h5 id="username" class="username">Dude Bro</h5>
+      <p id="admin-role" class="admin-role" >Super Admin</p>
+
+      <ul class="inline-list">
+        <li><small><a href="#" id="edit-profile" >Edit Profile</a></small></li>
+        <li><small><a href="#" id="logout" >Logout</a></small></li>
+      </ul>
+    </div>
+  </div>
+
+  <div class="admin-stats-wrapper">
+    <ul class="admin-stats">
+      <li id="posts-stats" class="panel post-stats">
+        <h4 id="posts-stats-value">1500</h4>
+        <p>posts</p>
+      </li>
+      <li id="users-stats" class="panel user-stats">
+          <h4 id="users-stats-value">138</h4>
+          <p>users</p>
+      </li>
+      <li id="views-stats" class="panel views-stats">
+          <h4 id="views-stats-value">52416</h4>
+          <p>views</p>
+      </li>
+    </ul>
+  </div>
+
+  <div class="admin-menu" data-section="accordion">
+      <section>
+        <p id="admin-menu-posts" class="title" data-section-title><a href="#"><i class="icon-inbox"></i> Posts</a></p>
+
+        <div id="admin-menu-all-posts" class="content" data-section-content>
+          <a href="#"><p><i class="icon-calendar"></i> All Posts <span class="round secondary label">1500</span></p></a>
+        </div>
+
+
+        <div id="admin-menu-awaiting-review" class="content" data-section-content>
+          <a href="#"><p><i class="icon-star-empty"></i> Awaiting Review <span class="round secondary label">27</span></p></a>
+        </div>
+
+
+        <div id="admin-menu-published" class="content" data-section-content>
+          <a href="#"><p><i class="icon-file-alt"></i> Published <span class="round success label">413</span></p></a>
+        </div>
+
+
+        <div id="admin-menu-unpublished" class="content" data-section-content>
+          <a href="#"><p><i class="icon-file"></i> Unpublished <span class="round alert label">1,060</span></p></a>
+        </div>
+      </section>
+
+      <section>
+        <p id="admin-menu-tasks" class="title" data-section-title><a href="#"><i class="icon-tasks"></i> Tasks</a></p>
+
+        <div id="admin-menu-my-tasks"class="content" data-section-content>
+          <a href="#"><p><i class="icon-pencil"></i> My Tasks <span class="round secondary label">75</span></p></a>
+        </div>
+
+        <div id="admin-menu-todo"class="content" data-section-content>
+          <a href="#"><p><i class="icon-check-empty"></i> To Do <span class="round label">39</span></p></a>
+        </div>
+
+        <div id="admin-menu-completed"class="content" data-section-content>
+          <a href="#"><p><i class="icon-check"></i> Completed <span class="round success label">36</span></p></a>
+        </div>
+      </section>
+
+      <section>
+        <p id="admin-menu-tools" class="title" data-section-title><a href="#"><i class="icon-cog"></i> Tools</a></p>
+
+        <div id="" class="content" data-section-content>
+          <p>Tools stuff goes here :)</p>
+        </div>
+      </section>
+  </div>
+
+</section>
+
+
+
+
+
+<!-- has to be right above the closing </body> tag -->
+<div id="createPost" class="reveal-modal">
+  <div class="create-post-header">
+    <h4>Create a Post</h4>
+  </div>
+
+  <aside class="quick-steps">
+    <p>test</p>
+  </aside>
+
+  <section class="create-post-options">
+    <h2>Awesome. I have it.</h2>
+    <p class="lead">Your couch.  It is mine.</p>
+    <p>Im a cool paragraph that lives inside of an even cooler modal. Wins</p>
+    <a class="close-reveal-modal">&#215;</a>
+  </section>
+</div>
+
+
+
+        <!-- Place Google Analytics script here -->
+        <script type="text/javascript">
+          var GoSquared = {};
+          GoSquared.acct = "GSN-582644-T";
+          (function(w){
+            function gs(){
+              w._gstc_lt = +new Date;
+              var d = document, g = d.createElement("script");
+              g.type = "text/javascript";
+              g.src = "//d1l6p2sc9645hc.cloudfront.net/tracker.js";
+              var s = d.getElementsByTagName("script")[0];
+              s.parentNode.insertBefore(g, s);
+            }
+            w.addEventListener ?
+              w.addEventListener("load", gs, false) :
+              w.attachEvent("onload", gs);
+          })(window);
+        </script>
+        <!-- end Google Analytics script -->
+
+        <!-- Live Reload -->
+        <script>document.write('<script src="http://' + (location.host || 'localhost').split(':')[0] + ':35729/livereload.js?snipver=1"></' + 'script>')
+        </script>
+    </body>
+</html>
+
+

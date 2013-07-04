@@ -1,0 +1,9 @@
+{
+  "name": "iCheck",
+  "version": "0.0.0",
+  "commit": "cc8ef41e91ac629c19b9ef057133b88ae90872ab",
+  "repository": {
+    "type": "git",
+    "url": "git://github.com/damirfoy/iCheck.git"
+  }
+}
