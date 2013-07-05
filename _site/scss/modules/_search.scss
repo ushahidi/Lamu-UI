@@ -83,7 +83,7 @@
   }
 }
 
-.search-button {
+.search-bar-button {
   @include grid-column(12);
   @media #{$small} {
     @include grid-column(12)

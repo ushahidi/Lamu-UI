@@ -15,7 +15,7 @@
         <![endif]-->
 
         <!-- cachebusted global.css -->
-        <link rel="stylesheet" href="css/global.css?1373046791">
+        <link rel="stylesheet" href="css/global.css?1373055694">
 
         <!-- Font Awesome CSS CDN -->
         <link href="//netdna.bootstrapcdn.com/font-awesome/3.1.1/css/font-awesome.css" rel="stylesheet">
@@ -227,7 +227,7 @@
         </select>
       </div>
 
-      <div class="search-button">
+      <div class="search-bar-button">
         <button type="submit" class="button success postfix"><i class="icon-search"></i></button>
       </div>
 
@@ -241,7 +241,7 @@
     <div class="create-post-header">
       <h4>Create a Post</h4>
       <a class="close-reveal-modal">&#215;</a>
-    </div>
+    </div> <!-- end create-post-header -->
 
   <div class="create-post-wrapper">
     <section class="create-post-options">
@@ -270,14 +270,36 @@
           <option>Security</option>
           <option>Urgent</option>
         </select>
-      </form>
-    </section>
-  </div>
 
-  <section class="media-bar">
 
-  </section>
-</div>
+      </form> <!-- end form -->
+    </section> <!-- end create-post-options -->
+
+    <section class="media-bar-wrap">
+      <div class="media-bar">
+        <div class="media-bar-row">
+
+            <div class="media-bar-uploads-wrap">
+              <ul class="media-bar-uploads">
+                <li id="choose-location" class="select-icon choose-location"><a href="#"><i class="icon-map-marker"></i></a></li>
+                <li id="choose-image" class="select-icon choose-image"><a href="#"><i class="icon-picture"></i></a></li>
+                <li id="choose-video" class="select-icon choose-video"><a href="#"><i class="icon-facetime-video"></i></a></li>
+                <li id="choose-link" class="select-icon choose-link"><a href="#"><i class="icon-link"></i></a></li>
+                <li id="choose-audio" class="select-icon choose-audio"><a href="#"><i class="icon-microphone"></i></a></li>
+              </ul>
+            </div>
+
+            <!-- FIXME: can this be outside of the html5 form element? -->
+            <div class="create-post-submit">
+              <button type="submit" class="button success expand">Submit</button>
+            </div>
+
+        </div> <!-- end media-bar-row -->
+      </div> <!-- end media bar -->
+    </section> <!-- end media-bar-wrap -->
+
+  </div> <!-- end create-post-wrapper -->
+</div> <!-- end reveal-modal -->
 
 
 
