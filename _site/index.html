@@ -15,7 +15,7 @@
         <![endif]-->
 
         <!-- cachebusted global.css -->
-        <link rel="stylesheet" href="css/global.css?1373040112">
+        <link rel="stylesheet" href="css/global.css?1373045707">
 
         <!-- Font Awesome CSS CDN -->
         <link href="//netdna.bootstrapcdn.com/font-awesome/3.1.1/css/font-awesome.css" rel="stylesheet">
@@ -183,7 +183,7 @@
 </div> -->
 
 <div class="search-bar">
-  <form role="search" id="search-form" action="">
+  <form role="search" id="search-form" class="custom" action="">
     <div class="search-form-wrapper">
 
       <div class="search-field">
@@ -238,19 +238,44 @@
 
 <!-- has to be right above the closing </body> tag -->
 <div id="createPost" class="reveal-modal">
-  <div class="create-post-header">
-    <h4>Create a Post</h4>
+    <div class="create-post-header">
+      <h4>Create a Post</h4>
+      <a class="close-reveal-modal">&#215;</a>
+    </div>
+
+  <div class="create-post-wrapper">
+    <section class="create-post-options">
+      <form role="search" id="search-form" class="custom" action="">
+        <h6>Title</h6>
+        <hr>
+        <input type="text" placeholder="Enter a title">
+        <h6>Description</h6>
+        <hr>
+        <textarea name="post-description" id="post-description" placeholder="Enter a short description" cols="30" rows="30"></textarea>
+        <h6>Location</h6>
+        <hr>
+        <select id="customDropdown" >
+          <option selected DISABLED>Choose a location</option>
+          <option>United States</option>
+          <option>Kenya</option>
+          <option>South Africa</option>
+          <option>New Zealand</option>
+        </select>
+        <div class="create-post-location-map"></div>
+        <h6>Categories</h6>
+        <hr>
+        <select id="customDropdown" >
+          <option selected DISABLED>Choose a category</option>
+          <option>Voting Issues</option>
+          <option>Security</option>
+          <option>Urgent</option>
+        </select>
+      </form>
+    </section>
   </div>
 
-  <aside class="quick-steps">
-    <p>test</p>
-  </aside>
+  <section class="media-bar">
 
-  <section class="create-post-options">
-    <h2>Awesome. I have it.</h2>
-    <p class="lead">Your couch.  It is mine.</p>
-    <p>Im a cool paragraph that lives inside of an even cooler modal. Wins</p>
-    <a class="close-reveal-modal">&#215;</a>
   </section>
 </div>
 
