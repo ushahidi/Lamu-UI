@@ -82,13 +82,15 @@
   padding: 0 14px;
 }*/
 
-.name-small h4 {
-  line-height: 2.688em;
-  margin-bottom: 0;
-  a {
-    color: $topbar-link-color;
+.name-small {
+  background-color: $lightGray;
+  h4 {
+    line-height: 2.688em;
+    margin: 0;
+    a {
+      color: $topbar-link-color;
+    }
   }
 }
-
 
 

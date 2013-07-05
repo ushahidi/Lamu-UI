@@ -37,9 +37,6 @@ var toggleDuration = 50;
 
 
 require([
-  'modules/subNav',
-  'modules/postToggle',
-  'modules/filterToggle',
   // 'modules/leafletMap',
   'modules/collapseMap',
   'modules/adminMenu',
