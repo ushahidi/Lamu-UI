@@ -1,7 +1,7 @@
 /*Admin-Profile*/
 
 .admin-profile {
-  @include grid-row();
+  @include grid-row;
   border-top: 1px solid black;
 }
 
@@ -33,7 +33,7 @@
 /*Admin Stats Wrapper*/
 
 .admin-stats-wrapper {
-  @include grid-row();
+  @include grid-row;
 }
 
 .admin-stats {
@@ -54,6 +54,7 @@
 /*Admin Menu*/
 
 .admin-menu {
+  @include grid-row;
   @include section-container($section-type:accordion);
   & > section { @include section($section-type:accordion, $title-color:$white, $title-font-size:17px, $content-bg:$lightGray);
   }

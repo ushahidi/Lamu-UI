@@ -1,49 +1,5 @@
 /*
 ******************************
-* Media Queries
-******************************
-*/
-
-@mixin breakpoint($point) {
-  @if $point == desk {
-    @media (max-width: 1280px) { @content; }
-  }
-
-  @else if $point == admin-break {
-    @media (max-width: 876px) { @content; }
-  }
-
-  @else if $point == landscape {
-    @media (max-width: 1024px) { @content; }
-  }
-
-  @else if $point == menu-break {
-    @media (max-width: 1063px) { @content; }
-  }
-
-  @else if $point == portrait {
-    @media (max-width: 767px) { @content; }
-  }
-
-  @else if $point == mobile-menu {
-    @media (max-width: 481px)  { @content; }
-  }
-
-  @else if $point == mobile {
-    @media (max-width: 480px)  { @content; }
-  }
-
-  @else if $point == 320 {
-    @media (max-width: 479px)  { @content; }
-  }
-
-  @else if $point == 430 {
-    @media (max-width: 430px)  { @content; }
-  }
-}
-
-/*
-******************************
 * Triangles
 ******************************
 */
@@ -95,23 +51,4 @@
   font-family: 'proxima-nova';
   font-weight: 600;
 }
-
-
-/*
-******************************
-* Buttons
-******************************
-*/
-
-@mixin btn {
-  background: $brand-blue;
-  color: $white;
-  text-transform: uppercase;
-  font-size: 12px;
-  font-weight: 600;
-  &:hover {
-    background: darken($brand-blue, 5);
-  }
-}
-
 

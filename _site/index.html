@@ -15,7 +15,7 @@
         <![endif]-->
 
         <!-- cachebusted global.css -->
-        <link rel="stylesheet" href="css/global.css?1372988128">
+        <link rel="stylesheet" href="css/global.css?1373037750">
 
         <!-- Font Awesome CSS CDN -->
         <link href="//netdna.bootstrapcdn.com/font-awesome/3.1.1/css/font-awesome.css" rel="stylesheet">
@@ -47,38 +47,37 @@
         <![endif]-->
 
     <nav role="navigation" class="top-bar" data-options="is_hover:false">
-<ul class="title-area">
-  <!-- retina ready logo is a css background image -->
-  <li class="name hide-for-small">
-    <div class="logo-image"></div>
-    <h1><a href="/">Deployment Name</a></h1>
-  </li>
-  <!-- <li class="toggle-topbar menu-icon"><a href="#"><span>Menu</span></a></li> -->
-</ul>
-
-<section class="top-bar-section">
-  <!-- Left Nav Section -->
-  <ul class="left">
-    <li class="divider"></li>
-    <li class="hide-for-medium-down active"><a class="views" href="#"><i class="icon-eye-open icon-large"></i> VIEWS</a></li>
-    <li class="show-for-medium-down active"><a class="views" href="#"><i class="icon-eye-open"></i><!-- icon only --></a></li>
-    <li class="divider"></li>
-    <li class="hide-for-medium-down"><a class="sets" href="#"><i class="icon-th-large icon-large"></i> SETS</a></li>
-    <li class="show-for-medium-down"><a class="sets" href="#"><i class="icon-th-large"></i><!-- icon only --></a></li>
-    <li class="divider"></li>
-
+  <ul class="title-area">
+    <!-- retina ready logo is a css background image -->
+    <li class="name hide-for-small">
+      <div class="logo-image"></div>
+      <h1><a href="/">Deployment Name</a></h1>
+    </li>
   </ul>
 
-  <!-- Right Nav Section -->
-  <ul class="right">
-    <li class="create-post hide-for-medium-down"><a id="create-post-button" class="create-post-button" href="#" data-reveal-id="createPost"><i class="icon-plus icon-large"></i> CREATE</a></li>
-    <li class="create-post show-for-medium-down"><a id="create-post-button-small" class="create-post-button" href="#" data-reveal-id="createPost"><i class="icon-plus"></i><!-- icon only --></a></li>
-    <li class="hide-for-medium-down"><a id="admin-panel-button" class="admin-panel-button" href="#admin-panel"><i class="icon-dashboard icon-large"></i> WORKSPACE</a></li>
-    <li class="show-for-medium-down"><a id="admin-panel-button-small" class="admin-panel-button" href="#admin-panel"><i class="icon-dashboard"></i><!-- icon only --></a></li>
-  </ul>
-</section>
+  <section class="top-bar-section">
+    <!-- Left Nav Section -->
+    <ul class="left">
+      <li class="divider"></li>
+      <li class="hide-for-medium-down active"><a class="views" href="#"><i class="icon-eye-open icon-large"></i> VIEWS</a></li>
+      <li class="show-for-medium-down active"><a class="views" href="#"><i class="icon-eye-open"></i><!-- icon only --></a></li>
+      <li class="divider"></li>
+      <li class="hide-for-medium-down"><a class="sets" href="#"><i class="icon-th-large icon-large"></i> SETS</a></li>
+      <li class="show-for-medium-down"><a class="sets" href="#"><i class="icon-th-large"></i><!-- icon only --></a></li>
+      <li class="divider"></li>
+
+    </ul>
+
+    <!-- Right Nav Section -->
+    <ul class="right">
+      <li class="create-post hide-for-medium-down"><a id="create-post-button" class="create-post-button" href="#" data-reveal-id="createPost"><i class="icon-plus icon-large"></i> CREATE</a></li>
+      <li class="create-post show-for-medium-down"><a id="create-post-button-small" class="create-post-button" href="#" data-reveal-id="createPost"><i class="icon-plus"></i><!-- icon only --></a></li>
+      <li class="hide-for-medium-down"><a id="admin-panel-button" class="admin-panel-button" href="#admin-panel"><i class="icon-dashboard icon-large"></i> WORKSPACE</a></li>
+      <li class="show-for-medium-down"><a id="admin-panel-button-small" class="admin-panel-button" href="#admin-panel"><i class="icon-dashboard"></i><!-- icon only --></a></li>
+    </ul>
+  </section>
 </nav>
-
+<!-- on mobile devices deployment name is moved below topbar nav for better layout-->
 <li class="name-small show-for-small">
   <div class="logo-image"></div>
   <h4><a href="/">Deployment Name</a></h4>
@@ -184,62 +183,55 @@
 </div> -->
 
 <div class="search-bar">
-
-  <form id="search-form" class="custom" action="">
-
+  <form role="search" id="search-form" class="custom" action="">
     <div class="search-form-wrapper">
-      <div class="large-12 columns">
-        <div class="row collapse">
 
-          <div class="large-3 columns">
-            <input aria-labelledby="search-label" type="text" class="search-field" placeholder="Keyword" value="">
-          </div>
-
-          <div class="large-2 columns">
-            <select id="customDropdown">
-              <option selected DISABLED>Categories</option>
-              <option>Voting Issues</option>
-              <option>Security</option>
-              <option>Urgent</option>
-            </select>
-          </div>
-
-          <div class="large-2 columns">
-            <select id="customDropdown">
-              <option selected DISABLED>Sets</option>
-              <option>SET #1</option>
-              <option>SET #2</option>
-              <option>SET #3</option>
-            </select>
-          </div>
-
-          <div class="large-2 columns">
-            <select id="customDropdown">
-              <option selected DISABLED>Location</option>
-              <option>United States</option>
-              <option>Kenya</option>
-              <option>South Africa</option>
-              <option>New Zealand</option>
-            </select>
-          </div>
-
-          <div class="large-2 columns">
-            <select id="customDropdown">
-              <option selected DISABLED>Time</option>
-              <option>Time #1</option>
-              <option>Time #2</option>
-              <option>Time #3</option>
-            </select>
-          </div>
-
-          <div class="large-1 columns">
-            <button type="submit" class="button success postfix"><i class="icon-search"></i></button>
-          </div>
-
-        </div>
+      <div class="search-field">
+        <input aria-labelledby="search-label" type="text" class="search-field" placeholder="Keyword" value="">
       </div>
-    </div>
 
+      <div class="categories-select">
+        <select id="customDropdown">
+          <option selected DISABLED>Categories</option>
+          <option>Voting Issues</option>
+          <option>Security</option>
+          <option>Urgent</option>
+        </select>
+      </div>
+
+      <div class="sets-select">
+        <select id="customDropdown">
+          <option selected DISABLED>Sets</option>
+          <option>SET #1</option>
+          <option>SET #2</option>
+          <option>SET #3</option>
+        </select>
+      </div>
+
+      <div class="location-select">
+        <select id="customDropdown">
+          <option selected DISABLED>Location</option>
+          <option>United States</option>
+          <option>Kenya</option>
+          <option>South Africa</option>
+          <option>New Zealand</option>
+        </select>
+      </div>
+
+      <div class="time-select">
+        <select id="customDropdown">
+          <option selected DISABLED>Time</option>
+          <option>Time #1</option>
+          <option>Time #2</option>
+          <option>Time #3</option>
+        </select>
+      </div>
+
+      <div class="search-button">
+        <button type="submit" class="button success postfix"><i class="icon-search"></i></button>
+      </div>
+
+    </div>
   </form>
 </div>
 
