@@ -1,0 +1,26 @@
+/*custom-dropdowns*/
+
+
+form.custom .custom.dropdown {
+  @media #{$small} {
+    margin-bottom: 0;
+  }
+}
+
+.search-bar form.custom .custom.dropdown {
+  @media #{$medium} {
+    margin-bottom: 0;
+  }
+}
+
+form.custom .custom.dropdown ul li:hover {
+  background-color: $blueGray;
+  color: $white;
+}
+
+form.custom .custom.dropdown ul li.selected:hover {
+  background: $body-bg;
+  cursor: "none";
+  color: $body-font-color;
+}
+

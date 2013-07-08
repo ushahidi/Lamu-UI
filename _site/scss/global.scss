@@ -60,11 +60,10 @@ NOTE: comment out what I don't use
 @import "modules/map";
 
 @import "modules/search";
-
-/*
 @import "modules/list-view";
-*/
+@import "modules/list-view-post";
 
+@import "base/forms";
 @import "base/off-canvas";
 
 /*must be called at bottom*/

@@ -1,3 +1,5 @@
+/*Global Styles loaded before Foundation*/
+
 * {
   @include box-sizing(border-box);
 }
@@ -14,7 +16,6 @@ i {
 .wf-active {
   visibility: visible;
 }
-
 
 /*input[type="text"],
 input[type="url"],

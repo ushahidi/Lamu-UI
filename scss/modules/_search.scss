@@ -25,7 +25,6 @@
   width: 100%;
   border-top: 1px solid darken($blue, 5%);
   border-bottom: 3px solid darken($blue, 5%);
-  z-index: 0;
   padding-top: 2em;
 }
 
@@ -46,7 +45,7 @@
 .categories-select {
   @include grid-column(12);
   @media #{$small} {
-    @include grid-column(12)
+    @include grid-column(6)
   }
   @media #{$medium} {
     @include grid-column(2, $collapse: true);
@@ -56,7 +55,7 @@
 .sets-select {
   @include grid-column(12);
   @media #{$small} {
-    @include grid-column(12)
+    @include grid-column(6)
   }
   @media #{$medium} {
     @include grid-column(2, $collapse: true);
@@ -66,7 +65,7 @@
 .location-select {
   @include grid-column(12);
   @media #{$small} {
-    @include grid-column(12)
+    @include grid-column(6)
   }
   @media #{$medium} {
     @include grid-column(2, $collapse: true);
@@ -76,7 +75,7 @@
 .time-select {
   @include grid-column(12);
   @media #{$small} {
-    @include grid-column(12)
+    @include grid-column(6)
   }
   @media #{$medium} {
     @include grid-column(2, $collapse: true);

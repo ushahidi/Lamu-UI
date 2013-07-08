@@ -30,6 +30,7 @@ $em-base: 16px !default;
 
 $black:          #000;
 $darkGray:       #1F1F1F;
+$midGray:        #E3E3E3;
 
 // Ushahidi Pallette
 $blue:           #14B4D1;
@@ -47,6 +48,7 @@ $default-float: left;
 
 $body-bg: $lightGray;
 $body-font-color: $darkGray;
+$sub-body-font-color: #9A9797;
 $body-font-family: "proxima-nova", "Helvetica Neue", "Helvetica", Helvetica, Arial, sans-serif;
 $body-font-weight: normal;
 $body-font-style: normal;
@@ -979,7 +981,7 @@ $reveal-overlay-bg-old: #000;
 // Modal itself.
 
 $reveal-modal-bg: #fff;
-$reveal-position-top: 50px;
+$reveal-position-top: 20px;
 $reveal-default-width: 95%;
 $reveal-modal-padding: 0px;
 $reveal-box-shadow: 0 0 10px rgba(#000,.4);
