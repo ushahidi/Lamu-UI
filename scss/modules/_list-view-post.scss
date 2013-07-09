@@ -2,6 +2,13 @@
   @include grid-column(12);
 }
 
+.list-view-select-post {
+  position: absolute;
+  top: 0;
+  left: 0;
+
+}
+
 .list-view-post-image {
   @include grid-column(5);
   @media #{$small} {

@@ -15,16 +15,16 @@
         <![endif]-->
 
         <!-- cachebusted global.css -->
-        <link rel="stylesheet" href="css/global.css?1373384083">
+        <link rel="stylesheet" href="/css/global.css?1373394307">
 
         <!-- Font Awesome CSS CDN -->
         <link href="//netdna.bootstrapcdn.com/font-awesome/3.1.1/css/font-awesome.css" rel="stylesheet">
 
         <!-- Require.js | the data-main attribute is our entry point, all requires are relative to this entry point -->
-        <script data-main="js/main.js" src="js/vendor/requirejs/require.js"></script>
+        <script data-main="/js/main.js" src="/js/vendor/requirejs/require.js"></script>
 
         <!-- Custom Modernizr Build - add, subtract and rebuild at end of project -->
-        <script src="js/custom.modernizr.js"></script>
+        <script src="/js/custom.modernizr.js"></script>
 
         <!-- Place Typekit script here -->
         <!-- This allow fonts to load asynchronously, but requires custom CSS. The custom css can be found in scss/base/_general.scss-->
@@ -275,6 +275,14 @@
     <div class="list-view-post-image">
       <!-- FIXME: color coded category icon - need a responsive & dynamic solution here -->
     <!-- <div class="post-category-notification-red"></div> -->
+    <div class="list-view-select-post">
+      <form class="custom">
+        <label for="select-post">
+          <input type="checkbox" id="select-post" style="display: none;">
+          <span class="custom checkbox"></span>
+        </label>
+      </form>
+    </div>
     <img src="../images/avatar.png" alt="">
     </div> <!-- end .list-view-post-avatar -->
 
@@ -323,6 +331,14 @@
     <div class="list-view-post-image">
       <!-- FIXME: color coded category icon - need a responsive & dynamic solution here -->
     <!-- <div class="post-category-notification-red"></div> -->
+    <div class="list-view-select-post">
+      <form class="custom">
+        <label for="select-post">
+          <input type="checkbox" id="select-post" style="display: none;">
+          <span class="custom checkbox"></span>
+        </label>
+      </form>
+    </div>
     <img src="../images/avatar.png" alt="">
     </div> <!-- end .list-view-post-avatar -->
 
@@ -371,6 +387,14 @@
     <div class="list-view-post-image">
       <!-- FIXME: color coded category icon - need a responsive & dynamic solution here -->
     <!-- <div class="post-category-notification-red"></div> -->
+    <div class="list-view-select-post">
+      <form class="custom">
+        <label for="select-post">
+          <input type="checkbox" id="select-post" style="display: none;">
+          <span class="custom checkbox"></span>
+        </label>
+      </form>
+    </div>
     <img src="../images/avatar.png" alt="">
     </div> <!-- end .list-view-post-avatar -->
 
@@ -519,9 +543,6 @@
         </script>
         <!-- end Google Analytics script -->
 
-        <!-- Live Reload -->
-        <script>document.write('<script src="http://' + (location.host || 'localhost').split(':')[0] + ':35729/livereload.js?snipver=1"></' + 'script>')
-        </script>
     </body>
 </html>
 

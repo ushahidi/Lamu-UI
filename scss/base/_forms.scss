@@ -24,3 +24,7 @@ form.custom .custom.dropdown ul li.selected:hover {
   color: $body-font-color;
 }
 
+form.custom .custom.checkbox.checked:before {
+  margin-top: 5px;
+  font-size: 20px;
+}

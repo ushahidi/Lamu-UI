@@ -5,7 +5,8 @@ require.config({
     "leaflet": "http://cdn.leafletjs.com/leaflet-0.5.1/leaflet",
     "stamen": "http://maps.stamen.com/js/tile.stamen",
 
-    // "iCheck": "vendor/iCheck/jquery.icheck.min",
+    "iCheck": "vendor/iCheck/jquery.icheck.min",
+
     // "HTMLInspector": "vendor/html-inspector/dist/html-inspector"
 
     "foundation": "foundation/foundation.min",
@@ -13,8 +14,10 @@ require.config({
   },
   shim: {
 
-      // "iCheck": ['jquery'],
+      "iCheck": ['jquery'],
+
       // "HTMLInspector": ['jquery'],
+
       'leaflet': {
         deps: ['jquery'],
         exports: 'L'
@@ -38,6 +41,9 @@ var toggleDuration = 50;
 
 require([
   // 'modules/leafletMap',
+
+  'modules/iCheck',
+
   'modules/collapseMap',
   'modules/adminMenu',
 
