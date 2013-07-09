@@ -5,4 +5,4 @@ tagline: Ushahidi Platform 3.0
 # needs front slash because of base URL
 css: /css/global.css
 # this allows for correct gh-pages urls
-baseurl: /_site
+baseurl: /Lamu-UI
