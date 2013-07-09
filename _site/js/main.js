@@ -5,25 +5,26 @@ require.config({
     "leaflet": "http://cdn.leafletjs.com/leaflet-0.5.1/leaflet",
     "stamen": "http://maps.stamen.com/js/tile.stamen",
 
-    // "iCheck": "vendor/iCheck/jquery.icheck.min",
-
     // "HTMLInspector": "vendor/html-inspector/dist/html-inspector"
 
     "foundation": "foundation/foundation.min",
-    "foundation.offCanvas": "foundation/foundation.offCanvas"
+    "foundation.offCanvas": "foundation/foundation.offCanvas",
+
+    // "iCheck": "vendor/iCheck/jquery.icheck.min"
   },
   shim: {
-
-      // "iCheck": ['jquery'],
-
-      // "HTMLInspector": ['jquery'],
 
       'leaflet': {
         deps: ['jquery'],
         exports: 'L'
       },
+
+      // "HTMLInspector": ['jquery'],
+
       "foundation": ['jquery'],
-      "foundation.offCanvas": ['jquery']
+      "foundation.offCanvas": ['jquery'],
+
+      // 'iCheck': ['jquery']
   }
 });
 
@@ -42,15 +43,16 @@ var toggleDuration = 50;
 require([
   // 'modules/leafletMap',
 
-  // 'modules/iCheck',
-
   'modules/collapseMap',
   'modules/adminMenu',
+  'modules/bulkFilterBar',
 
   // FOUNDATION requires
   'foundation',
   'foundation.offCanvas',
-  'modules/foundationScript'
+  'modules/foundationScript',
+
+  // 'modules/iCheck'
 ]);
 
 

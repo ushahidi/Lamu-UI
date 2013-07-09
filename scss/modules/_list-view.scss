@@ -1,3 +1,19 @@
+.list-view-bulk-filter-bar {
+  @include grid-column(12, $collapse: true);
+  margin: 20px;
+  .inline-list>li {
+    padding-right: 1.375em;
+    border-right: 1px solid;
+    line-height: 1em;
+    &:last-child {
+      border-right: 0px;
+    }
+  }
+  a {
+    color: $sub-body-font-color;
+  }
+}
+
 .list-view-wrapper {
   @include grid-column(12);
   background-color: $white;
@@ -6,7 +22,7 @@
 
 .list-view-filter {
   padding: 20px;
-  margin-bottom: 20px;
+  margin: 54px 0 20px 0;
   border-bottom: 1px solid $midGray;
   .list-view-filter-info,
   .list-view-filter-count {

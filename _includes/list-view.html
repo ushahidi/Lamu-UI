@@ -1,8 +1,20 @@
 <div class="list-view-wrapper">
   <div class="row">
 
+        <div class="list-view-bulk-filter-bar hidden">
+          <ul class="inline-list">
+            <li><a href="#">Select All</a></li>
+            <li><a href="#"> <i class="icon-edit"></i> Edit</a></li>
+            <li><a href="#"> <i class="icon-file-alt"></i> Publish</a></li>
+            <li><a href="#"> <i class="icon-file"></i> Unpublish</a></li>
+            <li><a href="#"> <i class="icon-trash"></i> Delete</a></li>
+            <li><a href="#"> <i class="icon-mail-forward"></i> Assign</a></li>
+            <li><a href="#"> <i class="icon-lock"></i> Privacy</a></li>
+          </ul>
+        </div> <!-- end .list-view-bulk-filter-bar -->
     <div class="list-view-filter">
       <div class="row">
+
 
         <form role="form" class="custom" action="">
           <div class="list-view-filter-info">
@@ -34,8 +46,8 @@
           </div> <!-- end .list-view-filter-sort -->
         </form>
 
-      </div>
-    </div>
+      </div> <!-- end .row -->
+    </div> <!-- end .list-view-filter -->
 
     {% include list-view-post.html %}
     <hr>
@@ -55,7 +67,7 @@
         <li><a href="">13</a></li>
         <li class="arrow"><a href="">&raquo;</a></li>
       </ul>
-    </div>
+    </div> <!-- end .pagination-centered -->
 
   </div> <!-- end .row .list-view-filter -->
 </div> <!-- end .list-view-wrapper -->

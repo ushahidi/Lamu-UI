@@ -5,6 +5,7 @@
     "requirejs": "latest",
     "jquery": "latest",
     "iCheck": "git://github.com/damirfoy/iCheck.git",
-    "html-inspector": "latest"
+    "html-inspector": "latest",
+    "pickadate": "~3.1.2"
   }
 }
