@@ -1,20 +1,20 @@
 require.config({
   paths: {
-    "jquery": "/vendor/jquery/jquery.min",
+    "jquery": "vendor/jquery/jquery.min",
     // "jquery": "//ajax.googleapis.com/ajax/libs/jquery/2.0.0/jquery.min",
     "leaflet": "http://cdn.leafletjs.com/leaflet-0.5.1/leaflet",
     "stamen": "http://maps.stamen.com/js/tile.stamen",
 
-    "iCheck": "/vendor/iCheck/jquery.icheck.min",
+    // "iCheck": "vendor/iCheck/jquery.icheck.min",
 
     // "HTMLInspector": "vendor/html-inspector/dist/html-inspector"
 
-    "foundation": "/foundation/foundation.min",
-    "foundation.offCanvas": "/foundation/foundation.offCanvas"
+    "foundation": "foundation/foundation.min",
+    "foundation.offCanvas": "foundation/foundation.offCanvas"
   },
   shim: {
 
-      "iCheck": ['jquery'],
+      // "iCheck": ['jquery'],
 
       // "HTMLInspector": ['jquery'],
 
@@ -42,7 +42,7 @@ var toggleDuration = 50;
 require([
   // 'modules/leafletMap',
 
-  'modules/iCheck',
+  // 'modules/iCheck',
 
   'modules/collapseMap',
   'modules/adminMenu',
