@@ -26,7 +26,7 @@ define(['jquery', 'leaflet'], function($, leaflet) {
           zoom: 7
       });
       var mapIcon = L.icon({
-          iconUrl: '../../images/map-marker.png',
+          iconUrl: 'images/map-marker.png',
 
           iconSize:     [76, 61], // size of the icon
           iconAnchor:   [22, 75], // point of the icon which will correspond to marker's location
