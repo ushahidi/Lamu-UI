@@ -15,7 +15,7 @@
         <![endif]-->
 
         <!-- cachebusted global.css -->
-        <link rel="stylesheet" href="/css/global.css?1373412611">
+        <link rel="stylesheet" href="/css/global.css?1373417341">
 
         <!-- Font Awesome CSS CDN -->
         <link href="//netdna.bootstrapcdn.com/font-awesome/3.1.1/css/font-awesome.css" rel="stylesheet">
@@ -190,6 +190,10 @@
         <input aria-labelledby="search-label" type="text" class="search-field" placeholder="Keyword" value="">
       </div>
 
+      <div class="location-select">
+        <input aria-labelledby="" type="text" class="location-field" placeholder="Location" value="">
+      </div>
+
       <div class="categories-select">
         <select id="customDropdown" >
           <option selected DISABLED>Categories</option>
@@ -208,9 +212,6 @@
         </select>
       </div>
 
-      <div class="location-select">
-        <input aria-labelledby="" type="text" class="location-field" placeholder="Location" value="">
-      </div>
 
       <div class="time-select">
         <select id="customDropdown" >
@@ -235,7 +236,7 @@
   <div class="row">
 
         <div class="list-view-bulk-filter-bar hidden">
-          <ul class="inline-list">
+          <ul class="list-view-filter-bar-list">
             <li><a href="#">Select All</a></li>
             <li><a href="#"> <i class="icon-edit"></i> Edit</a></li>
             <li><a href="#"> <i class="icon-file-alt"></i> Publish</a></li>
@@ -261,6 +262,7 @@
                 <option>1</option>
                 <option>2</option>
                 <option>3</option>
+                <option>All</option>
               </select>
             </div>
 
@@ -288,10 +290,10 @@
       <!-- FIXME: color coded category icon - need a responsive & dynamic solution here -->
     <!-- <div class="post-category-notification-red"></div> -->
     <div class="list-view-select-post">
-      <form class="custom">
+      <form class="">
         <label for="select-post">
-          <input type="checkbox" id="select-post" style="display: none;">
-          <span class="custom checkbox"></span>
+          <input type="checkbox" id="select-post">
+          <!-- <span class="custom checkbox"></span> -->
         </label>
       </form>
     </div>
@@ -344,10 +346,10 @@
       <!-- FIXME: color coded category icon - need a responsive & dynamic solution here -->
     <!-- <div class="post-category-notification-red"></div> -->
     <div class="list-view-select-post">
-      <form class="custom">
+      <form class="">
         <label for="select-post">
-          <input type="checkbox" id="select-post" style="display: none;">
-          <span class="custom checkbox"></span>
+          <input type="checkbox" id="select-post">
+          <!-- <span class="custom checkbox"></span> -->
         </label>
       </form>
     </div>
@@ -400,10 +402,10 @@
       <!-- FIXME: color coded category icon - need a responsive & dynamic solution here -->
     <!-- <div class="post-category-notification-red"></div> -->
     <div class="list-view-select-post">
-      <form class="custom">
+      <form class="">
         <label for="select-post">
-          <input type="checkbox" id="select-post" style="display: none;">
-          <span class="custom checkbox"></span>
+          <input type="checkbox" id="select-post">
+          <!-- <span class="custom checkbox"></span> -->
         </label>
       </form>
     </div>

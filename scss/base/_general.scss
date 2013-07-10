@@ -18,7 +18,13 @@ i {
 }
 
 .hidden {
-  display:none;
+  opacity: 0;
+  @include transition (all .25s ease-in-out);
+}
+
+.visible {
+  opacity: 1;
+  @include transition (all .25s ease-in-out);
 }
 
 /*input[type="text"],
