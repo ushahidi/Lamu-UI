@@ -17,6 +17,10 @@ i {
   visibility: visible;
 }
 
+.none {
+  display: none;
+}
+
 .hidden {
   opacity: 0;
   @include transition (all .25s ease-in-out);

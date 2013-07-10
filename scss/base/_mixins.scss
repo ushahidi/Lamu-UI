@@ -1,43 +1,5 @@
 /*
 ******************************
-* Triangles
-******************************
-*/
-
-@mixin triangle-white {
-  content: "";
-  display: block;
-  width: 0;
-  height: 0;
-  border-left: 7px solid transparent;
-  border-right: 7px solid transparent;
-  border-top: 9px solid $white;
-  position: relative;
-  left: 3px;
-  top: -4px;
-  padding: 0;
-  margin-left: 60px;
-  margin-top: -9px;
-}
-
-@mixin triangle-darkGray {
-  content: "";
-  display: block;
-  width: 0;
-  height: 0;
-  border-left: 7px solid transparent;
-  border-right: 7px solid transparent;
-  border-top: 9px solid $darkGray;
-  position: relative;
-  left: 3px;
-  top: -4px;
-  padding: 0;
-  margin-left: 60px;
-  margin-top: -9px;
-}
-
-/*
-******************************
 * Font Family
 ******************************
 */

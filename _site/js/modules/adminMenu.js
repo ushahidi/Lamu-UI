@@ -1,9 +1,5 @@
 define(['jquery'], function($) {
 
-  $(".top-bar-section li a.admin-panel-button").click(function (){
-    $(this).toggleClass('inverse');
-  });
-
   $( "p.title" ).click(function() {
      if ($(this).parent().hasClass("active")) {
         $(this).parent().removeClass("active");

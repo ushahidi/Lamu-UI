@@ -1,7 +1,8 @@
 
 <div class="search-bar">
   <div id="collapse-map" class="collapse-map">
-    <p>collapse map</p>
+    <p id="collapse-tab">collapse map</p>
+    <p id="collapse-tab" class="none" >expand map</p>
   </div>
   <form role="search" id="search-form" class="custom" action="">
     <div class="search-form-wrapper">
@@ -14,6 +15,7 @@
         <input aria-labelledby="" type="text" class="location-field" placeholder="Location" value="">
       </div>
 
+      <!-- TODO: need to figure out best solution for categorie, time etc... -->
       <div class="categories-select">
         <select id="customDropdown" >
           <option selected DISABLED>Categories</option>
@@ -31,7 +33,6 @@
           <option>SET #3</option>
         </select>
       </div>
-
 
       <div class="time-select">
         <select id="customDropdown" >

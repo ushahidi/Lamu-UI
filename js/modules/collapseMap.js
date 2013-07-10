@@ -1,8 +1,15 @@
 //collapse and expand map
 define(['jquery'], function($) {
-  $("#map-wrapper").addClass('map-expand');
   $("#collapse-map").click(function() {
-    $('#map-wrapper').toggleClass('map-collapse')
+    $('#map').toggleClass('map-collapse');
       console.log('You clicked #collapse-map');
+    $('#collapse-tab').text($('#collapse-tab').text() == 'collapse map' ? 'expand map' : 'collapse map');
+    return false;
   });
+
 });
+
+
+
+
+
