@@ -1,17 +1,37 @@
+<div class="list-view-bulk-filter-bar hidden">
+  <div class="row">
+  <ul class="list-view-filter-bar-list hide-for-medium-down">
+    <li><a href="#" class="underline" >Select All</a></li>
+    <li><a href="#"> <i class="icon-edit"></i> Edit</a></li>
+    <li><a href="#"> <i class="icon-file-alt"></i> Publish</a></li>
+    <li><a href="#"> <i class="icon-file"></i> Unpublish</a></li>
+    <li><a href="#"> <i class="icon-trash"></i> Delete</a></li>
+    <li><a href="#"> <i class="icon-mail-forward"></i> Assign</a></li>
+    <li><a href="#"> <i class="icon-lock"></i> Privacy</a></li>
+  </ul>
+
+  <ul class="list-view-filter-bar-list show-for-medium-down">
+    <li>
+      <form class="">
+        <label for="select-all">
+          <input type="checkbox" id="select-post">
+          <!-- <span class="custom checkbox"></span> -->
+        </label>
+      </form>
+    </li>
+    <li><a href="#"> <i class="icon-edit"></i></a></li>
+    <li><a href="#"> <i class="icon-file-alt"></i></a></li>
+    <li><a href="#"> <i class="icon-file"></i></a></li>
+    <li><a href="#"> <i class="icon-trash"></i></a></li>
+    <li><a href="#"> <i class="icon-mail-forward"></i></a></li>
+    <li><a href="#"> <i class="icon-lock"></i></a></li>
+  </ul>
+  </div>
+</div> <!-- end .list-view-bulk-filter-bar -->
+
 <div class="list-view-wrapper">
   <div class="row">
 
-        <div class="list-view-bulk-filter-bar hidden">
-          <ul class="list-view-filter-bar-list">
-            <li><a href="#">Select All</a></li>
-            <li><a href="#"> <i class="icon-edit"></i> Edit</a></li>
-            <li><a href="#"> <i class="icon-file-alt"></i> Publish</a></li>
-            <li><a href="#"> <i class="icon-file"></i> Unpublish</a></li>
-            <li><a href="#"> <i class="icon-trash"></i> Delete</a></li>
-            <li><a href="#"> <i class="icon-mail-forward"></i> Assign</a></li>
-            <li><a href="#"> <i class="icon-lock"></i> Privacy</a></li>
-          </ul>
-        </div> <!-- end .list-view-bulk-filter-bar -->
     <div class="list-view-filter">
       <div class="row">
 
@@ -52,9 +72,10 @@
 
     {% include list-view-post.html %}
     <hr>
-    {% include list-view-post.html %}
+        <!-- NOTE: this provide a different list view post image, just for demo purposes, delete file in production -->
+    {% include list-view-post2.html %}
     <hr>
-    {% include list-view-post.html %}
+    {% include list-view-post3.html %}
     <hr>
     <div class="pagination-centered">
       <ul class="pagination">

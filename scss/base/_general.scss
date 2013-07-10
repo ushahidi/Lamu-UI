@@ -27,6 +27,16 @@ i {
   @include transition (all .25s ease-in-out);
 }
 
+.inverse {
+  background-color: $blueGray !important;
+  color: $white !important;
+}
+
+.underline {
+  border-bottom: 1px dotted;
+  padding-bottom: 3px;
+}
+
 /*input[type="text"],
 input[type="url"],
 textarea {

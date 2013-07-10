@@ -1,6 +1,7 @@
 .list-view-bulk-filter-bar {
   @include grid-column(12, $collapse: true);
-  margin: 20px;
+  background-color: $blueGray;
+  padding: 20px 0 0 0;
   .list-view-filter-bar-list>li {
     padding-right: 1.375em;
     /*border-right: 1px solid;*/
@@ -10,14 +11,25 @@
     }
   }
   a {
-    color: $sub-body-font-color;
+    color: $white;
   }
 }
 
 .list-view-filter-bar-list {
-  @include block-grid($per-row: 3);
+  @include block-grid($per-row: 7);
+  padding: 0 15px;
+  form {
+    margin: 0;
+    input[type="checkbox"] {
+      margin: 0;
+    }
+  }
   @media #{$small} {
     @include block-grid($per-row: 7);
+    padding: 0 20px;
+  }
+  @media #{$medium} {
+    padding: 0;
   }
 }
 
@@ -28,8 +40,8 @@
 }
 
 .list-view-filter {
-  padding: 20px;
-  margin: 54px 0 20px 0;
+  padding: 20px 15px;
+  margin: 0 0 20px 0;
   border-top: 1px solid $midGray;
   border-bottom: 1px solid $midGray;
   .list-view-filter-info,
@@ -44,17 +56,20 @@
   @include grid-column(12);
   border-bottom: 1px solid $midGray;
   padding-bottom: 10px;
+  padding-left: 0;
   margin-bottom: 20px;
   @media #{$small} {
     @include grid-column(5);
     border-bottom: 0;
     padding-bottom: 0;
+    padding-left: 0;
     margin-bottom: 0;
   }
 }
 
 .list-view-filter-count {
   @include grid-column(12);
+  padding: 0;
   @media #{$small} {
     @include grid-column(3);
   }
@@ -62,7 +77,9 @@
 
 .list-view-filter-sort {
   @include grid-column(12);
+  padding: 0;
   @media #{$small} {
     @include grid-column(4);
+    padding-right: 0px;
   }
 }

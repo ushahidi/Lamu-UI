@@ -15,7 +15,7 @@
         <![endif]-->
 
         <!-- cachebusted global.css -->
-        <link rel="stylesheet" href="/css/global.css?1373417341">
+        <link rel="stylesheet" href="/css/global.css?1373466536">
 
         <!-- Font Awesome CSS CDN -->
         <link href="//netdna.bootstrapcdn.com/font-awesome/3.1.1/css/font-awesome.css" rel="stylesheet">
@@ -72,8 +72,8 @@
     <ul class="right">
       <li class="create-post hide-for-medium-down"><a id="create-post-button" class="create-post-button" href="#" data-reveal-id="createPost"><i class="icon-plus icon-large"></i> CREATE</a></li>
       <li class="create-post show-for-medium-down"><a id="create-post-button-small" class="create-post-button" href="#" data-reveal-id="createPost"><i class="icon-plus"></i><!-- icon only --></a></li>
-      <li class="hide-for-medium-down"><a id="admin-panel-button" class="admin-panel-button" href="#admin-panel"><i class="icon-dashboard icon-large"></i> WORKSPACE</a></li>
-      <li class="show-for-medium-down"><a id="admin-panel-button-small" class="admin-panel-button" href="#admin-panel"><i class="icon-dashboard"></i><!-- icon only --></a></li>
+      <li class="hide-for-medium-down"><a id="admin-panel-button" class="admin-panel-button inverse" href="#admin-panel"><i class="icon-dashboard icon-large"></i> WORKSPACE</a></li>
+      <li class="show-for-medium-down"><a id="admin-panel-button-small" class="admin-panel-button inverse" href="#admin-panel"><i class="icon-dashboard"></i><!-- icon only --></a></li>
     </ul>
   </section>
 </nav>
@@ -232,20 +232,40 @@
 </div>
 
 
+<div class="list-view-bulk-filter-bar hidden">
+  <div class="row">
+  <ul class="list-view-filter-bar-list hide-for-medium-down">
+    <li><a href="#" class="underline" >Select All</a></li>
+    <li><a href="#"> <i class="icon-edit"></i> Edit</a></li>
+    <li><a href="#"> <i class="icon-file-alt"></i> Publish</a></li>
+    <li><a href="#"> <i class="icon-file"></i> Unpublish</a></li>
+    <li><a href="#"> <i class="icon-trash"></i> Delete</a></li>
+    <li><a href="#"> <i class="icon-mail-forward"></i> Assign</a></li>
+    <li><a href="#"> <i class="icon-lock"></i> Privacy</a></li>
+  </ul>
+
+  <ul class="list-view-filter-bar-list show-for-medium-down">
+    <li>
+      <form class="">
+        <label for="select-all">
+          <input type="checkbox" id="select-post">
+          <!-- <span class="custom checkbox"></span> -->
+        </label>
+      </form>
+    </li>
+    <li><a href="#"> <i class="icon-edit"></i></a></li>
+    <li><a href="#"> <i class="icon-file-alt"></i></a></li>
+    <li><a href="#"> <i class="icon-file"></i></a></li>
+    <li><a href="#"> <i class="icon-trash"></i></a></li>
+    <li><a href="#"> <i class="icon-mail-forward"></i></a></li>
+    <li><a href="#"> <i class="icon-lock"></i></a></li>
+  </ul>
+  </div>
+</div> <!-- end .list-view-bulk-filter-bar -->
+
 <div class="list-view-wrapper">
   <div class="row">
 
-        <div class="list-view-bulk-filter-bar hidden">
-          <ul class="list-view-filter-bar-list">
-            <li><a href="#">Select All</a></li>
-            <li><a href="#"> <i class="icon-edit"></i> Edit</a></li>
-            <li><a href="#"> <i class="icon-file-alt"></i> Publish</a></li>
-            <li><a href="#"> <i class="icon-file"></i> Unpublish</a></li>
-            <li><a href="#"> <i class="icon-trash"></i> Delete</a></li>
-            <li><a href="#"> <i class="icon-mail-forward"></i> Assign</a></li>
-            <li><a href="#"> <i class="icon-lock"></i> Privacy</a></li>
-          </ul>
-        </div> <!-- end .list-view-bulk-filter-bar -->
     <div class="list-view-filter">
       <div class="row">
 
@@ -340,6 +360,7 @@
 </div> <!-- end .list-view-post -->
 
     <hr>
+        <!-- NOTE: this provide a different list view post image, just for demo purposes, delete file in production -->
     <div class="list-view-post">
   <div class="row">
     <div class="list-view-post-image">
@@ -353,7 +374,7 @@
         </label>
       </form>
     </div>
-    <img src="/images/mini-coop.png" alt="">
+    <img src="/images/barbican.png" alt="">
     </div> <!-- end .list-view-post-avatar -->
 
     <div class="list-view-post-details">
@@ -409,7 +430,7 @@
         </label>
       </form>
     </div>
-    <img src="/images/mini-coop.png" alt="">
+    <img src="/images/london-underground.png" alt="">
     </div> <!-- end .list-view-post-avatar -->
 
     <div class="list-view-post-details">

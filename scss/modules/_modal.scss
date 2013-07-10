@@ -1,5 +1,5 @@
 .reveal-modal {
-  top: 65px;
+  top: 25px;
   @media #{$small} {
     width: 80%;
     left: 57%;
@@ -13,6 +13,7 @@
   @media #{$large} {
     width: 40%;
     left: 77%;
+    top: 65px;
   }
 }
 
