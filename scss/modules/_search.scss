@@ -1,16 +1,16 @@
 .collapse-map {
   background-color: lighten($darkGray, 5%);
   position: relative;
-  bottom: -463px;
+  top: -38px;
   margin: auto;
   width: 186px;
   height: 38px;
-  color: white;
+  color: $white;
   z-index: 2;
   p {
-    @include font-family-reg;
     text-align: center;
-    padding-top: 11px;
+    padding-top: 6px;
+    margin: 0;
     font-size: 18px;
     letter-spacing: .1em;
     color: $white;
@@ -25,7 +25,7 @@
   width: 100%;
   border-top: 1px solid darken($blue, 5%);
   border-bottom: 3px solid darken($blue, 5%);
-  padding-top: 2em;
+  /*padding-top: 2em;*/
 }
 
 .search-form-wrapper {
