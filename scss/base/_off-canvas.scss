@@ -13,6 +13,9 @@
   clear: both;
   margin-left: 0px;
   overflow: hidden;
+  -moz-box-shadow:    0 0 5px 5px #ccc;
+    -webkit-box-shadow: 0 0 5px 5px #ccc;
+      box-shadow:         0 0 5px 5px #ccc;
   @media #{$medium-up} {
     margin-left: -300px;
   }

@@ -41,7 +41,7 @@ var toggleDuration = 50;
 
 
 require([
-  // 'modules/leafletMap',
+  'modules/leafletMap',
 
   'modules/collapseMap',
   'modules/adminMenu',

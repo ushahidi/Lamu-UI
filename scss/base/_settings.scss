@@ -46,7 +46,7 @@ $success-color: $green;
 
 $default-float: left;
 
-$body-bg: $white;
+$body-bg: $lightGray;
 $body-font-color: $darkGray;
 $sub-body-font-color: #9A9797;
 $body-font-family: "proxima-nova", "Helvetica Neue", "Helvetica", Helvetica, Arial, sans-serif;
@@ -626,7 +626,7 @@ $custom-dropdown-list-item-min-height: emCalc(24px);
 
 // Height and width styles.
 
-$f-dropdown-max-width: 200px;
+$f-dropdown-max-width: 300px;
 $f-dropdown-height: auto;
 $f-dropdown-max-height: none;
 $f-dropdown-margin-top: 2px;
