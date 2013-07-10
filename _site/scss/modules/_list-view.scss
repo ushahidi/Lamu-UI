@@ -18,6 +18,9 @@
 .list-view-filter-bar-list {
   @include block-grid($per-row: 7);
   padding: 0 15px;
+  li {
+    font-size: 20px;
+  }
   form {
     margin: 0;
     input[type="checkbox"] {
@@ -30,6 +33,9 @@
   }
   @media #{$medium} {
     padding: 0;
+    li {
+      font-size: $base-font-size;
+    }
   }
 }
 
