@@ -23,7 +23,8 @@ define(['jquery', 'leaflet'], function($, leaflet) {
       var layer = new L.StamenTileLayer('terrain');
       var map = new L.Map('map', {
           center: new L.LatLng(36.08000, -79.81944),
-          zoom: 7
+          zoom: 7,
+          scrollWheelZoom: false
       });
       var mapIcon = L.icon({
           iconUrl: 'images/map-marker.png',
@@ -37,5 +38,8 @@ define(['jquery', 'leaflet'], function($, leaflet) {
       // add a custom marker in the given location, attach some popup content to it and open the popup
 
       L.marker([36.08000, -79.81944], {icon: mapIcon}).addTo(map);
+
+      $('.leaflet-marker-pane img').attr('data-dropdown', 'leaflet-marker-pane');
   });
+
 });

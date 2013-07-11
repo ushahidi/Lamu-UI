@@ -3,7 +3,7 @@
   @media #{$small} {
     width: 80%;
     left: 57%;
-    border: 10px solid;
+    border: 10px solid $blueGray;
     padding: 0;
   }
   @media #{$medium-up} {

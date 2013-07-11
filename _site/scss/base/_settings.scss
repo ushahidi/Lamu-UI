@@ -626,7 +626,7 @@ $custom-dropdown-list-item-min-height: emCalc(24px);
 
 // Height and width styles.
 
-$f-dropdown-max-width: 300px;
+$f-dropdown-max-width: 530px;
 $f-dropdown-height: auto;
 $f-dropdown-max-height: none;
 $f-dropdown-margin-top: 2px;
@@ -638,14 +638,14 @@ $f-dropdown-bg: #fff;
 // Border styles for dropdowns.
 
 $f-dropdown-border-style: solid;
-$f-dropdown-border-width: 1px;
-$f-dropdown-border-color: darken(#fff, 20%);
+$f-dropdown-border-width: 5px;
+$f-dropdown-border-color: $blueGray;
 
 // Triangle pip.
 
-$f-dropdown-triangle-size: 6px;
+$f-dropdown-triangle-size: 12px;
 $f-dropdown-triangle-color: #fff;
-$f-dropdown-triangle-side-offset: 10px;
+$f-dropdown-triangle-side-offset: 8px;
 
 // List elements.
 
@@ -835,8 +835,8 @@ $pagination-margin: emCalc(-5px);
 
 $pagination-li-float: $default-float;
 $pagination-li-height: emCalc(24px);
-$pagination-li-font-color: #222;
-$pagination-li-font-size: emCalc(14px);
+$pagination-li-font-color: $white;
+$pagination-li-font-size: emCalc(16px);
 $pagination-li-margin: emCalc(5px);
 
 // Pagination anchor links
@@ -853,11 +853,11 @@ $pagination-link-unavailable-bg-active: transparent;
 
 // Currently selected anchor links
 
-$pagination-link-current-background: $primary-color;
-$pagination-link-current-font-color: #fff;
+$pagination-link-current-background: $blueGray;
+$pagination-link-current-font-color: $white;
 $pagination-link-current-font-weight: bold;
 $pagination-link-current-cursor: $cursor-default-value;
-$pagination-link-current-active-bg: $primary-color;
+$pagination-link-current-active-bg: $blueGray;
 
 //
 // Panel Variables
