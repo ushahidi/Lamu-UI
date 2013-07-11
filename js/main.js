@@ -42,10 +42,9 @@ var toggleDuration = 50;
 
 require([
   'modules/leafletMap',
-
   'modules/collapseMap',
   'modules/adminMenu',
-  'modules/bulkFilterBar',
+  'modules/listViewBulkActions',
 
   // FOUNDATION requires
   'foundation',

@@ -4,14 +4,14 @@ define(['jquery'], function($) {
       $checked = $('.list-view-select-post input[type="checkbox"]:checked')
       if ($checked.length > 0)
       {
-          $('.list-view-bulk-filter-bar').removeClass('hidden');
-          $('.list-view-bulk-filter-bar').addClass('visible');
+          $('.list-view-bulk-actions-list').removeClass('hidden');
+          $('.list-view-bulk-actions-list').addClass('visible');
       }
       else
       {
-           $('.list-view-bulk-filter-bar').removeClass('visible');
-           $('.list-view-bulk-filter-bar').addClass('hidden');
+           $('.list-view-bulk-actions-list').removeClass('visible');
+           $('.list-view-bulk-actions-list').addClass('hidden');
       }
-      console.log('You clicked .list-view-bulk-filter-bar');
+      console.log('You clicked .list-view-bulk-actions-list');
   });
 });
