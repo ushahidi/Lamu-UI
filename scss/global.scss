@@ -54,6 +54,9 @@ NOTE: comment out what I don't use
 @import "foundation/components/dropdown";
 /* end FOUNDATION */
 
+/*FOUNDATION overrides*/
+@import "base/overrides";
+/*end FOUNDATION overrides*/
 
 @import "modules/topbar";
 @import "modules/admin-panel";

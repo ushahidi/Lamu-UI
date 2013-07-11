@@ -23,14 +23,14 @@
 }
 
 [role="complementary"] {
-  width: 300px;
+  width: 310px;
   background-color: $white;
   margin-right: -200%;
   float: left;
 }
 
 .active [role="main"] {
-  margin-left: -300px;
+  margin-left: -310px;
   @media #{$medium-up} {
     margin-left: 0px;
   }
