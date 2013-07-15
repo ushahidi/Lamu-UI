@@ -17,7 +17,7 @@
         <![endif]-->
 
         <!-- cachebusted global.css -->
-        <link rel="stylesheet" href="/css/global.css?1373901410">
+        <link rel="stylesheet" href="/css/global.css?1373920038">
 
         <!-- Font Awesome CSS CDN -->
         <link href="//netdna.bootstrapcdn.com/font-awesome/3.2.1/css/font-awesome.css" rel="stylesheet">
@@ -48,109 +48,137 @@
             <p class="chromeframe">You are using an <strong>outdated</strong> browser. Please <a href="http://browsehappy.com/">upgrade your browser</a> or <a href="http://www.google.com/chromeframe/?redirect=true">activate Google Chrome Frame</a> to improve your experience.</p>
         <![endif]-->
 
-    <header role="banner">
-  <nav role="navigation" class="top-bar" data-options="is_hover:false">
-    <ul class="title-area">
-      <!-- retina ready logo is a css background image -->
-      <li class="name hide-for-small">
-        <div class="logo-image"></div>
-        <h1><a href="/">Deployment Name</a></h1>
-      </li>
-    </ul>
-
-    <section class="top-bar-section">
-      <!-- Left Nav Section -->
-      <ul class="left">
-        <li class="divider"></li>
-        <li class="hide-for-medium-down active"><a class="views" href="#"><i class="icon-eye-open icon-large"></i> VIEWS</a></li>
-        <li class="show-for-medium-down active"><a class="views" href="#"><i class="icon-eye-open"></i><!-- icon only --></a></li>
-        <li class="divider"></li>
-        <li class="hide-for-medium-down"><a class="sets" href="#"><i class="icon-th-large icon-large"></i> SETS</a></li>
-        <li class="show-for-medium-down"><a class="sets" href="#"><i class="icon-th-large"></i><!-- icon only --></a></li>
-        <li class="divider"></li>
-
+    <div class="fixed">
+  <header role="banner">
+    <nav role="navigation" class="top-bar" data-options="is_hover:false">
+      <ul class="title-area">
+        <!-- retina ready logo is a css background image -->
+        <li class="name hide-for-small">
+          <div class="logo-image"></div>
+          <h1><a href="/">Deployment Name</a></h1>
+        </li>
       </ul>
 
-      <!-- Right Nav Section -->
-      <ul class="right">
-        <li class="create-post hide-for-medium-down"><a id="create-post-button" class="create-post-button" href="#" data-reveal-id="createPost"><i class="icon-plus icon-large"></i> CREATE</a></li>
-        <li class="create-post show-for-medium-down"><a id="create-post-button-small" class="create-post-button" href="#" data-reveal-id="createPost"><i class="icon-plus"></i><!-- icon only --></a></li>
-        <li class="hide-for-medium-down"><a id="admin-panel-button" class="admin-panel-button inverse" href="#admin-panel"><i class="icon-dashboard icon-large"></i> WORKSPACE</a></li>
-        <li class="show-for-medium-down"><a id="admin-panel-button-small" class="admin-panel-button inverse" href="#admin-panel"><i class="icon-dashboard"></i><!-- icon only --></a></li>
-      </ul>
-    </section>
-  </nav>
-</header>
+      <!-- TODO: figure out mobile nav and subnav -->
+
+      <section class="top-bar-section">
+        <!-- Left Nav Section -->
+        <ul class="left">
+          <li class="divider"></li>
+          <li class="hide-for-medium-down active"><a class="views" href="#"><i class="icon-eye-open icon-large"></i> VIEWS</a></li>
+          <!-- <ul class="dropdown">
+  <li><a href="#">test</a></li>
+  <li><a href="#">test</a></li>
+  <li><a href="#">test</a></li>
+</ul>
+ -->
+          <li class="show-for-medium-down active"><a class="views" href="#"><i class="icon-eye-open"></i><!-- icon only --></a></li>
+          <!-- <ul class="dropdown">
+  <li><a href="#">test</a></li>
+  <li><a href="#">test</a></li>
+  <li><a href="#">test</a></li>
+</ul>
+ -->
+          <li class="divider"></li>
+          <li class="hide-for-medium-down"><a class="sets" href="#"><i class="icon-th-large icon-large"></i> SETS</a></li>
+          <!-- <ul class="dropdown">
+  <li><a href="#">test</a></li>
+  <li><a href="#">test</a></li>
+  <li><a href="#">test</a></li>
+</ul>
+ -->
+          <li class="show-for-medium-down"><a class="sets" href="#"><i class="icon-th-large"></i><!-- icon only --></a></li>
+          <!-- <ul class="dropdown">
+  <li><a href="#">test</a></li>
+  <li><a href="#">test</a></li>
+  <li><a href="#">test</a></li>
+</ul>
+ -->
+          <li class="divider"></li>
+
+        </ul>
+
+        <!-- Right Nav Section -->
+        <ul class="right">
+          <li class="create-post hide-for-medium-down"><a id="create-post-button" class="create-post-button" href="#" data-reveal-id="createPost"><i class="icon-plus icon-large"></i> CREATE</a></li>
+          <li class="create-post show-for-medium-down"><a id="create-post-button-small" class="create-post-button" href="#" data-reveal-id="createPost"><i class="icon-plus"></i><!-- icon only --></a></li>
+          <li class="hide-for-medium-down"><a id="admin-panel-button" class="admin-panel-button inverse" href="#admin-panel"><i class="icon-dashboard icon-large"></i> WORKSPACE</a></li>
+          <li class="show-for-medium-down"><a id="admin-panel-button-small" class="admin-panel-button inverse" href="#admin-panel"><i class="icon-dashboard"></i><!-- icon only --></a></li>
+        </ul>
+      </section>
+    </nav>
+  </header>
+</div>
 <!-- on mobile devices deployment name is moved below topbar nav for better layout-->
-<li class="name-small show-for-small">
+<li class="name-small show-for-small fixed">
   <div class="logo-image"></div>
   <h4><a href="/">Deployment Name</a></h4>
 </li>
 
 
-<div id="leaflet-marker-pane" class="report-overlay" data-dropdown-content>
+<div id="leaflet-marker-pane" class="post-overlay" data-dropdown-content>
 
-  <div class="report-overlay-header">
+  <div class="post-header">
     <div class="row">
-      <div class="report-overlay-category-marker">
+      <div class="post-category-marker">
         <img src="/images/category-icon.png" alt="">
       </div>
 
-      <div class="report-overlay-title">
-        <h6>Man hits tree after skidding off road.</h6>
+      <div class="post-title">
+        <h6><a href="/post-details.html">Man hits tree after skidding off road.</a></h6>
         <div class="row">
-          <div class="report-overlay-title-tag">
+          <div class="post-title-tag">
             <h6 class="subheader">collision</h6>
           </div>
         </div>
       </div>
 
-      <div class="report-overlay-actions">
+      <div class="post-actions">
         <button class="tiny secondary button"> <i class="icon-edit"></i>edit</button>
         <button class="tiny secondary button"> <i class="icon-plus-sign"></i>set</button>
       </div>
     </div>
   </div>
 
-  <div class="report-overlay-body">
+  <div class="post-body">
     <div class="row">
 
-      <div class="report-overlay-image">
+      <div class="post-image">
         <img src="/images/car-tree.jpg" alt="">
       </div>
 
-      <div class="report-overlay-details">
+      <div class="post-details">
 
-        <div class="report-overlay-author">
-          <h6><small><span class= "underline">DUDE BRO </span>ADDED A POST</small></h6>
+        <div class="post-author">
+          <h6><small><span class= "underline"><a href="">DUDE BRO</a> </span>ADDED A POST</small></h6>
         </div>
 
-        <div class="report-overlay-excerpt">
+        <div class="post-excerpt">
           <p>Cras justo odio, dapibus ac facilisis in, egestas eget quam. Donec ullamcorper nulla non metus auctor fringilla.</p>
           <hr>
         </div>
 
 
-      </div> <!-- end .report-overlay-details -->
+      </div> <!-- end .post-details -->
 
       <div class="row">
 
-        <div class="report-overlay-location-meta">
-          <h5><small> <i class="icon-map-marker"></i><span class="report-overlay-location underline" >London, UK</span></small></h5>
+        <div class="post-location-meta">
+          <h5><small> <i class="icon-map-marker"></i><span class="post-location underline" ><a href=""> London, UK</a></span></small></h5>
         </div>
 
-        <div class="report-overlay-time-meta">
-          <h5><small> <i class="icon-time"></i><strong class="report-overlay-time" >1 hour ago</strong></small></h5>
+        <div class="post-time-meta">
+          <h5><small> <i class="icon-time"></i><strong class="post-time" > 1 hour ago</strong></small></h5>
         </div>
 
-        <div class="report-overlay-details-button">
+        <div class="post-details-button">
           <button class="tiny success button"><i class="icon-lock"></i>  details</button>
         </div>
 
       </div>
 
     </div> <!-- end .row -->
-  </div> <!-- end .report-overlay-body -->
+  </div> <!-- end .post-body -->
 
 </div>
 
@@ -158,7 +186,6 @@
 <div class="map-wrapper">
   <section id="main" role="main">
     <div id="map" class="map"></div>
-
     
 <div class="search-bar">
   <div id="collapse-map" class="collapse-map">
@@ -212,7 +239,6 @@
     </div>
   </form>
 </div>
-
 
     <div class="list-view-bulk-actions hidden">
   <div class="row">
@@ -304,7 +330,7 @@
 
     <div class="list-view-post-details">
       <div class="row">
-        <h5 class="list-view-post-title"><a href="#">Tellus Ipsum Parturient Purus </a> <i class="icon-lock"></i></h5>
+        <h5 class="list-view-post-title"><a href="/post-details.html">Man hits tree after skidding off road. </a> <i class="icon-lock"></i></h5>
         <div class="list-view-post-time">
           <p> <i class="icon-time"></i>Today 12:20 pm</p>
         </div> <!-- end .list-view-post-time -->
@@ -473,7 +499,6 @@
 </div> <!-- end .list-view-wrapper -->
 
   </section>
-
   <section id="admin-panel" role="complementary">
   <div class="admin-profile">
     <div id="admin-avatar" class="admin-avatar"></div>
@@ -559,7 +584,6 @@
 
 
 
-
 </div>
 
 
@@ -616,9 +640,8 @@
               </ul>
             </div>
 
-            <!-- FIXME: can this be outside of the html5 form element? -->
             <div class="create-post-submit">
-              <button type="submit" class="button success expand">Submit</button>
+              <button type="submit" class="button success expand" form="search-form">Submit</button>
             </div>
 
         </div> <!-- end media-bar-row -->

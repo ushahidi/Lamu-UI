@@ -61,13 +61,16 @@ NOTE: comment out what I don't use
 @import "modules/topbar";
 @import "modules/admin-panel";
 @import "modules/map";
-@import "modules/report-overlay";
 
 @import "modules/search";
 @import "modules/list-view";
 @import "modules/list-view-post";
 
-@import "modules/iCheck";
+@import "base/post";
+@import "modules/post-overlay";
+@import "modules/post-details";
+
+/*@import "modules/iCheck";*/
 
 @import "base/forms";
 @import "base/off-canvas";

@@ -9,3 +9,14 @@ button.secondary:hover, button.secondary:focus, .button.secondary:hover, .button
   color: $white;
   @include transition (background-color 0ms ease-in-out);
 }
+
+.clearing-blackout {
+z-index: 9999;
+}
+
+.clearing-container {
+  margin-top: 90px;
+  @media #{$small} {
+    margin-top: 45px;
+  }
+}

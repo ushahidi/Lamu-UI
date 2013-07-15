@@ -1,10 +1,17 @@
+---
+layout: default
+---
+
+{% include topbar.html %}
+
 {% include post-overlay.html %}
 
 <div class="map-wrapper">
   <section id="main" role="main">
     <div id="map" class="map"></div>
-    {% include search.html %}
-    {% include list-view.html %}
+    {% include post-details-view.html %}
   </section>
   {% include admin-panel.html %}
 </div>
+
+

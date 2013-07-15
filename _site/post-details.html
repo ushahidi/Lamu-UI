@@ -1,0 +1,385 @@
+<!DOCTYPE html>
+<!--[if IE 8]>         <html class="no-js lt-ie9" lang="en" > <![endif]-->
+<!--[if gt IE 8]><!--> <html class="no-js" lang="en" > <!--<![endif]-->
+
+    <head>
+        <meta charset="utf-8">
+        <meta http-equiv="X-UA-Compatible" content="IE=edge,chrome=1">
+        <title>Ushahidi 3.0 - Lamu</title>
+        <meta name="description" content="Ushahidi Platform 3.0">
+        <!-- Mobile Viewport meta tags -->
+        <meta name="viewport" content="width=device-width, initial-scale=0.0, user-scalable=no, minimum-scale=1.0, maximum-scale=1.0" />
+        <meta name="apple-mobile-web-app-capable" content="yes" />
+        <!-- Leaflet CSS CDN -->
+        <link rel="stylesheet" href="http://cdn.leafletjs.com/leaflet-0.5.1/leaflet.css" />
+        <!--[if lte IE 8]>
+            <link rel="stylesheet" href="http://cdn.leafletjs.com/leaflet-0.5.1/leaflet.ie.css" />
+        <![endif]-->
+
+        <!-- cachebusted global.css -->
+        <link rel="stylesheet" href="/css/global.css?1373920038">
+
+        <!-- Font Awesome CSS CDN -->
+        <link href="//netdna.bootstrapcdn.com/font-awesome/3.2.1/css/font-awesome.css" rel="stylesheet">
+
+        <!-- Require.js | the data-main attribute is our entry point, all requires are relative to this entry point -->
+        <script data-main="/js/main.js" src="/js/vendor/requirejs/require.js"></script>
+
+        <!-- Custom Modernizr Build - add, subtract and rebuild at end of project -->
+        <script src="/js/custom.modernizr.js"></script>
+
+        <!-- Place Typekit script here -->
+        <!-- This allow fonts to load asynchronously, but requires custom CSS. The custom css can be found in scss/base/_general.scss-->
+        <script type="text/javascript">
+          (function() {
+            var config = {
+              kitId: 'nmg4nns',
+              scriptTimeout: 3000
+            };
+            var h=document.getElementsByTagName("html")[0];h.className+=" wf-loading";var t=setTimeout(function(){h.className=h.className.replace(/(\s|^)wf-loading(\s|$)/g," ");h.className+=" wf-inactive"},config.scriptTimeout);var tk=document.createElement("script"),d=false;tk.src='//use.typekit.net/'+config.kitId+'.js';tk.type="text/javascript";tk.async="true";tk.onload=tk.onreadystatechange=function(){var a=this.readyState;if(d||a&&a!="complete"&&a!="loaded")return;d=true;clearTimeout(t);try{Typekit.load(config)}catch(b){}};var s=document.getElementsByTagName("script")[0];s.parentNode.insertBefore(tk,s)
+          })();
+        </script>
+        <!-- end Typekit script -->
+
+    </head>
+
+    <body class="off-canvas">
+        <!--[if lt IE 7]>
+            <p class="chromeframe">You are using an <strong>outdated</strong> browser. Please <a href="http://browsehappy.com/">upgrade your browser</a> or <a href="http://www.google.com/chromeframe/?redirect=true">activate Google Chrome Frame</a> to improve your experience.</p>
+        <![endif]-->
+
+    <div class="fixed">
+  <header role="banner">
+    <nav role="navigation" class="top-bar" data-options="is_hover:false">
+      <ul class="title-area">
+        <!-- retina ready logo is a css background image -->
+        <li class="name hide-for-small">
+          <div class="logo-image"></div>
+          <h1><a href="/">Deployment Name</a></h1>
+        </li>
+      </ul>
+
+      <!-- TODO: figure out mobile nav and subnav -->
+
+      <section class="top-bar-section">
+        <!-- Left Nav Section -->
+        <ul class="left">
+          <li class="divider"></li>
+          <li class="hide-for-medium-down active"><a class="views" href="#"><i class="icon-eye-open icon-large"></i> VIEWS</a></li>
+          <!-- <ul class="dropdown">
+  <li><a href="#">test</a></li>
+  <li><a href="#">test</a></li>
+  <li><a href="#">test</a></li>
+</ul>
+ -->
+          <li class="show-for-medium-down active"><a class="views" href="#"><i class="icon-eye-open"></i><!-- icon only --></a></li>
+          <!-- <ul class="dropdown">
+  <li><a href="#">test</a></li>
+  <li><a href="#">test</a></li>
+  <li><a href="#">test</a></li>
+</ul>
+ -->
+          <li class="divider"></li>
+          <li class="hide-for-medium-down"><a class="sets" href="#"><i class="icon-th-large icon-large"></i> SETS</a></li>
+          <!-- <ul class="dropdown">
+  <li><a href="#">test</a></li>
+  <li><a href="#">test</a></li>
+  <li><a href="#">test</a></li>
+</ul>
+ -->
+          <li class="show-for-medium-down"><a class="sets" href="#"><i class="icon-th-large"></i><!-- icon only --></a></li>
+          <!-- <ul class="dropdown">
+  <li><a href="#">test</a></li>
+  <li><a href="#">test</a></li>
+  <li><a href="#">test</a></li>
+</ul>
+ -->
+          <li class="divider"></li>
+
+        </ul>
+
+        <!-- Right Nav Section -->
+        <ul class="right">
+          <li class="create-post hide-for-medium-down"><a id="create-post-button" class="create-post-button" href="#" data-reveal-id="createPost"><i class="icon-plus icon-large"></i> CREATE</a></li>
+          <li class="create-post show-for-medium-down"><a id="create-post-button-small" class="create-post-button" href="#" data-reveal-id="createPost"><i class="icon-plus"></i><!-- icon only --></a></li>
+          <li class="hide-for-medium-down"><a id="admin-panel-button" class="admin-panel-button inverse" href="#admin-panel"><i class="icon-dashboard icon-large"></i> WORKSPACE</a></li>
+          <li class="show-for-medium-down"><a id="admin-panel-button-small" class="admin-panel-button inverse" href="#admin-panel"><i class="icon-dashboard"></i><!-- icon only --></a></li>
+        </ul>
+      </section>
+    </nav>
+  </header>
+</div>
+<!-- on mobile devices deployment name is moved below topbar nav for better layout-->
+<li class="name-small show-for-small fixed">
+  <div class="logo-image"></div>
+  <h4><a href="/">Deployment Name</a></h4>
+</li>
+
+
+<div id="leaflet-marker-pane" class="post-overlay" data-dropdown-content>
+
+  <div class="post-header">
+    <div class="row">
+      <div class="post-category-marker">
+        <img src="/images/category-icon.png" alt="">
+      </div>
+
+      <div class="post-title">
+        <h6><a href="/post-details.html">Man hits tree after skidding off road.</a></h6>
+        <div class="row">
+          <div class="post-title-tag">
+            <h6 class="subheader">collision</h6>
+          </div>
+        </div>
+      </div>
+
+      <div class="post-actions">
+        <button class="tiny secondary button"> <i class="icon-edit"></i>edit</button>
+        <button class="tiny secondary button"> <i class="icon-plus-sign"></i>set</button>
+      </div>
+    </div>
+  </div>
+
+  <div class="post-body">
+    <div class="row">
+
+      <div class="post-image">
+        <img src="/images/car-tree.jpg" alt="">
+      </div>
+
+      <div class="post-details">
+
+        <div class="post-author">
+          <h6><small><span class= "underline"><a href="">DUDE BRO</a> </span>ADDED A POST</small></h6>
+        </div>
+
+        <div class="post-excerpt">
+          <p>Cras justo odio, dapibus ac facilisis in, egestas eget quam. Donec ullamcorper nulla non metus auctor fringilla.</p>
+          <hr>
+        </div>
+
+
+      </div> <!-- end .post-details -->
+
+      <div class="row">
+
+        <div class="post-location-meta">
+          <h5><small> <i class="icon-map-marker"></i><span class="post-location underline" ><a href=""> London, UK</a></span></small></h5>
+        </div>
+
+        <div class="post-time-meta">
+          <h5><small> <i class="icon-time"></i><strong class="post-time" > 1 hour ago</strong></small></h5>
+        </div>
+
+        <div class="post-details-button">
+          <button class="tiny success button"><i class="icon-lock"></i>  details</button>
+        </div>
+
+      </div>
+
+    </div> <!-- end .row -->
+  </div> <!-- end .post-body -->
+
+</div>
+
+
+<div class="map-wrapper">
+  <section id="main" role="main">
+    <div id="map" class="map"></div>
+    <div class="post-details-wrapper">
+  <div class="row">
+    <section class="post">
+        <div class="post-header">
+          <div class="post-category-marker">
+            <img src="/images/category-icon.png" alt="">
+          </div>
+
+          <div class="post-title">
+            <h6>Man hits tree after skidding off road.</h6>
+            <div class="row">
+              <div class="post-title-tag">
+                <h6 class="subheader">collision</h6>
+              </div>
+            </div>
+          </div>
+
+          <div class="post-actions">
+            <button class="small secondary button"> <i class="icon-edit"></i>edit</button>
+            <button class="small secondary button"> <i class="icon-plus-sign"></i>set</button>
+          </div>
+        </div>
+
+        <div class="post-body">
+
+            <div class="post-image">
+              <ul class="clearing-thumbs" data-clearing>
+                <li><img src="/images/car-tree.jpg" alt=""></li>
+              </ul>
+
+              <div class="row">
+
+                <div class="post-location-meta">
+                  <h5><small> <i class="icon-map-marker"></i><span class="post-location underline" ><a href=""> London, UK</a></span></small></h5>
+                </div>
+
+                <div class="post-time-meta">
+                  <h5><small> <i class="icon-time"></i><strong class="post-time" > 1 hour ago</strong></small></h5>
+                </div>
+
+                <div class="post-privacy-status">
+                  <h5><small> <i class="icon-lock"></i><strong class="post-time" > Private</strong></small></h5>
+                </div>
+
+              </div>
+
+            </div>
+
+            <div class="post-details">
+
+              <div class="post-author">
+                <h6><small><span class= "underline"><a href="">DUDE BRO</a> </span>ADDED A POST</small></h6>
+              </div>
+
+              <div class="post-excerpt">
+                <p>Nullam quis risus eget urna mollis ornare vel eu leo. Aenean eu leo quam. Pellentesque ornare sem lacinia quam venenatis vestibulum. Donec ullamcorper nulla non metus auctor fringilla. Vivamus sagittis lacus vel augue laoreet rutrum faucibus dolor auctor.</p>
+                <p>Lorem ipsum dolor sit amet, consectetur adipiscing elit. Nullam quis risus eget urna mollis ornare vel eu leo. Aenean lacinia bibendum nulla sed consectetur. Aenean lacinia bibendum nulla sed consectetur. Cum sociis natoque penatibus et magnis dis parturient montes, nascetur ridiculus mus. Cras mattis consectetur purus sit amet fermentum.</p>
+                <p>Nullam quis risus eget urna mollis ornare vel eu leo. Donec sed odio dui. Donec id elit non mi porta gravida at eget metus. Integer posuere erat a ante venenatis dapibus posuere velit aliquet. Cras justo odio, dapibus ac facilisis in, egestas eget quam. Cras mattis consectetur purus sit amet fermentum. Duis mollis, est non commodo luctus, nisi erat porttitor ligula, eget lacinia odio sem nec elit.</p>
+              </div>
+
+            </div> <!-- end .post-details -->
+            <hr>
+            <div class="post-thumbnails-wrapper">
+              <ul class="post-thumbnails clearing-thumbs" data-clearing>
+                <li><img src="/images/car-tree.jpg" alt=""></li>
+                <li><img src="/images/car-tree.jpg" alt=""></li>
+                <li><img src="/images/car-tree.jpg" alt=""></li>
+                <li><img src="/images/car-tree.jpg" alt=""></li>
+              </ul>
+            </div>
+
+        </div> <!-- end .post-body -->
+    </section>
+
+    <aside class="related-posts">
+      <div class="related-posts-header">
+        <h6>Related Posts</h6>
+      </div>
+    </aside>
+  </div>
+</div>
+
+  </section>
+  <section id="admin-panel" role="complementary">
+  <div class="admin-profile">
+    <div id="admin-avatar" class="admin-avatar"></div>
+    <div class="admin-edit">
+      <!-- NOTE: need dynamic usernames/roles here -->
+      <h5 id="username" class="username">Dude Bro</h5>
+      <p id="admin-role" class="admin-role" >Super Admin</p>
+
+      <ul class="inline-list">
+        <li><small><a href="#" id="edit-profile" >Edit Profile</a></small></li>
+        <li><small><a href="#" id="logout" >Logout</a></small></li>
+      </ul>
+    </div>
+  </div>
+
+  <div class="admin-stats-wrapper">
+    <ul class="admin-stats">
+      <li id="posts-stats" class="panel post-stats">
+        <h4 id="posts-stats-value">1500</h4>
+        <p>posts</p>
+      </li>
+      <li id="users-stats" class="panel user-stats">
+          <h4 id="users-stats-value">138</h4>
+          <p>users</p>
+      </li>
+      <li id="views-stats" class="panel views-stats">
+          <h4 id="views-stats-value">52416</h4>
+          <p>views</p>
+      </li>
+    </ul>
+  </div>
+
+  <div class="admin-menu" data-section="accordion">
+      <section class="active">
+        <p id="admin-menu-posts" class="title" data-section-title><a href="#"><i class="icon-inbox"></i> Posts</a></p>
+
+        <div id="admin-menu-all-posts" class="content" data-section-content>
+          <a href="#"><p><i class="icon-calendar"></i> All Posts <span class="round secondary label">1500</span></p></a>
+        </div>
+
+
+        <div id="admin-menu-awaiting-review" class="content" data-section-content>
+          <a href="#"><p><i class="icon-star-empty"></i> Awaiting Review <span class="round secondary label">27</span></p></a>
+        </div>
+
+
+        <div id="admin-menu-published" class="content" data-section-content>
+          <a href="#"><p><i class="icon-file-alt"></i> Published <span class="round success label">413</span></p></a>
+        </div>
+
+
+        <div id="admin-menu-unpublished" class="content" data-section-content>
+          <a href="#"><p><i class="icon-file"></i> Unpublished <span class="round alert label">1,060</span></p></a>
+        </div>
+      </section>
+
+      <section class="disable">
+        <p id="admin-menu-tasks" class="title" data-section-title><a href="#"><i class="icon-tasks"></i> Tasks</a></p>
+
+        <div id="admin-menu-my-tasks"class="content" data-section-content>
+          <a href="#"><p><i class="icon-pencil"></i> My Tasks <span class="round secondary label">75</span></p></a>
+        </div>
+
+        <div id="admin-menu-todo"class="content" data-section-content>
+          <a href="#"><p><i class="icon-check-empty"></i> To Do <span class="round label">39</span></p></a>
+        </div>
+
+        <div id="admin-menu-completed"class="content" data-section-content>
+          <a href="#"><p><i class="icon-check"></i> Completed <span class="round success label">36</span></p></a>
+        </div>
+      </section>
+
+      <section class="disable">
+        <p id="admin-menu-tools" class="title" data-section-title><a href="#"><i class="icon-cog"></i> Tools</a></p>
+
+        <div id="" class="content" data-section-content>
+          <p>Tools stuff goes here :)</p>
+        </div>
+      </section>
+  </div>
+
+</section>
+
+
+
+</div>
+
+
+
+
+        <!-- Place Google Analytics script here -->
+        <script type="text/javascript">
+          var GoSquared = {};
+          GoSquared.acct = "GSN-582644-T";
+          (function(w){
+            function gs(){
+              w._gstc_lt = +new Date;
+              var d = document, g = d.createElement("script");
+              g.type = "text/javascript";
+              g.src = "//d1l6p2sc9645hc.cloudfront.net/tracker.js";
+              var s = d.getElementsByTagName("script")[0];
+              s.parentNode.insertBefore(g, s);
+            }
+            w.addEventListener ?
+              w.addEventListener("load", gs, false) :
+              w.attachEvent("onload", gs);
+          })(window);
+        </script>
+        <!-- end Google Analytics script -->
+
+    </body>
+</html>
+
+
