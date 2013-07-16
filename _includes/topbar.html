@@ -10,20 +10,17 @@
       </ul>
 
       <!-- TODO: figure out mobile nav and subnav -->
+      <!-- TODO: work out active styles -->
 
       <section class="top-bar-section">
         <!-- Left Nav Section -->
         <ul class="left">
           <li class="divider"></li>
-          <li class="hide-for-medium-down active"><a class="views" href="#"><i class="icon-eye-open icon-large"></i> VIEWS</a></li>
-          <!-- {% include views-dropdown-nav.html %} -->
-          <li class="show-for-medium-down active"><a class="views" href="#"><i class="icon-eye-open"></i><!-- icon only --></a></li>
-          <!-- {% include views-dropdown-nav.html %} -->
+          <li id="views-subnav" class="hide-for-medium-down active"><a class="views" href="#"><i class="icon-eye-open icon-large"></i> VIEWS</a></li>
+          <li id="views-subnav-mobile" class="show-for-medium-down active"><a class="views" href="#"><i class="icon-eye-open"></i><!-- icon only --></a></li>
           <li class="divider"></li>
-          <li class="hide-for-medium-down"><a class="sets" href="#"><i class="icon-th-large icon-large"></i> SETS</a></li>
-          <!-- {% include sets-dropdown-nav.html %} -->
-          <li class="show-for-medium-down"><a class="sets" href="#"><i class="icon-th-large"></i><!-- icon only --></a></li>
-          <!-- {% include sets-dropdown-nav.html %} -->
+          <li id="sets-subnav" class="hide-for-medium-down"><a class="sets" href="#"><i class="icon-th-large icon-large"></i> SETS</a></li>
+          <li id="sets-subnav-mobile" class="show-for-medium-down"><a class="sets" href="#"><i class="icon-th-large"></i><!-- icon only --></a></li>
           <li class="divider"></li>
 
         </ul>
@@ -44,3 +41,7 @@
   <div class="logo-image"></div>
   <h4><a href="/">Deployment Name</a></h4>
 </li>
+
+<!-- subnavs need to be outside of header and above map-wrapper-->
+{% include views-dropdown-nav.html %}
+{% include sets-dropdown-nav.html %}

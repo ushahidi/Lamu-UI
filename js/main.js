@@ -1,6 +1,7 @@
 require.config({
   paths: {
     "jquery": "vendor/jquery/jquery.min",
+    "flexnav": "vendor/flexnav/js/jquery.flexnav.min",
     // "jquery": "//ajax.googleapis.com/ajax/libs/jquery/2.0.0/jquery.min",
     "leaflet": "http://cdn.leafletjs.com/leaflet-0.5.1/leaflet",
     "stamen": "http://maps.stamen.com/js/tile.stamen",
@@ -45,6 +46,7 @@ require([
   'modules/leafletMap',
   'modules/collapseMap',
   'modules/adminMenu',
+  'modules/subNav',
   'modules/listViewBulkActions',
 
   // FOUNDATION requires

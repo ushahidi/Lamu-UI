@@ -1,9 +1,9 @@
 //magnific lightbox plugin
 define(['jquery', 'magnific'], function($, magnific) {
   $(document).ready(function() {
-    $('.lightbox').magnificPopup({
-      type: 'image'
-    });
+    // $('.lightbox').magnificPopup({
+    //   type: 'image'
+    // });
 
     $('.lightbox-gallery').magnificPopup({
       gallery: {

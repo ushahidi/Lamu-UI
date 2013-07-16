@@ -1,12 +1,5 @@
 /*custom-dropdowns*/
 
-
-form.custom .custom.dropdown {
-  @media #{$small} {
-    margin-bottom: 0;
-  }
-}
-
 .search-bar form.custom .custom.dropdown {
   @media #{$medium} {
     margin-bottom: 0;
