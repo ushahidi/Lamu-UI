@@ -3,18 +3,12 @@
   margin-top: 20px;
 }
 
-.post {
-@extend .post;
-@media #{$medium} {
-  @include grid-column(8);
-}
-}
-
-.related-posts {
-@include grid-column(12);
-@media #{$medium} {
-  @include grid-column(4);
-}
+.post-details {
+  @extend .post;
+  margin-bottom: 20px;
+  @media #{$medium} {
+    @include grid-column(8);
+  }
 }
 
 .post-location-meta {

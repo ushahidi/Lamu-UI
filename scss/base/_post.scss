@@ -1,6 +1,5 @@
 .post {
-  @include grid-column(12);
-  padding: 0;
+  @include grid-column(12, $collapse: true);
   h5, h6 {
     line-height: 1em;
   }
@@ -92,14 +91,10 @@
 }
 
 .post-excerpt {
-  @include grid-column(12);
-  padding: 0;
+  @include grid-column(12, $collapse: true);
   @media #{$small} {
     padding-right: 0;
   }
-  p {
-  line-height: 1.1;
- }
 }
 
 .post-location-meta {
