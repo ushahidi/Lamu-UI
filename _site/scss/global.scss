@@ -79,5 +79,7 @@ NOTE: comment out what I don't use
 @import "base/forms";
 @import "base/off-canvas";
 
+@import "modules/footer";
+
 /*must be called at bottom*/
 @import "modules/modal";

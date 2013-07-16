@@ -32,7 +32,7 @@
 .active [role="main"] {
   margin-left: -310px;
   @media #{$medium-up} {
-    margin-left: 0px;
+    margin-left: -300px;
   }
 }
 .active [role="complementary"] {

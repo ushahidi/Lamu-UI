@@ -1,5 +1,6 @@
 .related-posts {
   @extend .post;
+  margin-bottom: 20px;
   @media #{$small} {
     @include grid-column(4);
   }
