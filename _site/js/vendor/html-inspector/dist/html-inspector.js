@@ -1,10 +1,10 @@
 /*!
- * HTML Inspector - v0.3.0
+ * HTML Inspector - v0.4.1
  *
  * Copyright (c) 2013 Philip Walton <http://philipwalton.com>
  * Released under the MIT license
  *
- * Date: 2013-06-23
+ * Date: 2013-07-15
  */
 
 ;(function(root, document) {
@@ -97,7 +97,8 @@ function foundIn(needle, haystack) {
 
 /**
  * Tests whether a fully-qualified URL is cross-origin
- * Same origin URLs must have the same protocol, host, and port
+ * Same origin URLs must have the same protocol and host
+ * (note: host include hostname and port)
  */
 function isCrossOrigin(url) {
   var reURL = /^(?:(https?:)\/\/)?((?:[0-9a-z\.\-]+)(?::(?:\d+))?)/
@@ -356,6 +357,10 @@ var HTMLInspector = (function() {
       }
     },
 
+    setConfig: function(config) {
+      inspector.config = processConfig(config)
+    },
+
     rules: new Rules(),
 
     modules: new Modules(),
@@ -391,13 +396,6 @@ var HTMLInspector = (function() {
       matchesSelector: matchesSelector,
       matches: matches,
       parents: parents
-    },
-
-    // expose for testing only
-    _constructors: {
-      Listener: Listener,
-      Reporter: Reporter,
-      Callbacks: Callbacks
     }
 
   }
@@ -405,6 +403,7 @@ var HTMLInspector = (function() {
   return inspector
 
 }())
+
 
 HTMLInspector.modules.add("css", (function() {
 
@@ -416,10 +415,13 @@ HTMLInspector.modules.add("css", (function() {
   function getClassesFromRuleList(rulelist) {
     return rulelist.reduce(function(classes, rule) {
       var matches
-      if (rule.cssRules) {
+      if (rule.styleSheet) { // from @import rules
+        return classes.concat(getClassesFromStyleSheets([rule.styleSheet]))
+      }
+      else if (rule.cssRules) { // from @media rules (or other conditionals)
         return classes.concat(getClassesFromRuleList(toArray(rule.cssRules)))
       }
-      if (rule.selectorText) {
+      else if (rule.selectorText) {
         matches = rule.selectorText.match(reClassSelector) || []
         return classes.concat(matches.map(function(cls) { return cls.slice(1) } ))
       }
@@ -1696,10 +1698,10 @@ HTMLInspector.rules.add("validate-element-location", function(listener, reporter
     , warned = [] // store already-warned elements to prevent double warning
 
 
-  // =============================================================================
+  // ===========================================================================
   // Elements with clear-cut location rules are tested here.
   // More complicated cases are tested below
-  // =============================================================================
+  // ===========================================================================
 
   listener.on("element", function(name) {
     // skip elements without a DOM element for a parent
@@ -1718,9 +1720,10 @@ HTMLInspector.rules.add("validate-element-location", function(listener, reporter
     }
   })
 
-  // ======================================================================== //
-  // Make sure <style> elements inside <body> have the 'scoped' attribute     //
-  // ======================================================================== //
+  // ===========================================================================
+  // Make sure <style> elements inside <body> have the 'scoped' attribute.
+  // They must also be the first element child of their parent.
+  // ===========================================================================
 
   listener.on("element", function(name) {
     // don't double warn if the style elements already has a location warning
@@ -1733,12 +1736,20 @@ HTMLInspector.rules.add("validate-element-location", function(listener, reporter
         this
       )
     }
+    else if (matches(this, "body style[scoped]:not(:first-child)")) {
+      reporter.warn(
+        "validate-element-location",
+        "Scoped <style> elements must be the first child of their parent element.",
+        this
+      )
+    }
+
   })
 
-  // ======================================================================== //
-  // Make sure <meta> and <link> elements inside <body> have the 'itemprop'   //
-  // attribute                                                                //
-  // ======================================================================== //
+  // ===========================================================================
+  // Make sure <meta> and <link> elements inside <body> have the 'itemprop'
+  // attribute
+  // ===========================================================================
 
   listener.on("element", function(name) {
     // don't double warn if the style elements already has a location warning
@@ -1755,6 +1766,7 @@ HTMLInspector.rules.add("validate-element-location", function(listener, reporter
   })
 
 })
+
 
 HTMLInspector.rules.add("validate-elements", function(listener, reporter) {
 

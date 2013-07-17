@@ -1,79 +1,84 @@
-/*global module:false*/
+// Grunt file
+
+// 'grunt' runs default build tasks
+    // concatenates and minifies js/main.js with Uglify via Requirejs r.js file
+// 'grunt jekyll' runs 'jekyll serve --watch --port 4000 --baseurl  ""' and regenerates _site upon saved changes
+// 'grunt watch' concatenates and minifies CSS via compass
+
+/*
+TODO: need to add html minify for deployment - https://github.com/gruntjs/grunt-contrib-htmlmin
+*/
+
 module.exports = function(grunt) {
 
-  // Project configuration.
+// Load the plugin(s)
+grunt.loadNpmTasks('grunt-contrib-requirejs');
+grunt.loadNpmTasks('grunt-jekyll');
+grunt.loadNpmTasks('grunt-contrib-compass');
+grunt.loadNpmTasks('grunt-contrib-watch');
+grunt.loadNpmTasks('grunt-contrib-imagemin');
+
+// Initialize Grunt
   grunt.initConfig({
-    // Metadata.
     pkg: grunt.file.readJSON('package.json'),
-    banner: '/*! <%= pkg.title || pkg.name %> - v<%= pkg.version %> - ' +
-      '<%= grunt.template.today("yyyy-mm-dd") %>\n' +
-      '<%= pkg.homepage ? "* " + pkg.homepage + "\\n" : "" %>' +
-      '* Copyright (c) <%= grunt.template.today("yyyy") %> <%= pkg.author.name %>;' +
-      ' Licensed <%= _.pluck(pkg.licenses, "type").join(", ") %> */\n',
-    // Task configuration.
-    concat: {
-      options: {
-        banner: '<%= banner %>',
-        stripBanners: true
-      },
-      dist: {
-        src: ['lib/<%= pkg.name %>.js'],
-        dest: 'dist/<%= pkg.name %>.js'
-      }
-    },
-    uglify: {
-      options: {
-        banner: '<%= banner %>'
-      },
-      dist: {
-        src: '<%= concat.dist.dest %>',
-        dest: 'dist/<%= pkg.name %>.min.js'
-      }
-    },
-    jshint: {
-      options: {
-        curly: true,
-        eqeqeq: true,
-        immed: true,
-        latedef: true,
-        newcap: true,
-        noarg: true,
-        sub: true,
-        undef: true,
-        unused: true,
-        boss: true,
-        eqnull: true,
-        browser: true,
-        globals: {
-          jQuery: true
+
+    requirejs: {
+      compile: {
+        options: {
+          mainConfigFile: 'js/main.js',
+          baseUrl: 'js',
+          name: 'main',
+          out: 'js/main.min.js'
+          /*
+          TODO: call this file in production
+          */
         }
-      },
-      gruntfile: {
-        src: 'Gruntfile.js'
-      },
-      lib_test: {
-        src: ['lib/**/*.js', 'test/**/*.js']
       }
     },
-    watch: {
-      gruntfile: {
-        files: '<%= jshint.gruntfile.src %>',
-        tasks: ['jshint:gruntfile']
+
+    jekyll: {
+      server: {
+        server : true,
+        watch: true,
+        baseurl: ' "" ',
+        server_port : 4000
       },
-      lib_test: {
-        files: '<%= jshint.lib_test.src %>',
-        tasks: ['jshint:lib_test', 'qunit']
+      config: '_config.yml' // Jekyll config file is located in project root
+    },
+
+    compass: {
+      dist: {
+        options: {
+          config: 'config.rb' // compass config file is located in project root
+        }
+      }
+    },
+
+    imagemin: {
+        all: {
+            options: {
+                optimizationLevel: 2
+            },
+            files: [{
+                expand: true,
+                cwd: 'temp/',
+                src: ['images/*.{png,jpg,jpeg}'],
+                dest: 'images/test'
+            }]
+        }
+    },
+
+    watch: {
+      sass: {
+        files: ['scss/*.scss'],
+        tasks: ['compass']
       }
     }
+
   });
 
-  // These plugins provide necessary tasks.
-  grunt.loadNpmTasks('grunt-contrib-concat');
-  grunt.loadNpmTasks('grunt-contrib-uglify');
-  grunt.loadNpmTasks('grunt-contrib-jshint');
-  grunt.loadNpmTasks('grunt-contrib-watch');
 
-  // Default task.
-  grunt.registerTask('default', ['jshint', 'concat', 'uglify']);
+  // Default task(s).
+  grunt.registerTask('default', ['requirejs', 'imagemin']);
 
 };

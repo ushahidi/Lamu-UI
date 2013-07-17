@@ -1,3 +1,12 @@
+== 0.4.1 (July 10, 2013)
+
+* Update bower.json to the correct version.
+
+== 0.4.0 (July 10, 2013)
+
+* Add a basic command line interface.
+* Fix a bug where @import statements weren't being accounted for when travsersing the stylesheets.
+
 == 0.3.0 (June 23, 2013)
 
 * Remove the dependency on jQuery

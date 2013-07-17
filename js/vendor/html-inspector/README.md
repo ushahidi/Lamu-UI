@@ -8,8 +8,10 @@
 4. [Writing Your Own Rules](#writing-your-own-rules)
 5. [Overriding Rules Configurations](#overriding-rule-configurations)
 6. [Custom Builds](#custom-builds)
-7. [Running the Tests](#running-the-tests)
-8. [Contributing](#contributing)
+7. [Browser Support](#browser-support)
+8. [Running the Tests](#running-the-tests)
+9. [Contributing](#contributing)
+10. [FAQs](#faqs)
 
 HTML Inspector is a highly-customizable, code quality tool to help you (and your team) write better markup. It aims to find a balance between the uncompromisingly strict W3C validator and having absolutely no rules at all (the unfortunate reality for most of us).
 
@@ -19,15 +21,21 @@ For a more formal introduction, please refer to [this blog post](http://philipwa
 
 ## Getting Started
 
-The easiest way to get started is to simply download the source and add it to your page. [Bower](https://github.com/bower/bower) users can install HTML Inspector with the following command:
+The easiest way to try out HTML Inspector is to link to the source file hosted on [CDNJS](http://cdnjs.com/):
+
+```html
+<script src="http://cdnjs.cloudflare.com/ajax/libs/html-inspector/0.4.0/html-inspector.js"></script>
+```
+
+Alternatively, [Bower](https://github.com/bower/bower) users can install HTML Inspector with the following command:
 
 ```sh
 bower install html-inspector
 ```
 
-Alternatively you can clone the repo and add the file at `dist/html-inspector.js` to your HTML.
+If you clone the Github repo, just use the file at `dist/html-inspector.js`.
 
-Once HTML Inspector is added, just run `HTMLInspector.inspect()` to see the results. Calling `inspect` with no options will load all rules and run them with their default configuration options.
+Once HTML Inspector is added, you can run `HTMLInspector.inspect()` to see the results. Calling `inspect` with no options will load all rules and run them with their default configuration options.
 
 ```html
 <script src="path/to/html-inspector.js"></script>
@@ -340,6 +348,19 @@ npm install
 bower install
 ```
 
+## Browser Support
+
+HTML Inspector has been tested and known to work in the latest versions of all modern browsers including Chrome, Firefox, Safari, Opera, and Internet Explorer. It will not work in older browsers that do not support ES5 methods, the CSS Object Model, or `console.warn()`. Since HTML Inspector is primarily a development tool, it is not intended to work in browsers that aren't typically used for development and don't support modern Web standards.
+
+If you need to test your site in older versions of IE and don't want to see JavaScript errors, simply wrap all your HTML Inspector code inside a conditional comment, so it is ignored by IE9 and below. Here is an example:
+
+```html
+<!--[if gt IE 9]><!-->
+  <script src="path/to/html-inspector.js"></script>
+  <script>HTMLInspector.inspect()</script>
+<!--<![endif]-->
+```
+
 ## Running the Tests
 
 If Grunt and all the dependencies are installed, you can run the Jasmine tests with the following command.
@@ -357,3 +378,7 @@ I'm always open to feedback and suggestions for how to make HTML Inspector bette
 If you're submitting a bug report, please search the issues to make sure there isn't one already filed.
 
 If you're submitting a pull request please read [CONTRIBUTING.md](https://github.com/philipwalton/html-inspector/blob/master/CONTRIBUTING.md) before submitting.
+
+## FAQs
+
+The FAQs section has grown rather large, so it has been moved to its own page. You can find the [full FAQs here](https://github.com/philipwalton/html-inspector/blob/master/FAQs.md).

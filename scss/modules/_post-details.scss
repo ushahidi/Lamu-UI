@@ -39,6 +39,10 @@
   }
 }
 
+.click-to-zoom {
+  margin-bottom: 10px;
+}
+
 .post-thumbnails {
   @include block-grid($per-row: 2);
   @media #{$small} {

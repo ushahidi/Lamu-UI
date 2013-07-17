@@ -127,10 +127,10 @@ HTMLInspector.rules.add("validate-element-location", function(listener, reporter
     , warned = [] // store already-warned elements to prevent double warning
 
 
-  // =============================================================================
+  // ===========================================================================
   // Elements with clear-cut location rules are tested here.
   // More complicated cases are tested below
-  // =============================================================================
+  // ===========================================================================
 
   listener.on("element", function(name) {
     // skip elements without a DOM element for a parent
@@ -149,9 +149,10 @@ HTMLInspector.rules.add("validate-element-location", function(listener, reporter
     }
   })
 
-  // ======================================================================== //
-  // Make sure <style> elements inside <body> have the 'scoped' attribute     //
-  // ======================================================================== //
+  // ===========================================================================
+  // Make sure <style> elements inside <body> have the 'scoped' attribute.
+  // They must also be the first element child of their parent.
+  // ===========================================================================
 
   listener.on("element", function(name) {
     // don't double warn if the style elements already has a location warning
@@ -164,12 +165,20 @@ HTMLInspector.rules.add("validate-element-location", function(listener, reporter
         this
       )
     }
+    else if (matches(this, "body style[scoped]:not(:first-child)")) {
+      reporter.warn(
+        "validate-element-location",
+        "Scoped <style> elements must be the first child of their parent element.",
+        this
+      )
+    }
+
   })
 
-  // ======================================================================== //
-  // Make sure <meta> and <link> elements inside <body> have the 'itemprop'   //
-  // attribute                                                                //
-  // ======================================================================== //
+  // ===========================================================================
+  // Make sure <meta> and <link> elements inside <body> have the 'itemprop'
+  // attribute
+  // ===========================================================================
 
   listener.on("element", function(name) {
     // don't double warn if the style elements already has a location warning
@@ -186,6 +195,7 @@ HTMLInspector.rules.add("validate-element-location", function(listener, reporter
   })
 
 })
+
 
 HTMLInspector.rules.add("validate-elements", function(listener, reporter) {
 

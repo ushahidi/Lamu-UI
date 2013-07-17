@@ -1,3 +1,7 @@
+<!-- subnavs need to be outside of header and above map-wrapper-->
+{% include views-dropdown-nav.html %}
+{% include sets-dropdown-nav.html %}
+
 <div class="fixed">
   <header role="banner">
     <nav role="navigation" class="top-bar" data-options="is_hover:false">
@@ -41,7 +45,3 @@
   <div class="logo-image"></div>
   <h4><a href="/">Deployment Name</a></h4>
 </li>
-
-<!-- subnavs need to be outside of header and above map-wrapper-->
-{% include views-dropdown-nav.html %}
-{% include sets-dropdown-nav.html %}

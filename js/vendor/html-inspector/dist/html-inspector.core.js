@@ -88,7 +88,8 @@ function foundIn(needle, haystack) {
 
 /**
  * Tests whether a fully-qualified URL is cross-origin
- * Same origin URLs must have the same protocol, host, and port
+ * Same origin URLs must have the same protocol and host
+ * (note: host include hostname and port)
  */
 function isCrossOrigin(url) {
   var reURL = /^(?:(https?:)\/\/)?((?:[0-9a-z\.\-]+)(?::(?:\d+))?)/
@@ -347,6 +348,10 @@ var HTMLInspector = (function() {
       }
     },
 
+    setConfig: function(config) {
+      inspector.config = processConfig(config)
+    },
+
     rules: new Rules(),
 
     modules: new Modules(),
@@ -382,13 +387,6 @@ var HTMLInspector = (function() {
       matchesSelector: matchesSelector,
       matches: matches,
       parents: parents
-    },
-
-    // expose for testing only
-    _constructors: {
-      Listener: Listener,
-      Reporter: Reporter,
-      Callbacks: Callbacks
     }
 
   }
@@ -396,6 +394,7 @@ var HTMLInspector = (function() {
   return inspector
 
 }())
+
 
 HTMLInspector.modules.add("css", (function() {
 
@@ -407,10 +406,13 @@ HTMLInspector.modules.add("css", (function() {
   function getClassesFromRuleList(rulelist) {
     return rulelist.reduce(function(classes, rule) {
       var matches
-      if (rule.cssRules) {
+      if (rule.styleSheet) { // from @import rules
+        return classes.concat(getClassesFromStyleSheets([rule.styleSheet]))
+      }
+      else if (rule.cssRules) { // from @media rules (or other conditionals)
         return classes.concat(getClassesFromRuleList(toArray(rule.cssRules)))
       }
-      if (rule.selectorText) {
+      else if (rule.selectorText) {
         matches = rule.selectorText.match(reClassSelector) || []
         return classes.concat(matches.map(function(cls) { return cls.slice(1) } ))
       }

@@ -1,3 +1,5 @@
+# Compass config file
+
 # Require any additional compass plugins here.
 # @import "susy";
 require "zurb-foundation";
@@ -11,7 +13,6 @@ javascripts_dir = "js"
 fonts_dir = "fonts"
 
 output_style = :compressed
-environment = :development
 
 relative_assets = true
 

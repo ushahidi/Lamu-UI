@@ -17,7 +17,7 @@
         <![endif]-->
 
         <!-- cachebusted global.css -->
-        <link rel="stylesheet" href="/css/global.css?1374008860">
+        <link rel="stylesheet" href="/css/global.css?1374093744">
 
         <!-- Font Awesome CSS CDN -->
         <link href="//netdna.bootstrapcdn.com/font-awesome/3.2.1/css/font-awesome.css" rel="stylesheet">
@@ -48,7 +48,27 @@
             <p class="chromeframe">You are using an <strong>outdated</strong> browser. Please <a href="http://browsehappy.com/">upgrade your browser</a> or <a href="http://www.google.com/chromeframe/?redirect=true">activate Google Chrome Frame</a> to improve your experience.</p>
         <![endif]-->
 
-    <div class="fixed">
+    <!-- subnavs need to be outside of header and above map-wrapper-->
+<nav role="sub-navigation" class="views-subnav">
+  <ul>
+    <li><a href="#">Maps</a></li>
+    <li><a href="#">Lists</a></li>
+    <li><a href="#">Visualizations</a></li>
+    <li><a href="#">Media</a></li>
+  </ul>
+</nav>
+
+<nav role="sub-navigation" class="sets-subnav">
+  <ul>
+    <li><a href="#">Set #1</a></li>
+    <li><a href="#">Set #2</a></li>
+    <li><a href="#">Set #3</a></li>
+    <li><a href="#">Set #4</a></li>
+  </ul>
+</nav>
+
+
+<div class="fixed">
   <header role="banner">
     <nav role="navigation" class="top-bar" data-options="is_hover:false">
       <ul class="title-area">
@@ -91,26 +111,6 @@
   <div class="logo-image"></div>
   <h4><a href="/">Deployment Name</a></h4>
 </li>
-
-<!-- subnavs need to be outside of header and above map-wrapper-->
-<nav role="sub-navigation" class="views-subnav">
-  <ul>
-    <li><a href="#">Maps</a></li>
-    <li><a href="#">Lists</a></li>
-    <li><a href="#">Visualizations</a></li>
-    <li><a href="#">Media</a></li>
-  </ul>
-</nav>
-
-<nav role="sub-navigation" class="sets-subnav">
-  <ul>
-    <li><a href="#">Set #1</a></li>
-    <li><a href="#">Set #2</a></li>
-    <li><a href="#">Set #3</a></li>
-    <li><a href="#">Set #4</a></li>
-  </ul>
-</nav>
-
 
 
     <div id="leaflet-marker-pane" class="post-overlay" data-dropdown-content>
