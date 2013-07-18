@@ -4,13 +4,6 @@ layout: default
 
 {% include post-overlay.html %}
 
-<div class="map-wrapper">
-  <section id="main" role="main">
-    <div id="map" class="map post-details-map"></div>
-    {% include post-details-view.html %}
-  </section>
-  {% include admin-panel.html %}
-</div>
+<div id="map" class="map post-details-map"></div>
+{% include post-details-view.html %}
 
-<!-- has to be right above the closing </body> tag -->
-{% include modal.html %}
