@@ -17,7 +17,7 @@
         <![endif]-->
 
         <!-- cachebusted global.css -->
-        <link rel="stylesheet" href="/css/global.css?1374175759">
+        <link rel="stylesheet" href="/css/global.css?1374176562">
 
         <!-- Font Awesome CSS CDN -->
         <link href="//netdna.bootstrapcdn.com/font-awesome/3.2.1/css/font-awesome.css" rel="stylesheet">
@@ -113,7 +113,9 @@
 </li>
 
 
-    <div id="leaflet-marker-pane" class="post-overlay" data-dropdown-content>
+    <div class="content-wrapper">
+      <section id="main" role="main">
+        <div id="leaflet-marker-pane" class="post-overlay" data-dropdown-content>
 
   <div class="post-header">
     <div class="row">
@@ -180,10 +182,8 @@
 </div>
 
 
-<div class="map-wrapper">
-  <section id="main" role="main">
-    <div id="map" class="map post-details-map"></div>
-    <div class="post-details-wrapper">
+<div id="map" class="map post-details-map"></div>
+<div class="post-details-wrapper">
   <div class="row">
 
   <section class="post-details">
@@ -331,8 +331,10 @@
   </div>
 </div>
 
-  </section>
-  <section id="admin-panel" role="complementary">
+
+
+      </section>
+      <section id="admin-panel" role="complementary">
   <div class="admin-profile">
     <div id="admin-avatar" class="admin-avatar"></div>
     <div class="admin-edit">
@@ -417,10 +419,37 @@
 
 
 
-</div>
+    </div>
 
-<!-- has to be right above the closing </body> tag -->
-<div id="createPost" class="reveal-modal">
+    <footer role="contentinfo">
+  <div class="row">
+    <p>© Copyright Ushahidi, Inc 2013</p>
+  </div>
+</footer>
+
+
+        <!-- Place Google Analytics script here -->
+        <script type="text/javascript">
+          var GoSquared = {};
+          GoSquared.acct = "GSN-582644-T";
+          (function(w){
+            function gs(){
+              w._gstc_lt = +new Date;
+              var d = document, g = d.createElement("script");
+              g.type = "text/javascript";
+              g.src = "//d1l6p2sc9645hc.cloudfront.net/tracker.js";
+              var s = d.getElementsByTagName("script")[0];
+              s.parentNode.insertBefore(g, s);
+            }
+            w.addEventListener ?
+              w.addEventListener("load", gs, false) :
+              w.attachEvent("onload", gs);
+          })(window);
+        </script>
+        <!-- end Google Analytics script -->
+
+    <!-- has to be right above the closing </body> tag -->
+    <div id="createPost" class="reveal-modal">
     <div class="create-post-header">
       <h4>Create a Post</h4>
       <a class="close-reveal-modal">&#215;</a>
@@ -482,35 +511,6 @@
 
   </div> <!-- end create-post-wrapper -->
 </div> <!-- end reveal-modal -->
-
-
-
-    <footer role="contentinfo">
-  <div class="row">
-    <p>© Copyright Ushahidi, Inc 2013</p>
-  </div>
-</footer>
-
-
-        <!-- Place Google Analytics script here -->
-        <script type="text/javascript">
-          var GoSquared = {};
-          GoSquared.acct = "GSN-582644-T";
-          (function(w){
-            function gs(){
-              w._gstc_lt = +new Date;
-              var d = document, g = d.createElement("script");
-              g.type = "text/javascript";
-              g.src = "//d1l6p2sc9645hc.cloudfront.net/tracker.js";
-              var s = d.getElementsByTagName("script")[0];
-              s.parentNode.insertBefore(g, s);
-            }
-            w.addEventListener ?
-              w.addEventListener("load", gs, false) :
-              w.attachEvent("onload", gs);
-          })(window);
-        </script>
-        <!-- end Google Analytics script -->
 
     </body>
 </html>
