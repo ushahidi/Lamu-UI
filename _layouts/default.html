@@ -50,7 +50,12 @@
 
     {% include topbar.html %}
 
-    {{content}}
+    <div class="content-wrapper">
+      <section id="main" role="main">
+        {{content}}
+      </section>
+      {% include admin-panel.html %}
+    </div>
 
     {% include footer.html %}
 
@@ -74,6 +79,8 @@
         </script>
         <!-- end Google Analytics script -->
 
+    <!-- has to be right above the closing </body> tag -->
+    {% include modal.html %}
     </body>
 </html>
 
