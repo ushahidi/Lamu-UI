@@ -20,3 +20,8 @@ z-index: 9999;
     margin-top: 45px;
   }
 }
+
+.body-wrapper {
+  @include grid-column(12);
+  margin-top: 20px;
+}

@@ -21,7 +21,7 @@ define(['jquery', 'leaflet'], function($, leaflet) {
       });
       map.addLayer(layer);
 
-      // add a custom marker in the given location, attach some popup content to it and open the popup
+      // add a custom marker in the given location
 
       L.marker([36.08000, -79.81944], {icon: mapIcon}).addTo(map);
 

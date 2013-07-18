@@ -7,11 +7,6 @@
         border-image: url(../images/search-bg.png) repeat;*/
 }
 
-.post-details-wrapper {
-  @include grid-column(12);
-  margin-top: 20px;
-}
-
 .post-details {
   @extend .post;
   margin-bottom: 20px;
