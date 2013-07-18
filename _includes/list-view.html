@@ -70,13 +70,13 @@
       </div> <!-- end .row -->
     </div> <!-- end .list-view-filter -->
 
-    {% include list-view-post.html %}
-    <hr>
-        <!-- NOTE: this provide a different list view post image, just for demo purposes, delete file in production -->
-    {% include list-view-post2.html %}
-    <hr>
-    {% include list-view-post3.html %}
-    <hr>
+    <ul class="list-view-posts-list">
+      {% include list-view-post.html %}
+      <!-- NOTE: this provide a different list view post image, just for demo purposes, delete file in production -->
+      {% include list-view-post2.html %}
+      {% include list-view-post3.html %}
+    </ul>
+
     <div class="pagination-centered">
       <ul class="pagination">
         <li class="arrow unavailable"><a href="">&laquo;</a></li>
