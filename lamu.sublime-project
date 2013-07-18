@@ -6,7 +6,7 @@
 		{
 			"path": "/Users/M8M/Sites/Lamu-UI",
       "file_exclude_patterns":["lamu.sublime-workspace", "robots.txt", "MIT-LICENSE.txt"],
-      "folder_exclude_patterns":["images", "fonts", "languages"]
+      "folder_exclude_patterns":["fonts", "languages"]
 		}
 	]
 }

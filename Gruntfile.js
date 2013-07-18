@@ -26,14 +26,11 @@ module.exports = function(grunt) {
 
     imagemin: {
         all: {
-            options: {
-                optimizationLevel: 2
-            },
             files: [{
-                expand: true,
-                cwd: 'temp/',
-                src: ['images/*.{png,jpg,jpeg}'],
-                dest: 'images/test'
+              expand: true,
+              cwd: 'images',
+              src: ['*.{png,jpg, jpeg}'],
+              dest: 'images'
             }]
         }
     },
@@ -81,5 +78,7 @@ module.exports = function(grunt) {
   // Default task(s).
   grunt.registerTask('default', ['requirejs', 'imagemin']);
   grunt.registerTask('build', ['requirejs', 'imagemin']);
+
+  grunt.registerTask('image', ['imagemin']);
 
 };
