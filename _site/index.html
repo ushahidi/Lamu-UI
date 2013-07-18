@@ -8,7 +8,7 @@
         <title>Ushahidi 3.0 - Lamu</title>
         <meta name="description" content="Ushahidi Platform 3.0">
         <!-- Mobile Viewport meta tags -->
-        <meta name="viewport" content="width=device-width, initial-scale=0.0, user-scalable=no, minimum-scale=1.0, maximum-scale=1.0" />
+        <meta name="viewport" content="width=device-width, initial-scale=1.0">
         <meta name="apple-mobile-web-app-capable" content="yes" />
         <!-- Leaflet CSS CDN -->
         <link rel="stylesheet" href="http://cdn.leafletjs.com/leaflet-0.5.1/leaflet.css" />
@@ -17,7 +17,7 @@
         <![endif]-->
 
         <!-- cachebusted global.css -->
-        <link rel="stylesheet" href="/css/global.css?1374136502">
+        <link rel="stylesheet" href="/css/global.css?1374169451">
 
         <!-- Font Awesome CSS CDN -->
         <link href="//netdna.bootstrapcdn.com/font-awesome/3.2.1/css/font-awesome.css" rel="stylesheet">
@@ -193,16 +193,19 @@
     <div class="search-form-wrapper">
 
       <div class="search-field">
-        <input aria-labelledby="search-label" type="text" class="search-field" placeholder="Keyword" value="">
+        <label class="visually-hidden" for="search-field">Search</label>
+        <input aria-labelledby="search-label" type="text" id="search-field" class="search-field" placeholder="Keyword" value="">
       </div>
 
       <div class="location-select">
-        <input aria-labelledby="" type="text" class="location-field" placeholder="Location" value="">
+        <label class="visually-hidden" for="location-field">Location</label>
+        <input aria-labelledby="" type="text" id="location-field" class="location-field" placeholder="Location" value="">
       </div>
 
       <!-- TODO: need to figure out best solution for categorie, time etc... -->
       <div class="categories-select">
-        <select id="customDropdown" >
+        <label class="visually-hidden" for="categories">Categories</label>
+        <select id="categories" >
           <option selected DISABLED>Categories</option>
           <option>Voting Issues</option>
           <option>Security</option>
@@ -211,7 +214,8 @@
       </div>
 
       <div class="sets-select">
-        <select id="customDropdown" >
+        <label class="visually-hidden" for="sets">Sets</label>
+        <select id="sets" >
           <option selected DISABLED>Sets</option>
           <option>SET #1</option>
           <option>SET #2</option>
@@ -220,7 +224,8 @@
       </div>
 
       <div class="time-select">
-        <select id="customDropdown" >
+        <label class="visually-hidden" for="time">Time</label>
+        <select id="time" >
           <option selected DISABLED>Time</option>
           <option>Time #1</option>
           <option>Time #2</option>
@@ -251,11 +256,10 @@
 
   <ul class="list-view-bulk-actions-list show-for-medium-down">
     <li>
-      <form class="">
-        <label for="select-all">
-          <input type="checkbox" id="select-post">
+      <form>
+        <label class="visually-hidden" for="select-all">Select All</label>
+        <input type="checkbox" id="select-all">
           <!-- <span class="custom checkbox"></span> -->
-        </label>
       </form>
     </li>
     <li><a href="#"> <i class="icon-edit"></i></a></li>
@@ -282,25 +286,31 @@
 
           <div class="list-view-filter-count">
             <div class="filter-count-select">
-              <select id="customDropdown1" >
-                <option selected DISABLED>Count:</option>
-                <option>1</option>
-                <option>2</option>
-                <option>3</option>
-                <option>All</option>
-              </select>
+              <form action="">
+                <label class="visually-hidden" for="filter-posts-count">Count</label>
+                <select id="filter-posts-count" >
+                  <option selected DISABLED>Count:</option>
+                  <option>1</option>
+                  <option>2</option>
+                  <option>3</option>
+                  <option>All</option>
+                </select>
+              </form>
             </div>
 
           </div> <!-- end .list-view-filter-count -->
 
           <div class="list-view-filter-sort">
             <div class="filter-sort-select">
-              <select id="customDropdown2" >
-                <option selected DISABLED>Sort by:</option>
-                <option>Title A-Z</option>
-                <option>Category</option>
-                <option>Time</option>
-              </select>
+              <form action="">
+                <label class="visually-hidden" for="filter-posts-sort">Sort Posts</label>
+                <select id="filter-posts-sort" >
+                  <option selected DISABLED>Sort by:</option>
+                  <option>Title A-Z</option>
+                  <option>Category</option>
+                  <option>Time</option>
+                </select>
+            </form>
             </div>
 
           </div> <!-- end .list-view-filter-sort -->
@@ -316,11 +326,9 @@
       <!-- FIXME: color coded category icon - need a responsive & dynamic solution here -->
     <!-- <div class="post-category-notification-red"></div> -->
     <div class="list-view-select-post">
-      <form class="">
-        <label for="select-post">
-          <input type="checkbox" id="select-post">
-          <!-- <span class="custom checkbox"></span> -->
-        </label>
+      <form>
+        <label class="visually-hidden" for="select-post">Select Post</label>
+        <input type="checkbox" id="select-post">
       </form>
     </div>
     <img src="/images/mini-coop.png" alt="">
@@ -372,11 +380,9 @@
       <!-- FIXME: color coded category icon - need a responsive & dynamic solution here -->
     <!-- <div class="post-category-notification-red"></div> -->
     <div class="list-view-select-post">
-      <form class="">
-        <label for="select-post">
-          <input type="checkbox" id="select-post">
-          <!-- <span class="custom checkbox"></span> -->
-        </label>
+      <form>
+        <label class="visually-hidden" for="select-post">Select Post</label>
+        <input type="checkbox" id="select-post">
       </form>
     </div>
     <img src="/images/barbican.png" alt="">
@@ -427,11 +433,9 @@
       <!-- FIXME: color coded category icon - need a responsive & dynamic solution here -->
     <!-- <div class="post-category-notification-red"></div> -->
     <div class="list-view-select-post">
-      <form class="">
-        <label for="select-post">
-          <input type="checkbox" id="select-post">
-          <!-- <span class="custom checkbox"></span> -->
-        </label>
+      <form>
+        <label class="visually-hidden" for="select-post">Select Post</label>
+        <input type="checkbox" id="select-post">
       </form>
     </div>
     <img src="/images/london-underground.png" alt="">

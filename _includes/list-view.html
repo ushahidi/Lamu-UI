@@ -12,11 +12,10 @@
 
   <ul class="list-view-bulk-actions-list show-for-medium-down">
     <li>
-      <form class="">
-        <label for="select-all">
-          <input type="checkbox" id="select-post">
+      <form>
+        <label class="visually-hidden" for="select-all">Select All</label>
+        <input type="checkbox" id="select-all">
           <!-- <span class="custom checkbox"></span> -->
-        </label>
       </form>
     </li>
     <li><a href="#"> <i class="icon-edit"></i></a></li>
@@ -43,25 +42,31 @@
 
           <div class="list-view-filter-count">
             <div class="filter-count-select">
-              <select id="customDropdown1" >
-                <option selected DISABLED>Count:</option>
-                <option>1</option>
-                <option>2</option>
-                <option>3</option>
-                <option>All</option>
-              </select>
+              <form action="">
+                <label class="visually-hidden" for="filter-posts-count">Count</label>
+                <select id="filter-posts-count" >
+                  <option selected DISABLED>Count:</option>
+                  <option>1</option>
+                  <option>2</option>
+                  <option>3</option>
+                  <option>All</option>
+                </select>
+              </form>
             </div>
 
           </div> <!-- end .list-view-filter-count -->
 
           <div class="list-view-filter-sort">
             <div class="filter-sort-select">
-              <select id="customDropdown2" >
-                <option selected DISABLED>Sort by:</option>
-                <option>Title A-Z</option>
-                <option>Category</option>
-                <option>Time</option>
-              </select>
+              <form action="">
+                <label class="visually-hidden" for="filter-posts-sort">Sort Posts</label>
+                <select id="filter-posts-sort" >
+                  <option selected DISABLED>Sort by:</option>
+                  <option>Title A-Z</option>
+                  <option>Category</option>
+                  <option>Time</option>
+                </select>
+            </form>
             </div>
 
           </div> <!-- end .list-view-filter-sort -->
