@@ -2,6 +2,7 @@
 
 // 'grunt' runs default build tasks
     // concatenates and minifies js/main.js with Uglify via Requirejs r.js file
+    // optimizes images
 // 'grunt jekyll' runs 'jekyll serve --watch --port 4000 --baseurl  ""' and regenerates _site upon saved changes
 // 'grunt watch' concatenates and minifies CSS via compass
 
@@ -11,40 +12,9 @@ TODO: need to add html minify for deployment - https://github.com/gruntjs/grunt-
 
 module.exports = function(grunt) {
 
-// Load the plugin(s)
-grunt.loadNpmTasks('grunt-contrib-requirejs');
-grunt.loadNpmTasks('grunt-jekyll');
-grunt.loadNpmTasks('grunt-contrib-compass');
-grunt.loadNpmTasks('grunt-contrib-watch');
-grunt.loadNpmTasks('grunt-contrib-imagemin');
-
 // Initialize Grunt
   grunt.initConfig({
     pkg: grunt.file.readJSON('package.json'),
-
-    requirejs: {
-      compile: {
-        options: {
-          mainConfigFile: 'js/main.js',
-          baseUrl: 'js',
-          name: 'main',
-          out: 'js/main.min.js'
-          /*
-          TODO: call this file in production
-          */
-        }
-      }
-    },
-
-    jekyll: {
-      server: {
-        server : true,
-        watch: true,
-        baseurl: ' "" ',
-        server_port : 4000
-      },
-      config: '_config.yml' // Jekyll config file is located in project root
-    },
 
     compass: {
       dist: {
@@ -68,6 +38,30 @@ grunt.loadNpmTasks('grunt-contrib-imagemin');
         }
     },
 
+    jekyll: {
+      server: {
+        server : true,
+        watch: true,
+        baseurl: ' "" ',
+        server_port : 4000
+      },
+      config: '_config.yml' // Jekyll config file is located in project root
+    },
+
+    requirejs: {
+      compile: {
+        options: {
+          mainConfigFile: 'js/main.js',
+          baseUrl: 'js',
+          name: 'main',
+          out: 'js/main.min.js'
+          /*
+          TODO: call this file in production
+          */
+        }
+      }
+    },
+
     watch: {
       sass: {
         files: ['scss/*.scss'],
@@ -77,8 +71,15 @@ grunt.loadNpmTasks('grunt-contrib-imagemin');
 
   });
 
+  // Load the plugin(s)
+  grunt.loadNpmTasks('grunt-contrib-compass');
+  grunt.loadNpmTasks('grunt-contrib-imagemin');
+  grunt.loadNpmTasks('grunt-jekyll');
+  grunt.loadNpmTasks('grunt-contrib-requirejs');
+  grunt.loadNpmTasks('grunt-contrib-watch');
 
   // Default task(s).
   grunt.registerTask('default', ['requirejs', 'imagemin']);
+  grunt.registerTask('build', ['requirejs', 'imagemin']);
 
 };
