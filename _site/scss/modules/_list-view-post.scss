@@ -24,29 +24,6 @@
   }
 }
 
-/*.post-category-notification {
-  position: absolute;
-  top: 20px;
-  left: 120px;
-  border-radius: 20px;
-  width: 30px;
-  height: 30px;
-  border: 6px solid $white;
-}
-
-.post-category-notification-red {
-  @extend .post-category-notification;
-  background-color: red
-}*/
-
-/*.list-view-post-details-wrapper {
-  @include grid-column(7);
-  margin-top: 20px;
-  @media #{$small} {
-    @include grid-column(10);
-  }
-}*/
-
 .list-view-post-details {
   @include grid-column(8, $collapse: true);
   margin-top: 10px;

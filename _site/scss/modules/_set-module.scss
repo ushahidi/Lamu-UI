@@ -5,11 +5,17 @@
   @extend .box-shadow;
 }
 
+/*
+TODO: may need a notification mixin here
+*/
+.set-post-number {
+ @extend .notification;
+ background-color: $blueGray;
+ top: -18px;
+}
+
 .set-body {
   padding: 0 10px 0;
-}
-.set-title {
-  margin-top: 20px;
 }
 
 .set-time-meta {
