@@ -8,10 +8,10 @@
 
 .sets-search-bar-title {
   @include grid-column(6);
-  h4 {
+  h5 {
     letter-spacing: .1em;
     color: $white;
-    margin: 0;
+    margin: 0 0 5px 0;
   }
   @media #{$small} {
     border-right: 1px solid darken($darkBlue, 10);
