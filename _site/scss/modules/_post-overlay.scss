@@ -10,3 +10,11 @@
     line-height: 1em;
   }
 }
+
+.post-overlay .post-details-button {
+  @media #{$small} {
+    button {
+      float: left;
+    }
+  }
+}

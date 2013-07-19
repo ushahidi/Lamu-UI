@@ -1,3 +1,47 @@
-.sets-grid {
-  @include block-grid($per-row: 4);
+.sets-search-bar {
+  @include grid-row();
+  @extend .box-shadow;
+  background: $darkBlue url(../images/search-bg.jpg) repeat;
+  margin-bottom: 20px;
+  padding: 1.25em;
 }
+
+.sets-search-bar-title {
+  @include grid-column(6);
+  h4 {
+    letter-spacing: .1em;
+    color: $white;
+    margin: 0;
+  }
+  @media #{$small} {
+    border-right: 1px solid darken($darkBlue, 10);
+  }
+}
+
+.sets-search-bar-create-button {
+ @include grid-column(6);
+ @media #{$small} {
+    @include grid-column(3);
+    border-right: 1px solid darken($darkBlue, 10);
+    a {
+     margin: 0;
+    }
+ }
+}
+
+.sets-search-bar-search-field {
+  @include grid-column(12);
+  @media #{$small} {
+    @include grid-column(3);
+  }
+  input[type="text"] {
+    margin: 0;
+  }
+}
+
+.sets-grid {
+  @include block-grid($per-row: 2);
+  @media #{$small} {
+    @include block-grid($per-row: 4);
+  }
+ }

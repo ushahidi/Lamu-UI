@@ -1,3 +1,7 @@
+header[role="banner"] {
+  @extend .box-shadow;
+}
+
 .top-bar {
   overflow: hidden;
 }
@@ -39,7 +43,7 @@
 }*/
 
 .top-bar-section li.create-post a{
-  background-color: #C50813;
+  background-color: $alert-color;
   color: $white;
 }
 
@@ -85,6 +89,7 @@
 .name-small {
   background-color: $lightGray;
   margin-top: 45px;
+  @extend .box-shadow;
   h4 {
     line-height: 2.688em;
     margin: 0;

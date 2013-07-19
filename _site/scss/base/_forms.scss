@@ -1,8 +1,13 @@
 /*custom-dropdowns*/
 
-.search-bar form.custom .custom.dropdown,
-.list-view-filter form.custom .custom.dropdown {
+.search-bar form.custom .custom.dropdown {
   @media #{$medium} {
+    margin-bottom: 0;
+  }
+}
+
+.list-view-filter form.custom .custom.dropdown {
+  @media #{$small} {
     margin-bottom: 0;
   }
 }

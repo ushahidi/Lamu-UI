@@ -1,0 +1,46 @@
+.set-wrapper {
+  text-align: center;
+  background-color: $white;
+  padding-bottom: 20px;
+  @extend .box-shadow;
+}
+
+.set-title {
+  margin-top: 20px;
+}
+
+.set-time-meta {
+  margin-bottom: 5px;
+  color: $sub-body-font-color;
+}
+
+.set-excerpt {
+  margin-bottom: 20px;
+  font-size: 14px;
+  p {
+    line-height: 1.3em;
+  }
+}
+
+.set-tags {
+  @extend .border-bottom;
+  padding-bottom: 10px;
+  margin: 0 10px 10px;
+  color: $sub-body-font-color;
+  text-align: left;
+  line-height: .8em;
+  a {
+    color: inherit;
+  }
+}
+
+.set-actions-list {
+  margin-left: 0;
+  i {
+    padding: 0;
+  }
+ li {
+  display: inline;
+  padding-right: 10px;
+ }
+}
