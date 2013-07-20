@@ -2,9 +2,9 @@ nav[role="sub-navigation"] {
   @include grid-column(12, $collapse: true);
   display: none;
   background-color: $white;
-  @media #{$small} {
+/*  @media #{$small} {
   margin-top: 45px;
-  }
+  }*/
   ul {
     margin: 0;
   }

@@ -8,42 +8,13 @@ Opera 10+ (Opera 9.5 supported background-size but not the keywords)
 Firefox 3.6+ (Firefox 4 supports non-vendor prefixed version)
  */
 
-/*.map-wrapper {
-  position: relative;
-}
-
-#map {
-  position:absolute;
-  top: 0;
-  bottom: 0;
-  width: 100%;
-}
-
-.map-expand {
-  height: 499px;
-}
-
-.map-collapse {
-  height: 299px;
-}*/
-
-/*leaflet.css overrides*/
-/*.leaflet-popup-content-wrapper {
-  -webkit-border-radius: 5px;
-  border-radius: 5px;
-}
-
-.leaflet-popup-tip-container {
-margin-bottom: 7px;
-}*/
-
 .content-wrapper {
   overflow: hidden;
   @include grid-column(12);
   padding: 0;
-  @media #{$small} {
+/*  @media #{$small} {
     margin-top: 45px;
-  }
+  }*/
 }
 
 .map {
