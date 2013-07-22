@@ -1,56 +1,39 @@
-//subNav toggle
 define(['jquery'], function($) {
 
-  $('#views-subnav').click(function (){
-    if ($('.sets-subnav').hasClass('visible'))
-    {
-      $('.sets-subnav').addClass('hidden');
-      $('.views-subnav').addClass('visible');
-    }
-    else
-    {
-      $('.views-subnav').toggleClass('hidden');
-    }
-  console.log('You clicked #views-subnav');
-  });
+$('body').addClass('js');
 
-  $('#views-subnav-mobile').click(function (){
-    if ($('.sets-subnav').css('display', 'none'))
-    {
-      $('.sets-subnav').hide();
-      $('.views-subnav').show();
-    }
-    else
-    {
-      $('.views-subnav').slideToggle(200);
-    }
-  console.log('You clicked #views-subnav-mobile');
-  });
+var $viewsMenuLink = $('#views-menu-link, #views-menu-link-mobile'),
+    $viewsMenu = $('#views-menu'),
+    $setsMenuLink = $('#sets-menu-link, #sets-menu-link-mobile'),
+    $setsMenu = $('#sets-menu');
 
-  $('#sets-subnav').click(function (){
-    if ($('.views-subnav').css('display', 'none'))
-    {
-      $('.views-subnav').hide();
-      $('.sets-subnav').show();
-    }
-    else
-    {
-      $('.sets-subnav').slideToggle(200);
-    }
-  console.log('You clicked #sets-subnav');
-  });
+    $viewsMenuLink.click(function(e) {
+      e.preventDefault();
+      $(this).toggleClass('active');
 
-  $('#sets-subnav-mobile').click(function (){
-    if ($('.views-subnav').css('display', 'none'))
-    {
-      $('.views-subnav').hide();
-      $('.sets-subnav').show();
+      if ($setsMenu .hasClass('subnav')) {
+        $setsMenuLink.toggleClass('active');
+        $setsMenu.toggleClass('subnav');
+        $viewsMenu.toggleClass('subnav');
+      }
+      else {
+        $viewsMenu.toggleClass('subnav');
+      };
+    });
+
+
+    $setsMenuLink.click(function(e) {
+      e.preventDefault();
+    $(this).toggleClass('active');
+
+    if ($viewsMenu.hasClass('subnav')) {
+      $viewsMenuLink.toggleClass('active');
+      $viewsMenu.toggleClass('subnav');
+      $setsMenu.toggleClass('subnav');
     }
-    else
-    {
-      $('.sets-subnav').slideToggle(200);
-    }
-  console.log('You clicked #sets-subnav-mobile');
+    else {
+      $setsMenu.toggleClass('subnav');
+    };
   });
 
 });

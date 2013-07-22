@@ -40,7 +40,13 @@
 }
 
 .sets-grid {
-  @include block-grid($per-row: 2);
+  @include block-grid($per-row: 1);
+  @media #{$portrait} {
+    @include block-grid($per-row: 1);
+  }
+  @media #{$landscape} {
+    @include block-grid($per-row: 2);
+  }
   @media #{$small} {
     @include block-grid($per-row: 4);
   }

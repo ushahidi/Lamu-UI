@@ -1,7 +1,14 @@
 nav[role="sub-navigation"] {
   @include grid-column(12, $collapse: true);
   display: none;
+  max-height:1.2em;
   background-color: $white;
+  -webkit-transition: all .4s ease;
+  -moz-transition: all .4s ease;
+  -ms-transition: all .4s ease;
+  -o-transition: all .4s ease;
+  transition: all .4s ease;
+
 /*  @media #{$small} {
   margin-top: 45px;
   }*/
@@ -34,4 +41,10 @@ nav[role="sub-navigation"] li:hover,
 nav[role="sub-navigation"] li:focus,
 nav[role="sub-navigation"] li:active {
 
+}
+
+/*subnav reveal for mobile menu*/
+nav[role="sub-navigation"].subnav {
+  display: block;
+  max-height:999px;
 }
