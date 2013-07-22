@@ -1,7 +1,7 @@
 .set-wrapper {
   text-align: center;
   background-color: $white;
-  padding-bottom: 20px;
+  padding-bottom: 12px;
   @extend .box-shadow;
 }
 
@@ -18,8 +18,13 @@ TODO: may need a notification mixin here
   padding: 0 10px 0;
 }
 
-.set-title p {
-  margin-bottom: 5px;
+.set-title h3 {
+  @media #{$small} {
+    font-size: 1.375em;
+  }
+  @media #{$medium} {
+    font-size: 1.175em;
+  }
 }
 
 .set-time-meta {
@@ -33,6 +38,10 @@ TODO: may need a notification mixin here
   p {
     line-height: 1.3em;
   }
+}
+
+.set-view-posts .button {
+  margin-bottom: 2em;
 }
 
 .set-tags {
@@ -55,5 +64,11 @@ TODO: may need a notification mixin here
  li {
   display: inline;
   padding-right: 10px;
+  small {
+    font-size: 85%;
+    @media#{$medium} {
+      font-size: 70%;
+    }
+  }
  }
 }

@@ -3,6 +3,7 @@ nav[role="sub-navigation"] {
   display: none;
   max-height:1.2em;
   background-color: $white;
+  border-top: 3px solid $blueGray;
   -webkit-transition: all .4s ease;
   -moz-transition: all .4s ease;
   -ms-transition: all .4s ease;
