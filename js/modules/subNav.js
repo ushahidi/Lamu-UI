@@ -24,16 +24,35 @@ var $viewsMenuLink = $('#views-menu-link, #views-menu-link-mobile'),
 
     $setsMenuLink.click(function(e) {
       e.preventDefault();
-    $(this).toggleClass('active');
+      $(this).toggleClass('active');
 
-    if ($viewsMenu.hasClass('subnav')) {
-      $viewsMenuLink.toggleClass('active');
-      $viewsMenu.toggleClass('subnav');
-      $setsMenu.toggleClass('subnav');
-    }
-    else {
-      $setsMenu.toggleClass('subnav');
-    };
+      if ($viewsMenu.hasClass('subnav')) {
+        $viewsMenuLink.toggleClass('active');
+        $viewsMenu.toggleClass('subnav');
+        $setsMenu.toggleClass('subnav');
+      }
+      else {
+        $setsMenu.toggleClass('subnav');
+      };
   });
 
+    $('nav[role="sub-navigation"] ul li').click(function() {
+      // $(this).toggleClass('active').siblings('li').toggleClass('active');
+      console.log($(this).siblings())
+      $(this).siblings().removeClass('active');
+      $(this).addClass('active');
+
+      /*
+      FIXME: this is not working
+      */
+      var activeurl = window.location;
+      $('a[href="'+activeurl+'"]').parent('li').addClass('active');
+    });
+
 });
+
+
+
+
+
+
