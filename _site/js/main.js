@@ -10,7 +10,6 @@ require.config({
   },
 
   shim: {
-
       'leaflet': {
         deps: ['jquery'],
         exports: 'L'
