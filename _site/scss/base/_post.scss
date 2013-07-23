@@ -1,9 +1,31 @@
+/*------------------------------------*\
+    $CONTENTS
+\*------------------------------------*/
+/**
+ * GLOBAL...............global styles
+ * POST HEADER...............post header, title, categories and actions
+ * POST BODY..................post images, excerpt and meta
+ */
+
+
+
+/*------------------------------------*\
+    $GLOBAL
+\*------------------------------------*/
 .post {
   @include grid-column(12, $collapse: true);
   h5, h6 {
     line-height: 1em;
   }
 }
+
+
+
+
+/*------------------------------------*\
+    $POST HEADER
+\*------------------------------------*/
+
 
 .post-header {
   @include grid-column(12);
@@ -57,7 +79,13 @@
 }
 
 
-/*post-body*/
+
+
+
+/*------------------------------------*\
+    $POST BODY
+\*------------------------------------*/
+
 
 .post-body {
   @include grid-column(12);
@@ -85,8 +113,6 @@
     @include grid-column(8);
   }
 }
-
-/*post-details*/
 
 .post-author {
   @include grid-column(12);

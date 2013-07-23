@@ -1,3 +1,19 @@
+/*------------------------------------*\
+    $CONTENTS
+\*------------------------------------*/
+/**
+ * GLOBAL............global set styles
+ * SET MODULE IMAGE...............image and notification
+ * SET MODULE BODY...............set module body
+ */
+
+
+
+
+/*------------------------------------*\
+    $GLOBAL
+\*------------------------------------*/
+
 .set-wrapper {
   text-align: center;
   background-color: $white;
@@ -5,6 +21,13 @@
   @extend .box-shadow;
 }
 
+
+
+
+
+/*------------------------------------*\
+    $SET MODULE IMAGE
+\*------------------------------------*/
 /*
 TODO: may need a notification mixin here
 */
@@ -13,6 +36,14 @@ TODO: may need a notification mixin here
  background-color: $blueGray;
  top: -18px;
 }
+
+
+
+
+
+/*------------------------------------*\
+    $SET MODULE BODY
+\*------------------------------------*/
 
 .set-body {
   padding: 0 10px 0;

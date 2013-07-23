@@ -1,3 +1,19 @@
+/*------------------------------------*\
+    $CONTENTS
+\*------------------------------------*/
+/**
+ * POST DETAILS MAP...............map with smaller height than main index view
+ * POST DETAILS...............post meta and images
+ */
+
+
+
+
+
+/*------------------------------------*\
+    $POST DETAILS MAP
+\*------------------------------------*/
+
 .post-details-map {
   height: 200px;
   border-bottom: 3px solid $darkBlue;
@@ -6,6 +22,13 @@
       -o-border-image: url(../images/search-bg.png) repeat;
         border-image: url(../images/search-bg.png) repeat;*/
 }
+
+
+
+
+/*------------------------------------*\
+    $POST DETIALS
+\*------------------------------------*/
 
 .post-details {
   @extend .post;

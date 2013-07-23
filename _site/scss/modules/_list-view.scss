@@ -1,3 +1,18 @@
+/*------------------------------------*\
+    $CONTENTS
+\*------------------------------------*/
+/**
+ * LIST VIEW BULK ACTIONS...............actions for all listed posts
+ * LIST VIEW WRAPPER & FILTER BAR..................wrapper around all posts in list view and filter bar
+ */
+
+
+
+
+/*------------------------------------*\
+    $LIST VIEW BULK ACTIONS
+\*------------------------------------*/
+
 .list-view-bulk-actions {
   @include grid-column(12, $collapse: true);
   background-color: $blueGray;
@@ -44,6 +59,13 @@
   }
 }
 
+
+
+
+/*------------------------------------*\
+    $LIST VIEW WRAPPER AND FILTER BAR
+\*------------------------------------*/
+
 .list-view-wrapper {
   @include grid-column(12);
   @extend .box-shadow;
@@ -58,7 +80,6 @@
   background: $darkBlue url(../images/search-bg.jpg) repeat;
   padding: 20px 15px;
   margin: 0 0 20px 0;
-
   .list-view-filter-info,
   .list-view-filter-count {
     @media #{$small} {
@@ -87,7 +108,6 @@
 
 .list-view-filter-count {
   @include grid-column(12);
-
   @media #{$small} {
     @include grid-column(3);
   }

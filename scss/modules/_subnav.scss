@@ -1,3 +1,17 @@
+/*------------------------------------*\
+    $CONTENTS
+\*------------------------------------*/
+/**
+ * SUBNAV............all subnav styles
+ */
+
+
+
+
+/*------------------------------------*\
+    $SUBNAV
+\*------------------------------------*/
+
 nav[role="sub-navigation"] {
   @include grid-column(12, $collapse: true);
   display: none;
@@ -8,13 +22,20 @@ nav[role="sub-navigation"] {
   -ms-transition: all .4s ease;
   -o-transition: all .4s ease;
   transition: all .4s ease;
-
-/*  @media #{$small} {
-  margin-top: 45px;
-  }*/
   ul {
     margin: 0;
   }
+}
+
+/*subnav reveal for mobile menu*/
+nav[role="sub-navigation"].subnav {
+  display: block;
+  max-height:999px;
+}
+
+nav[role="sub-navigation"] ul li.active>a {
+  background: $blueGray;
+  color: $white;
 }
 
 nav[role="sub-navigation"] li {
@@ -37,19 +58,6 @@ nav[role="sub-navigation"] li a {
   }
 }
 
-nav[role="sub-navigation"] li:hover,
 nav[role="sub-navigation"] li:focus,
 nav[role="sub-navigation"] li:active {
-
-}
-
-/*subnav reveal for mobile menu*/
-nav[role="sub-navigation"].subnav {
-  display: block;
-  max-height:999px;
-}
-
-nav[role="sub-navigation"] ul li.active>a {
-  background: $blueGray;
-  color: $white;
 }

@@ -1,4 +1,17 @@
-/*Global Styles loaded before Foundation*/
+/*------------------------------------*\
+    $CONTENTS
+\*------------------------------------*/
+/**
+
+ These are global styles loaded before Foundation
+
+ * GLOBAL...............global custom classes
+ * CUSTOM CLASSES...............custom classes
+ */
+
+
+
+
 
 * {
   @include box-sizing(border-box);
@@ -16,6 +29,13 @@ i {
 .wf-active {
   visibility: visible;
 }
+
+
+
+
+/*------------------------------------*\
+    $CUSTOM CLASSES
+\*------------------------------------*/
 
 .none {
   display: none;

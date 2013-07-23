@@ -1,3 +1,7 @@
+/*-------------------------------------------------------------------*\
+    $LIST VIEW POST...............individual posts within the LIST VIEW
+\*-------------------------------------------------------------------*/
+
 .list-view-post {
   @include grid-column(12);
   border-bottom: 1px solid $midGray;
@@ -8,14 +12,12 @@
   position: absolute;
   top: 0;
   left: 0;
-
 }
 
 .list-view-post-image {
   @include grid-column(4);
   @media #{$small} {
     @include grid-column(2);
-
   }
   img {
     margin: 10px 0 10px 0;
@@ -37,7 +39,6 @@
   @include grid-column(12);
   @media #{$small} {
     @include grid-column(8);
-
   }
 }
 

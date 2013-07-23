@@ -1,3 +1,17 @@
+/*------------------------------------*\
+    $CONTENTS
+\*------------------------------------*/
+/**
+ * SEARCH BAR...............sets create and search bar
+ * SETS GRID...............grid that includes sets module
+ */
+
+
+
+
+/*------------------------------------*\
+    $SEARCH BAR
+\*------------------------------------*/
 .sets-search-bar {
   @include grid-row();
   @extend .box-shadow;
@@ -40,6 +54,9 @@
   }
 }
 
+/*------------------------------------*\
+    $SETS GRID
+\*------------------------------------*/
 .sets-grid {
   @include block-grid($per-row: 1);
   @media #{$portrait} {
