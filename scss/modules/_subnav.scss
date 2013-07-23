@@ -22,6 +22,7 @@ nav[role="sub-navigation"] {
   -ms-transition: all .4s ease;
   -o-transition: all .4s ease;
   transition: all .4s ease;
+  @extend .box-shadow;
   ul {
     margin: 0;
   }
