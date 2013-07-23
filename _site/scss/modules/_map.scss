@@ -37,9 +37,6 @@ Firefox 3.6+ (Firefox 4 supports non-vendor prefixed version)
 
 .leaflet-container .leaflet-control-attribution {
   visibility: hidden;
-  @media #{$small} {
-    visibility: visible;
-  }
 }
 
 

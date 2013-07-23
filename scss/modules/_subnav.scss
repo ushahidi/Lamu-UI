@@ -3,7 +3,6 @@ nav[role="sub-navigation"] {
   display: none;
   max-height:1.2em;
   background-color: $white;
-  border-top: 3px solid $blueGray;
   -webkit-transition: all .4s ease;
   -moz-transition: all .4s ease;
   -ms-transition: all .4s ease;
@@ -29,7 +28,7 @@ nav[role="sub-navigation"] li {
 nav[role="sub-navigation"] li a {
   display: block;
   padding: 20px 20px;
-  color: $black;
+  color: $blueGray;
   border-bottom: 1px solid $lightGray;
   @media #{$small} {
     float: left;
@@ -51,5 +50,6 @@ nav[role="sub-navigation"].subnav {
 }
 
 nav[role="sub-navigation"] ul li.active>a {
-  background: #f4f4f4;
+  background: $blueGray;
+  color: $white;
 }
