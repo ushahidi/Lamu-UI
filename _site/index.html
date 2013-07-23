@@ -17,7 +17,7 @@
         <![endif]-->
 
         <!-- cachebusted global.css -->
-        <link rel="stylesheet" href="/css/global.css?1374593241">
+        <link rel="stylesheet" href="/css/global.css?1374598129">
 
         <!-- Font Awesome CSS CDN -->
         <link href="//netdna.bootstrapcdn.com/font-awesome/3.2.1/css/font-awesome.css" rel="stylesheet">
@@ -52,7 +52,7 @@
   <nav role="navigation" class="top-bar" data-options="is_hover:false">
     <ul class="title-area">
       <!-- retina ready logo is a css background image -->
-      <li class="name hide-for-small">
+      <li class="name  hide-for-small">
         <div class="logo-image"></div>
         <h1><a href="/">Deployment Name</a></h1>
       </li>
@@ -65,28 +65,28 @@
       <!-- Left Nav Section -->
       <ul class="left">
         <li class="divider"></li>
-        <li id="views-menu-link" class="hide-for-medium-down"><a class="views" href="#"><i class="icon-eye-open icon-large"></i> VIEWS</a></li>
-        <li id="views-menu-link-mobile" class="show-for-medium-down"><a class="views" href="#"><i class="icon-eye-open"></i><!-- icon only --></a></li>
+        <li class="js-views-menu-link  hide-for-medium-down"><a class="views" href="#"><i class="icon-eye-open  icon-large"></i> VIEWS</a></li>
+        <li class="js-views-menu-link-mobile  show-for-medium-down"><a class="views" href="#"><i class="icon-eye-open"></i><!-- icon only --></a></li>
         <li class="divider"></li>
-        <li id="sets-menu-link" class="hide-for-medium-down"><a class="sets" href="#"><i class="icon-th-large icon-large"></i> SETS</a></li>
-        <li id="sets-menu-link-mobile" class="show-for-medium-down"><a class="sets" href="#"><i class="icon-th-large"></i><!-- icon only --></a></li>
+        <li class="js-sets-menu-link  hide-for-medium-down"><a class="sets" href="#"><i class="icon-th-large  icon-large"></i> SETS</a></li>
+        <li class="js-sets-menu-link-mobile  show-for-medium-down"><a class="sets" href="#"><i class="icon-th-large"></i><!-- icon only --></a></li>
         <li class="divider"></li>
 
       </ul>
 
       <!-- Right Nav Section -->
       <ul class="right">
-        <li class="create-post hide-for-medium-down"><a id="create-post-button" class="create-post-button" href="#" data-reveal-id="createPost"><i class="icon-plus icon-large"></i> CREATE</a></li>
-        <li class="create-post show-for-medium-down"><a id="create-post-button-small" class="create-post-button" href="#" data-reveal-id="createPost"><i class="icon-plus"></i><!-- icon only --></a></li>
-        <li class="hide-for-medium-down"><a id="admin-panel-button" class="admin-panel-button inverse" href="#admin-panel"><i class="icon-dashboard icon-large"></i> WORKSPACE</a></li>
-        <li class="show-for-medium-down"><a id="admin-panel-button-small" class="admin-panel-button inverse" href="#admin-panel"><i class="icon-dashboard"></i><!-- icon only --></a></li>
+        <li class="create-post  hide-for-medium-down"><a id="create-post-button" class="create-post-button" href="#" data-reveal-id="createPost"><i class="icon-plus  icon-large"></i> CREATE</a></li>
+        <li class="create-post  show-for-medium-down"><a id="create-post-button-small" class="create-post-button" href="#" data-reveal-id="createPost"><i class="icon-plus"></i><!-- icon only --></a></li>
+        <li class="hide-for-medium-down"><a id="admin-panel-button" class="admin-panel-button  inverse" href="#admin-panel"><i class="icon-dashboard  icon-large"></i> WORKSPACE</a></li>
+        <li class="show-for-medium-down"><a id="admin-panel-button-small" class="admin-panel-button  inverse" href="#admin-panel"><i class="icon-dashboard"></i><!-- icon only --></a></li>
       </ul>
     </section>
   </nav>
 </header>
 
 <!-- subnavs need to be outside of header and above map-wrapper-->
-<nav role="sub-navigation" id="views-menu">
+<nav role="sub-navigation" class="js-views-menu">
   <ul>
     <li><a href="#">Maps</a></li>
     <li><a href="#">Lists</a></li>
@@ -95,7 +95,7 @@
   </ul>
 </nav>
 
-<nav role="sub-navigation" id="sets-menu">
+<nav role="sub-navigation" class="js-sets-menu">
   <ul>
     <li><a href="sets.html">Set #1</a></li>
     <li><a href="sets.html">Set #2</a></li>
@@ -106,7 +106,7 @@
 
 
 <!-- on mobile devices deployment name is moved below topbar nav for better layout-->
-<li class="name-small show-for-small">
+<li class="name-small  show-for-small">
   <div class="logo-image"></div>
   <h4><a href="/">Deployment Name</a></h4>
 </li>
@@ -132,8 +132,8 @@
       </div>
 
       <div class="post-actions">
-        <button class="small secondary button"> <i class="icon-edit"></i>edit</button>
-        <button class="small secondary button"> <i class="icon-plus-sign"></i>set</button>
+        <button class="small  secondary  button"> <i class="icon-edit"></i>edit</button>
+        <button class="small  secondary  button"> <i class="icon-plus-sign"></i>set</button>
       </div>
     </div>
   </div>
@@ -162,7 +162,7 @@
       <div class="row">
 
         <div class="post-location-meta">
-          <h5><small> <i class="icon-map-marker"></i><span class="post-location underline" ><a href=""> London, UK</a></span></small></h5>
+          <h5><small> <i class="icon-map-marker"></i><span class="post-location  underline" ><a href=""> London, UK</a></span></small></h5>
         </div>
 
         <div class="post-time-meta">
@@ -170,7 +170,7 @@
         </div>
 
         <div class="post-details-button">
-          <button class="small success button"><i class="icon-lock"></i>  details</button>
+          <button class="small  success  button"><i class="icon-lock"></i>  details</button>
         </div>
 
       </div>
@@ -181,12 +181,12 @@
 </div>
 
 
-<div id="map" class="map"></div>
+<div id="map" class="map  js-map"></div>
 
 <div class="search-bar">
-  <div id="collapse-map" class="collapse-map">
-    <p id="collapse-tab">collapse map</p>
-    <p id="collapse-tab" class="none" >expand map</p>
+  <div class="collapse-map  js-collapse-map">
+    <p class="js-collapse-tab">collapse map</p>
+    <p class="none" >expand map</p>
   </div>
   <form role="search" id="search-form" class="custom" action="">
     <div class="search-form-wrapper">
@@ -241,9 +241,9 @@
   </form>
 </div>
 
-<div class="list-view-bulk-actions hidden">
+<div class="list-view-bulk-actions  js-list-view-bulk-actions  hidden">
   <div class="row">
-  <ul class="list-view-bulk-actions-list hide-for-medium-down">
+  <ul class="list-view-bulk-actions-list  hide-for-medium-down">
     <li><a href="#" class="underline" >Select All</a></li>
     <li><a href="#"> <i class="icon-edit"></i> Edit</a></li>
     <li><a href="#"> <i class="icon-file-alt"></i> Publish</a></li>
@@ -253,7 +253,7 @@
     <li><a href="#"> <i class="icon-lock"></i> Privacy</a></li>
   </ul> <!-- end .list-view-bulk-actions-list .hide-for-medium-down-->
 
-  <ul class="list-view-bulk-actions-list show-for-medium-down">
+  <ul class="list-view-bulk-actions-list  show-for-medium-down">
     <li>
       <form>
         <label class="visually-hidden" for="select-all">Select All</label>
@@ -318,7 +318,7 @@
   <div class="row">
     <div class="list-view-post-image">
 
-    <div class="list-view-select-post">
+    <div class="list-view-select-post  js-list-view-select-post">
       <form>
         <label class="visually-hidden" for="select-post">Select Post</label>
         <input type="checkbox" id="select-post">
@@ -342,23 +342,23 @@
 
     <div class="list-view-post-admin">
       <div class="list-view-post-categories">
-        <button class="button small secondary"> <i class="icon-circle"></i> Automobiles</button>
+        <button class="button  small  secondary"> <i class="icon-circle"></i> Automobiles</button>
       </div> <!-- end .list-view-post-categories -->
-      <div class="list-view-post-edit-wrapper hide-for-medium-down">
+      <div class="list-view-post-edit-wrapper  hide-for-medium-down">
         <ul class="list-view-post-edit">
-          <li><a href="#" class="button small secondary"> <i class="icon-edit"></i> edit</a></li>
-          <li><a href="#" class="button small secondary"> <i class="icon-plus-sign"></i> set</a></li>
-          <li><a href="#" class="button small secondary"> <i class="icon-file"></i> unpublish</a></li>
-          <li><a href="#" class="button small secondary"> <i class="icon-trash"></i></a></li>
+          <li><a href="#" class="button  small  secondary"> <i class="icon-edit"></i> edit</a></li>
+          <li><a href="#" class="button  small  secondary"> <i class="icon-plus-sign"></i> set</a></li>
+          <li><a href="#" class="button  small  secondary"> <i class="icon-file"></i> unpublish</a></li>
+          <li><a href="#" class="button  small  secondary"> <i class="icon-trash"></i></a></li>
         </ul> <!-- end .list-view-post-edit -->
       </div> <!-- end .list-view-post-edit-wrapper .hide-for-medium-down -->
 
       <div class="list-view-post-edit-wrapper show-for-medium-down">
         <ul class="list-view-post-edit">
-          <li><a href="#" class="button small secondary"> <i class="icon-edit"></i></a></li>
-          <li><a href="#" class="button small secondary"> <i class="icon-plus-sign"></i></a></li>
-          <li><a href="#" class="button small secondary"> <i class="icon-file-alt"></i></a></li>
-          <li><a href="#" class="button small secondary"> <i class="icon-trash"></i></a></li>
+          <li><a href="#" class="button  small  secondary"> <i class="icon-edit"></i></a></li>
+          <li><a href="#" class="button  small  secondary"> <i class="icon-plus-sign"></i></a></li>
+          <li><a href="#" class="button  small  secondary"> <i class="icon-file-alt"></i></a></li>
+          <li><a href="#" class="button  small  secondary"> <i class="icon-trash"></i></a></li>
         </ul>
 
       </div> <!-- end .list-view-post-edit-wrapper .show-for-medium-down -->
@@ -371,7 +371,7 @@
   <div class="row">
     <div class="list-view-post-image">
 
-    <div class="list-view-select-post">
+    <div class="list-view-select-post  js-list-view-select-post">
       <form>
         <label class="visually-hidden" for="select-post">Select Post</label>
         <input type="checkbox" id="select-post">
@@ -395,23 +395,23 @@
 
     <div class="list-view-post-admin">
       <div class="list-view-post-categories">
-        <button class="button small secondary"> <i class="icon-circle"></i> Architecture</button>
+        <button class="button  small  secondary"> <i class="icon-circle"></i> Architecture</button>
       </div>
-      <div class="hide-for-medium-down list-view-post-edit-wrapper">
+      <div class="hide-for-medium-down  list-view-post-edit-wrapper">
         <ul class="list-view-post-edit">
-          <li><a href="#" class="button small secondary"> <i class="icon-edit"></i> edit</a></li>
-          <li><a href="#" class="button small secondary"> <i class="icon-plus-sign"></i> set</a></li>
-          <li><a href="#" class="button small secondary"> <i class="icon-file"></i> unpublish</a></li>
-          <li><a href="#" class="button small secondary"> <i class="icon-trash"></i></a></li>
+          <li><a href="#" class="button  small  secondary"> <i class="icon-edit"></i> edit</a></li>
+          <li><a href="#" class="button  small  secondary"> <i class="icon-plus-sign"></i> set</a></li>
+          <li><a href="#" class="button  small  secondary"> <i class="icon-file"></i> unpublish</a></li>
+          <li><a href="#" class="button  small  secondary"> <i class="icon-trash"></i></a></li>
         </ul>
       </div>
 
       <div class="show-for-medium-down list-view-post-edit-wrapper">
         <ul class="list-view-post-edit">
-          <li><a href="#" class="button small secondary"> <i class="icon-edit"></i></a></li>
-          <li><a href="#" class="button small secondary"> <i class="icon-plus-sign"></i></a></li>
-          <li><a href="#" class="button small secondary"> <i class="icon-file-alt"></i></a></li>
-          <li><a href="#" class="button small secondary"> <i class="icon-trash"></i></a></li>
+          <li><a href="#" class="button  small  secondary"> <i class="icon-edit"></i></a></li>
+          <li><a href="#" class="button  small  secondary"> <i class="icon-plus-sign"></i></a></li>
+          <li><a href="#" class="button  small  secondary"> <i class="icon-file-alt"></i></a></li>
+          <li><a href="#" class="button  small  secondary"> <i class="icon-trash"></i></a></li>
         </ul>
 
       </div> <!-- end .list-view-post-edit-wrapper -->
@@ -423,7 +423,7 @@
   <div class="row">
     <div class="list-view-post-image">
 
-    <div class="list-view-select-post">
+    <div class="list-view-select-post  js-list-view-select-post">
       <form>
         <label class="visually-hidden" for="select-post">Select Post</label>
         <input type="checkbox" id="select-post">
@@ -447,23 +447,23 @@
 
     <div class="list-view-post-admin">
       <div class="list-view-post-categories">
-        <button class="button small secondary"> <i class="icon-circle"></i> Transportation</button>
+        <button class="button  small  secondary"> <i class="icon-circle"></i> Transportation</button>
       </div>
-      <div class="hide-for-medium-down list-view-post-edit-wrapper">
+      <div class="hide-for-medium-down  list-view-post-edit-wrapper">
         <ul class="list-view-post-edit">
-          <li><a href="#" class="button small secondary"> <i class="icon-edit"></i> edit</a></li>
-          <li><a href="#" class="button small secondary"> <i class="icon-plus-sign"></i> set</a></li>
-          <li><a href="#" class="button small secondary"> <i class="icon-file"></i> unpublish</a></li>
-          <li><a href="#" class="button small secondary"> <i class="icon-trash"></i></a></li>
+          <li><a href="#" class="button  small  secondary"> <i class="icon-edit"></i> edit</a></li>
+          <li><a href="#" class="button  small  secondary"> <i class="icon-plus-sign"></i> set</a></li>
+          <li><a href="#" class="button  small  secondary"> <i class="icon-file"></i> unpublish</a></li>
+          <li><a href="#" class="button  small  secondary"> <i class="icon-trash"></i></a></li>
         </ul>
       </div>
 
       <div class="show-for-medium-down list-view-post-edit-wrapper">
         <ul class="list-view-post-edit">
-          <li><a href="#" class="button small secondary"> <i class="icon-edit"></i></a></li>
-          <li><a href="#" class="button small secondary"> <i class="icon-plus-sign"></i></a></li>
-          <li><a href="#" class="button small secondary"> <i class="icon-file-alt"></i></a></li>
-          <li><a href="#" class="button small secondary"> <i class="icon-trash"></i></a></li>
+          <li><a href="#" class="button  small  secondary"> <i class="icon-edit"></i></a></li>
+          <li><a href="#" class="button  small  secondary"> <i class="icon-plus-sign"></i></a></li>
+          <li><a href="#" class="button  small  secondary"> <i class="icon-file-alt"></i></a></li>
+          <li><a href="#" class="button  small  secondary"> <i class="icon-trash"></i></a></li>
         </ul>
 
       </div> <!-- end .list-view-post-edit-wrapper -->
@@ -510,15 +510,15 @@
 
   <div class="admin-stats-wrapper">
     <ul class="admin-stats">
-      <li id="posts-stats" class="panel post-stats">
+      <li id="posts-stats" class="panel  post-stats">
         <h4 id="posts-stats-value">1500</h4>
         <p>posts</p>
       </li>
-      <li id="users-stats" class="panel user-stats">
+      <li id="users-stats" class="panel  user-stats">
           <h4 id="users-stats-value">138</h4>
           <p>users</p>
       </li>
-      <li id="views-stats" class="panel views-stats">
+      <li id="views-stats" class="panel  views-stats">
           <h4 id="views-stats-value">52416</h4>
           <p>views</p>
       </li>
@@ -527,48 +527,48 @@
 
   <div class="admin-menu" data-section="accordion">
       <section class="active">
-        <p id="admin-menu-posts" class="title" data-section-title><a href="#"><i class="icon-inbox"></i> Posts</a></p>
+        <p id="admin-menu-posts" class="title  js-title" data-section-title><a href="#"><i class="icon-inbox"></i> Posts</a></p>
 
-        <div id="admin-menu-all-posts" class="content" data-section-content>
-          <a href="#"><p><i class="icon-calendar"></i> All Posts <span class="round secondary label">1500</span></p></a>
+        <div id="admin-menu-all-posts" class="content  js-content" data-section-content>
+          <a href="#"><p><i class="icon-calendar"></i> All Posts <span class="round  secondary  label">1500</span></p></a>
         </div>
 
 
-        <div id="admin-menu-awaiting-review" class="content" data-section-content>
-          <a href="#"><p><i class="icon-star-empty"></i> Awaiting Review <span class="round secondary label">27</span></p></a>
+        <div id="admin-menu-awaiting-review" class="content  js-content" data-section-content>
+          <a href="#"><p><i class="icon-star-empty"></i> Awaiting Review <span class="round  secondary  label">27</span></p></a>
         </div>
 
 
-        <div id="admin-menu-published" class="content" data-section-content>
-          <a href="#"><p><i class="icon-file-alt"></i> Published <span class="round success label">413</span></p></a>
+        <div id="admin-menu-published" class="content  js-content" data-section-content>
+          <a href="#"><p><i class="icon-file-alt"></i> Published <span class="round  success  label">413</span></p></a>
         </div>
 
 
-        <div id="admin-menu-unpublished" class="content" data-section-content>
-          <a href="#"><p><i class="icon-file"></i> Unpublished <span class="round alert label">1,060</span></p></a>
-        </div>
-      </section>
-
-      <section class="disable">
-        <p id="admin-menu-tasks" class="title" data-section-title><a href="#"><i class="icon-tasks"></i> Tasks</a></p>
-
-        <div id="admin-menu-my-tasks"class="content" data-section-content>
-          <a href="#"><p><i class="icon-pencil"></i> My Tasks <span class="round secondary label">75</span></p></a>
-        </div>
-
-        <div id="admin-menu-todo"class="content" data-section-content>
-          <a href="#"><p><i class="icon-check-empty"></i> To Do <span class="round label">39</span></p></a>
-        </div>
-
-        <div id="admin-menu-completed"class="content" data-section-content>
-          <a href="#"><p><i class="icon-check"></i> Completed <span class="round success label">36</span></p></a>
+        <div id="admin-menu-unpublished" class="content  js-content" data-section-content>
+          <a href="#"><p><i class="icon-file"></i> Unpublished <span class="round  alert  label">1,060</span></p></a>
         </div>
       </section>
 
       <section class="disable">
-        <p id="admin-menu-tools" class="title" data-section-title><a href="#"><i class="icon-cog"></i> Tools</a></p>
+        <p id="admin-menu-tasks" class="title  js-title" data-section-title><a href="#"><i class="icon-tasks"></i> Tasks</a></p>
 
-        <div id="" class="content" data-section-content>
+        <div id="admin-menu-my-tasks" class="content  js-content" data-section-content>
+          <a href="#"><p><i class="icon-pencil"></i> My Tasks <span class="round  secondary  label">75</span></p></a>
+        </div>
+
+        <div id="admin-menu-todo" class="content  js-content" data-section-content>
+          <a href="#"><p><i class="icon-check-empty"></i> To Do <span class="round  label">39</span></p></a>
+        </div>
+
+        <div id="admin-menu-completed" class="content  js-content" data-section-content>
+          <a href="#"><p><i class="icon-check"></i> Completed <span class="round  success  label">36</span></p></a>
+        </div>
+      </section>
+
+      <section class="disable">
+        <p id="admin-menu-tools" class="title  js-title" data-section-title><a href="#"><i class="icon-cog"></i> Tools</a></p>
+
+        <div id="" class="content  js-content" data-section-content>
           <p>Tools stuff goes here :)</p>
         </div>
       </section>
@@ -660,7 +660,7 @@
             </div>
 
             <div class="create-post-submit">
-              <button type="submit" class="button success expand" form="search-form">Submit</button>
+              <button type="submit" class="button  success  expand" form="search-form">Submit</button>
             </div>
 
         </div> <!-- end media-bar-row -->

@@ -5,7 +5,7 @@ define(['jquery', 'magnific'], function($, magnific) {
     //   type: 'image'
     // });
 
-    $('.lightbox-gallery').magnificPopup({
+    $('.js-lightbox-gallery').magnificPopup({
       gallery: {
         enabled: true
       },

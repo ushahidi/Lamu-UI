@@ -5,13 +5,10 @@ require.config({
     "leaflet": "http://cdn.leafletjs.com/leaflet-0.6.3/leaflet",
     "stamen": "http://maps.stamen.com/js/tile.stamen",
     "magnific": "vendor/magnific-popup/dist/jquery.magnific-popup.min",
-
     "foundation": "foundation/foundation.min",
-    "foundation.offCanvas": "foundation/foundation.offCanvas",
-
-    // "HTMLInspector": "vendor/html-inspector/dist/html-inspector"
-    // "iCheck": "vendor/iCheck/jquery.icheck.min"
+    "foundation.offCanvas": "foundation/foundation.offCanvas"
   },
+
   shim: {
 
       'leaflet': {
@@ -20,10 +17,7 @@ require.config({
       },
 
       "foundation": ['jquery'],
-      "foundation.offCanvas": ['jquery'],
-
-      // "HTMLInspector": ['jquery'],
-      // 'iCheck': ['jquery']
+      "foundation.offCanvas": ['jquery']
   }
 });
 
@@ -38,9 +32,7 @@ require([
   // FOUNDATION requires
   'foundation',
   'foundation.offCanvas',
-  'modules/foundationScript',
-
-  // 'modules/iCheck'
+  'modules/foundationScript'
 ]);
 
 

@@ -1,6 +1,6 @@
 define(['jquery'], function($) {
 
-  $( "p.title" ).click(function() {
+  $( "p.js-title" ).click(function() {
      if ($(this).parent().hasClass('active')) {
         $(this).parent().removeClass('active');
         return false; // Prevents further propagation of event
@@ -11,9 +11,9 @@ define(['jquery'], function($) {
      }
   });
 
-  $('.admin-menu>section .content').click(function(e) {
+  $('.admin-menu>section .js-content').click(function(e) {
     e.preventDefault();
-    $('.content').removeClass('active');
+    $('.js-content').removeClass('active');
     $(this).addClass('active');
   });
 
