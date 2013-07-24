@@ -6,7 +6,8 @@ require.config({
     "stamen": "http://maps.stamen.com/js/tile.stamen",
     "magnific": "vendor/magnific-popup/dist/jquery.magnific-popup.min",
     "foundation": "foundation/foundation.min",
-    "foundation.offCanvas": "foundation/foundation.offCanvas"
+    "foundation.offCanvas": "foundation/foundation.offCanvas",
+    "htmlInspector": "vendor/html-inspector/dist/html-inspector.best-practice.js"
   },
 
   shim: {
@@ -31,7 +32,9 @@ require([
   // FOUNDATION requires
   'foundation',
   'foundation.offCanvas',
-  'modules/foundationScript'
+  'modules/foundationScript',
+
+  'modules/htmlInspector'
 ]);
 
 

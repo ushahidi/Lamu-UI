@@ -25,8 +25,14 @@
         <!-- Require.js | the data-main attribute is our entry point, all requires are relative to this entry point -->
         <script data-main="{{ site.baseurl }}/js/main.js" src="{{ site.baseurl }}/js/vendor/requirejs/require.js"></script>
 
-        <!-- Custom Modernizr Build - add, subtract and rebuild at end of project -->
+        <!-- Custom Modernizr Build - add, subtract and rebuild at end of project or use Gruntjs mondernizr for custom build -->
         <script src="{{ site.baseurl }}/js/custom.modernizr.js"></script>
+
+        <!-- cross browser CSS3 pseudo-classes and attribute selectors with Selectivizr -->
+        <!--[if (gte IE 6)&(lte IE 8)]>
+          <script type="text/javascript" src="js/vendor/selectivizr/selectivizr.js"></script>
+          <noscript><link rel="stylesheet" href="[fallback css]" /></noscript>
+        <![endif]-->
 
         <!-- Place Typekit script here -->
         <!-- This allow fonts to load asynchronously, but requires custom CSS. The custom css can be found in scss/base/_general.scss-->
