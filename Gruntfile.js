@@ -24,6 +24,21 @@ module.exports = function(grunt) {
       }
     },
 
+    csslint: {
+      strict: {
+        options: {
+          import: 2
+        },
+        src: ['css/*.css']
+      },
+      lax: {
+        options: {
+          import: false
+        },
+        src: ['css/*.css']
+      }
+    },
+
     imagemin: {
         all: {
             files: [{
@@ -70,6 +85,7 @@ module.exports = function(grunt) {
 
   // Load the plugin(s)
   grunt.loadNpmTasks('grunt-contrib-compass');
+  grunt.loadNpmTasks('grunt-contrib-csslint');
   grunt.loadNpmTasks('grunt-contrib-imagemin');
   grunt.loadNpmTasks('grunt-jekyll');
   grunt.loadNpmTasks('grunt-contrib-requirejs');
@@ -77,6 +93,7 @@ module.exports = function(grunt) {
 
   // Default task(s).
   grunt.registerTask('default', ['requirejs', 'imagemin']);
+  grunt.registerTask('test', ['csslint']);
   grunt.registerTask('build', ['requirejs', 'imagemin']);
 
   grunt.registerTask('image', ['imagemin']);
