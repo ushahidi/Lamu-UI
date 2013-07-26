@@ -1,12 +1,12 @@
 require.config({
   paths: {
     "jquery": "vendor/jquery/jquery.min",
-    "flexnav": "vendor/flexnav/js/jquery.flexnav.min",
     "leaflet": "http://cdn.leafletjs.com/leaflet-0.6.3/leaflet",
     "stamen": "http://maps.stamen.com/js/tile.stamen",
     "magnific": "vendor/magnific-popup/dist/jquery.magnific-popup.min",
     "foundation": "foundation/foundation.min",
     "foundation.offCanvas": "foundation/foundation.offCanvas",
+    "fastClick": "vendor/fastclick/lib/fastclick",
     "htmlInspector": "vendor/html-inspector/dist/html-inspector.best-practice.js"
   },
 
@@ -22,6 +22,7 @@ require.config({
 });
 
 require([
+  'modules/global',
   'modules/magnific',
   'modules/leafletMap',
   'modules/collapseMap',
@@ -35,6 +36,9 @@ require([
   'modules/foundationScript',
 
   'modules/htmlInspector'
+
+
+
 ]);
 
 

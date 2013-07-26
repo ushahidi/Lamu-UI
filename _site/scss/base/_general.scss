@@ -30,6 +30,14 @@ i {
   visibility: visible;
 }
 
+::-moz-selection {
+    color: white;
+    background: $blueGray;
+}
+::selection {
+    color: white;
+    background: $blueGray;
+}
 
 
 
