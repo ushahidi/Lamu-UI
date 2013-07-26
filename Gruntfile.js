@@ -21,6 +21,14 @@ module.exports = function(grunt) {
         options: {
           config: 'config.rb' // compass config file is located in project root
         }
+      },
+
+      dev: {
+        options: {
+          sassDir: 'scss',
+          cssDir: 'css/test',
+          outputStyle: 'expanded'
+        }
       }
     },
 
@@ -93,7 +101,7 @@ module.exports = function(grunt) {
 
   // Default task(s).
   grunt.registerTask('default', ['requirejs', 'imagemin']);
-  grunt.registerTask('test', ['csslint']);
+  grunt.registerTask('test', ['compass', 'csslint']);
   grunt.registerTask('build', ['requirejs', 'imagemin']);
 
   grunt.registerTask('image', ['imagemin']);
