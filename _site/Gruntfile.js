@@ -17,45 +17,37 @@ module.exports = function(grunt) {
     pkg: grunt.file.readJSON('package.json'),
 
     compass: {
-      dist: {
-        options: {
-          config: 'config.rb' // compass config file is located in project root
-        }
-      },
-
       dev: {
         options: {
           sassDir: 'scss',
           cssDir: 'css/test',
           outputStyle: 'expanded'
         }
+      },
+
+      prod: {
+        options: {
+          config: 'config.rb' // compass config file is located in project root
+        }
       }
     },
 
     csslint: {
-      strict: {
-        options: {
-          import: 2
-        },
-        src: ['css/*.css']
+      options: {
+          csslintrc: '.csslintrc' // get CSSLint options from .csslintrc file in project root
       },
-      lax: {
-        options: {
-          import: false
-        },
-        src: ['css/*.css']
-      }
+      src: ['css/test/*.css']
     },
 
     imagemin: {
-        all: {
-            files: [{
-              expand: true,
-              cwd: 'images',
-              src: ['*.{png,jpg, jpeg}'],
-              dest: 'images'
-            }]
-        }
+      all: {
+          files: [{
+            expand: true,
+            cwd: 'images',
+            src: ['*.{png,jpg, jpeg}'],
+            dest: 'images'
+          }]
+      }
     },
 
     jekyll: {
@@ -65,19 +57,16 @@ module.exports = function(grunt) {
         baseurl: ' "" ',
         server_port : 4000
       },
-      config: '_config.yml' // Jekyll config file is located in project root
+      config: '_config.yml' // get Jekyll config options from _config.yml file in project root
     },
 
     requirejs: {
-      compile: {
+      prod: {
         options: {
           mainConfigFile: 'js/main.js',
           baseUrl: 'js',
           name: 'main',
-          out: 'js/main.min.js'
-          /*
-          TODO: call this file in production
-          */
+          out: 'js/main.min.js' /* TODO: call this file in production */
         }
       }
     },
@@ -85,7 +74,7 @@ module.exports = function(grunt) {
     watch: {
       sass: {
         files: ['scss/**/*.scss'],
-        tasks: ['compass']
+        tasks: ['compass:prod']
       }
     }
 
@@ -95,13 +84,13 @@ module.exports = function(grunt) {
   grunt.loadNpmTasks('grunt-contrib-compass');
   grunt.loadNpmTasks('grunt-contrib-csslint');
   grunt.loadNpmTasks('grunt-contrib-imagemin');
-  grunt.loadNpmTasks('grunt-jekyll');
   grunt.loadNpmTasks('grunt-contrib-requirejs');
   grunt.loadNpmTasks('grunt-contrib-watch');
+  grunt.loadNpmTasks('grunt-jekyll');
 
   // Default task(s).
   grunt.registerTask('default', ['requirejs', 'imagemin']);
-  grunt.registerTask('test', ['compass', 'csslint']);
+  grunt.registerTask('test', ['requirejs', 'csslint']);
   grunt.registerTask('build', ['requirejs', 'imagemin']);
 
   grunt.registerTask('image', ['imagemin']);

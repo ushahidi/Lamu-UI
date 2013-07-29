@@ -15,6 +15,7 @@
 
 * {
   @include box-sizing(border-box);
+  *behavior: url(../js/ie/boxsizing.htc);
 }
 
 /*Font-Awesome global icon padding*/

@@ -7,7 +7,8 @@ require.config({
     "foundation": "foundation/foundation.min",
     "foundation.offCanvas": "foundation/foundation.offCanvas",
     "fastClick": "vendor/fastclick/lib/fastclick",
-    "htmlInspector": "vendor/html-inspector/dist/html-inspector.best-practice.js"
+    "hammer": "vendor/hammerjs/dist/hammer.min"
+    // "htmlInspector": "vendor/html-inspector/dist/html-inspector.best-practice.js"
   },
 
   shim: {
@@ -22,20 +23,21 @@ require.config({
 });
 
 require([
-  'modules/global',
+  'modules/fastClick',
+  'modules/hammer',
   'modules/magnific',
   'modules/leafletMap',
   'modules/collapseMap',
-  'modules/adminMenu',
+  'modules/workspaceMenu',
   'modules/subNav',
   'modules/listViewBulkActions',
 
   // FOUNDATION requires
   'foundation',
   'foundation.offCanvas',
-  'modules/foundationScript',
+  'modules/foundationScript'
 
-  'modules/htmlInspector'
+  // 'modules/htmlInspector'
 
 
 

@@ -138,32 +138,33 @@ article, aside, details, figcaption, figure, footer, header, hgroup, menu, nav, 
   -webkit-box-sizing: border-box;
   -moz-box-sizing: border-box;
   box-sizing: border-box;
+  *behavior: url(../js/ie/boxsizing.htc);
 }
 
 /*Font-Awesome global icon padding*/
-/* line 21, ../../scss/base/_general.scss */
+/* line 22, ../../scss/base/_general.scss */
 i {
   padding-right: 10px;
 }
 
 /*custom css for Typekit asynchronous loading*/
-/* line 26, ../../scss/base/_general.scss */
+/* line 27, ../../scss/base/_general.scss */
 .wf-loading {
   visibility: hidden;
 }
 
-/* line 29, ../../scss/base/_general.scss */
+/* line 30, ../../scss/base/_general.scss */
 .wf-active {
   visibility: visible;
 }
 
-/* line 33, ../../scss/base/_general.scss */
+/* line 34, ../../scss/base/_general.scss */
 ::-moz-selection {
   color: white;
   background: #323a45;
 }
 
-/* line 37, ../../scss/base/_general.scss */
+/* line 38, ../../scss/base/_general.scss */
 ::selection {
   color: white;
   background: #323a45;
@@ -172,13 +173,13 @@ i {
 /*------------------------------------*\
     $CUSTOM CLASSES
 \*------------------------------------*/
-/* line 48, ../../scss/base/_general.scss */
+/* line 49, ../../scss/base/_general.scss */
 .none {
   display: none;
   visibility: hidden;
 }
 
-/* line 53, ../../scss/base/_general.scss */
+/* line 54, ../../scss/base/_general.scss */
 .visually-hidden {
   /*http://developer.yahoo.com/blogs/ydn/posts/2012/10/clip-your-hidden-content-for-better-accessibility/*/
   position: absolute !important;
@@ -192,12 +193,12 @@ i {
   overflow: hidden;
 }
 
-/* line 64, ../../scss/base/_general.scss */
+/* line 65, ../../scss/base/_general.scss */
 body:hover .visually-hidden a, body:hover .visually-hidden input, body:hover .visually-hidden button {
   display: none !important;
 }
 
-/* line 66, ../../scss/base/_general.scss */
+/* line 67, ../../scss/base/_general.scss */
 .hidden {
   opacity: 0;
   -webkit-transition: all 0.25s ease-in-out;
@@ -205,7 +206,7 @@ body:hover .visually-hidden a, body:hover .visually-hidden input, body:hover .vi
   transition: all 0.25s ease-in-out;
 }
 
-/* line 71, ../../scss/base/_general.scss */
+/* line 72, ../../scss/base/_general.scss */
 .visible {
   opacity: 1;
   -webkit-transition: all 0.25s ease-in-out;
@@ -213,13 +214,13 @@ body:hover .visually-hidden a, body:hover .visually-hidden input, body:hover .vi
   transition: all 0.25s ease-in-out;
 }
 
-/* line 76, ../../scss/base/_general.scss */
+/* line 77, ../../scss/base/_general.scss */
 .inverse {
   background-color: #323a45 !important;
   color: #fcfcfc !important;
 }
 
-/* line 81, ../../scss/base/_general.scss */
+/* line 82, ../../scss/base/_general.scss */
 .underline {
   border-bottom: 1px dotted;
   padding-bottom: 3px;
@@ -5581,11 +5582,11 @@ nav[role="sub-navigation"] {
   display: none;
   max-height: 1.2em;
   background-color: #fcfcfc;
-  -webkit-transition: all .4s ease;
-  -moz-transition: all .4s ease;
-  -ms-transition: all .4s ease;
-  -o-transition: all .4s ease;
-  transition: all .4s ease;
+  -webkit-transition: all 1s ease;
+  -moz-transition: all 1s ease;
+  -ms-transition: all 1s ease;
+  -o-transition: all 1s ease;
+  transition: all 1s ease;
 }
 /* line 26, ../../scss/modules/_subnav.scss */
 nav[role="sub-navigation"] ul {
@@ -5597,27 +5598,32 @@ nav[role="sub-navigation"] ul {
 nav[role="sub-navigation"].subnav {
   display: block;
   max-height: 999px;
+  -webkit-transition: all 1s ease;
+  -moz-transition: all 1s ease;
+  -ms-transition: all 1s ease;
+  -o-transition: all 1s ease;
+  transition: all 1s ease;
 }
 
-/* line 37, ../../scss/modules/_subnav.scss */
+/* line 42, ../../scss/modules/_subnav.scss */
 nav[role="sub-navigation"] ul li.active > a {
   background: #323a45;
   color: #fcfcfc;
 }
 
-/* line 42, ../../scss/modules/_subnav.scss */
+/* line 47, ../../scss/modules/_subnav.scss */
 nav[role="sub-navigation"] li {
   display: block;
 }
 @media only screen and (min-width: 768px) {
-  /* line 42, ../../scss/modules/_subnav.scss */
+  /* line 47, ../../scss/modules/_subnav.scss */
   nav[role="sub-navigation"] li {
     float: left;
     clear: none;
   }
 }
 
-/* line 50, ../../scss/modules/_subnav.scss */
+/* line 55, ../../scss/modules/_subnav.scss */
 nav[role="sub-navigation"] li a {
   display: block;
   padding: 20px 20px;
@@ -5625,7 +5631,7 @@ nav[role="sub-navigation"] li a {
   border-bottom: 1px solid #eff0f3;
 }
 @media only screen and (min-width: 768px) {
-  /* line 50, ../../scss/modules/_subnav.scss */
+  /* line 55, ../../scss/modules/_subnav.scss */
   nav[role="sub-navigation"] li a {
     float: left;
     padding: 20px 30px;

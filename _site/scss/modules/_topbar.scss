@@ -79,7 +79,7 @@
   }
 }
 
-.top-bar-section li a.admin-panel-button {
+.top-bar-section li a.workspace-panel-button {
   padding: 0 66px 0 18px;
   .icon-dashboard {
     position: relative;
@@ -88,7 +88,7 @@
 }
 
 .top-bar-section li.show-for-medium-down a {
-  &.admin-panel-button,
+  &.workspace-panel-button,
   &.create-post-button,
   &.views,
   &.sets {
@@ -100,7 +100,7 @@
       padding: 0;
     }
   }
-  &.admin-panel-button {
+  &.workspace-panel-button {
     padding: 0 18px;
   }
 }

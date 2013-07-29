@@ -17,11 +17,11 @@ nav[role="sub-navigation"] {
   display: none;
   max-height:1.2em;
   background-color: $white;
-  -webkit-transition: all .4s ease;
-  -moz-transition: all .4s ease;
-  -ms-transition: all .4s ease;
-  -o-transition: all .4s ease;
-  transition: all .4s ease;
+  -webkit-transition: all 1s ease;
+    -moz-transition: all 1s ease;
+      -ms-transition: all 1s ease;
+        -o-transition: all 1s ease;
+          transition: all 1s ease;
   @extend .box-shadow;
   ul {
     margin: 0;
@@ -32,6 +32,11 @@ nav[role="sub-navigation"] {
 nav[role="sub-navigation"].subnav {
   display: block;
   max-height:999px;
+  -webkit-transition: all 1s ease;
+    -moz-transition: all 1s ease;
+      -ms-transition: all 1s ease;
+        -o-transition: all 1s ease;
+          transition: all 1s ease;
 }
 
 nav[role="sub-navigation"] ul li.active>a {
