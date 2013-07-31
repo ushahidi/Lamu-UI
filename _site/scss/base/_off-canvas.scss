@@ -27,6 +27,12 @@
   margin-left: 0px;
   overflow: hidden;
   @extend .box-shadow;
+  -webkit-transition: margin .3s ease;
+    -moz-transition: margin .3s ease;
+      -ms-transition: margin .3s ease;
+        -o-transition: margin .3s ease;
+          transition: margin .3s ease;
+
 }
 
 [role="complementary"] {

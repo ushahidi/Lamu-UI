@@ -66,12 +66,12 @@ body:hover .visually-hidden a, body:hover .visually-hidden input, body:hover .vi
 
 .hidden {
   opacity: 0;
-  @include transition (all .25s ease-in-out);
+  @include transition (opacity .3s ease-in-out);
 }
 
 .visible {
   opacity: 1;
-  @include transition (all .25s ease-in-out);
+  @include transition (opacity .3s ease-in-out);
 }
 
 .inverse {

@@ -14,29 +14,27 @@
 
 nav[role="sub-navigation"] {
   @include grid-column(12, $collapse: true);
-  display: none;
-  max-height:1.2em;
   background-color: $white;
-  -webkit-transition: all 1s ease;
-    -moz-transition: all 1s ease;
-      -ms-transition: all 1s ease;
-        -o-transition: all 1s ease;
-          transition: all 1s ease;
   @extend .box-shadow;
   ul {
     margin: 0;
   }
 }
 
+nav[role="sub-navigation"] ul {
+  display: none;
+  opacity: 0;
+  -webkit-transition: opacity .3s ease;
+    -moz-transition: opacity .3s ease;
+      -ms-transition: opacity .3s ease;
+        -o-transition: opacity .3s ease;
+          transition: opacity .3s ease;
+}
+
 /*subnav reveal for mobile menu*/
-nav[role="sub-navigation"].subnav {
+nav[role="sub-navigation"] ul.subnav {
   display: block;
-  max-height:999px;
-  -webkit-transition: all 1s ease;
-    -moz-transition: all 1s ease;
-      -ms-transition: all 1s ease;
-        -o-transition: all 1s ease;
-          transition: all 1s ease;
+  opacity: 1;
 }
 
 nav[role="sub-navigation"] ul li.active>a {

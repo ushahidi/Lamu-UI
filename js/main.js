@@ -7,7 +7,7 @@ require.config({
     "foundation": "foundation/foundation.min",
     "foundation.offCanvas": "foundation/foundation.offCanvas",
     "fastClick": "vendor/fastclick/lib/fastclick",
-    "hammer": "vendor/hammerjs/dist/hammer.min"
+    "hammer": "vendor/hammerjs/dist/jquery.hammer.min"
     // "htmlInspector": "vendor/html-inspector/dist/html-inspector.best-practice.js"
   },
 

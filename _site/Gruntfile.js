@@ -55,7 +55,7 @@ module.exports = function(grunt) {
         server : true,
         watch: true,
         baseurl: ' "" ',
-        server_port : 4000
+        server_port: 4000
       },
       config: '_config.yml' // get Jekyll config options from _config.yml file in project root
     },
@@ -75,6 +75,13 @@ module.exports = function(grunt) {
       sass: {
         files: ['scss/**/*.scss'],
         tasks: ['compass:prod']
+      },
+      livereload: {
+        options: {
+          livereload: true,
+          debounceDelay: 2000
+        },
+        files: ['_site/css/global.css']
       }
     }
 

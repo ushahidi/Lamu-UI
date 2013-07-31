@@ -1,6 +1,16 @@
-define(['hammer'], function(hammer){
-  var element = document.getElementsByClassName('js-workspace-panel-button, .js-workspace-panel-small');
-  var hammertime = Hammer(element).on("drag", function(event) {
-     alert('hello!');
+define(['hammer'], function(hammer) {
+
+  var element = document.getElementById('js-off-canvas');
+  var hammertime = Hammer(element);
+
+  hammertime.on('swipeleft dragleft', function(e) {
+    ev.gesture.preventDefault()
+    $('body').toggleClass('active');
+    // alert('hello!');
   });
+
 });
+
+
+
+
