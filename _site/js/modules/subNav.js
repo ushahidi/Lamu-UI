@@ -3,9 +3,9 @@ define(['jquery'], function($) {
 $('body').addClass('js');
 
 var $viewsMenuLink = $('.js-views-menu-link, .js-views-menu-link-mobile'),
-    $viewsMenu = $('.js-views-menu ul'),
+    $viewsMenu = $('.js-views-menu'),
     $setsMenuLink = $('.js-sets-menu-link, .js-sets-menu-link-mobile'),
-    $setsMenu = $('.js-sets-menu ul');
+    $setsMenu = $('.js-sets-menu');
 
     $viewsMenuLink.click(function(e) {
       e.preventDefault();

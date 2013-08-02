@@ -4,9 +4,9 @@ define(['hammer'], function(hammer) {
   var hammertime = Hammer(element);
 
   hammertime.on('swipeleft dragleft', function(e) {
-    ev.gesture.preventDefault()
+    e.preventDefault();
     $('body').toggleClass('active');
-    // alert('hello!');
+    alert('hello!');
   });
 
 });
