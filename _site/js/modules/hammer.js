@@ -6,7 +6,7 @@ define(['hammer'], function(hammer) {
   hammertime.on('swipeleft dragleft', function(e) {
     e.preventDefault();
     $('body').toggleClass('active');
-    alert('hello!');
+    // alert('hello!');
   });
 
 });
