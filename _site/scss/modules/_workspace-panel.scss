@@ -95,17 +95,22 @@
 	color: $white;
 }
 
-.workspace-menu>section .content {
-	&.active {
-		background: $section-content-bg-active;
-	}
-	a {
-		color: $body-font-color;
-		p {
-			margin: 0;
-			span {
-				float: right;
-			}
-		}
-	}
+.workspace-menu>section ul {
+  margin: 0;
+    .content {
+      padding: 10px;
+      &.active {
+        background: $section-content-bg-active;
+      }
+    	a {
+    		color: $body-font-color;
+    		p {
+    			margin: 0;
+    			span {
+    				float: right;
+    			}
+    		}
+    	}
+    }
+
 }
