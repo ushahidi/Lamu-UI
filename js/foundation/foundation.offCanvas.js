@@ -7,7 +7,7 @@
   if ($selector2.length > 0) {
     $('.js-workspace-panel-button, .js-workspace-panel-button-small').on(events, function (e) {
       e.preventDefault();
-      $('body').toggleClass('active');
+      $('body').toggleClass('active-workspace');
       console.log('workspace toggle');
     });
   }
