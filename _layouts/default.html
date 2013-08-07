@@ -58,7 +58,9 @@
     <div class="content-wrapper  js-content-wrapper">
       <section id="main" role="main">
         {% include topbar.html %}
-        {{content}}
+        <div id="mainRegion">
+          {{content}}
+        </div>
       </section>
       {% include workspace-panel.html %}
     </div>

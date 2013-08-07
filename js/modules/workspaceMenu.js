@@ -1,14 +1,8 @@
 define(['jquery'], function($) {
 
-  $( "p.js-title" ).click(function() {
-     if ($(this).parent().hasClass('active')) {
-        $(this).parent().removeClass('active');
-        return false; // Prevents further propagation of event
-     }
-     if ($(this).parent().hasClass('disable')) {
-        $(this).parent().addClass('active')
-        return false; // Prevents further propagation of event
-     }
+  $( "p.js-title" ).click(function(e) {
+     $(this).parent().toggleClass('active');
+     e.preventDefault();
   });
 
   $('.workspace-menu>section .js-content').click(function(e) {
