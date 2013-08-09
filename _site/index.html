@@ -17,7 +17,7 @@
         <![endif]-->
 
         <!-- cachebusted global.css -->
-        <link rel="stylesheet" href="/css/global.css?1376063237">
+        <link rel="stylesheet" href="/css/global.css?1376067065">
 
         <!-- Font Awesome CSS CDN -->
         <link href="//netdna.bootstrapcdn.com/font-awesome/3.2.1/css/font-awesome.css" rel="stylesheet">
@@ -110,7 +110,8 @@
   <h4><a href="/">Deployment Name</a></h4>
 </li>
 
-        <div id="leaflet-marker-pane" class="post-overlay" data-dropdown-content>
+        <div id="mainRegion">
+          <div id="leaflet-marker-pane" class="post-overlay" data-dropdown-content>
 
   <div class="post-header">
     <div class="row">
@@ -429,24 +430,24 @@
       <div class="list-view-post-categories">
         <button class="button  small  secondary"> <i class="icon-circle"></i> Transportation</button>
       </div>
-      <div class="hide-for-medium-down  list-view-post-edit-wrapper">
+      <div class="list-view-post-edit-wrapper  hide-for-medium-down">
         <ul class="list-view-post-edit">
-          <li><a href="#" class="button  small  secondary"> <i class="icon-edit"></i> edit</a></li>
-          <li><a href="#" class="button  small  secondary"> <i class="icon-plus-sign"></i> set</a></li>
-          <li><a href="#" class="button  small  secondary"> <i class="icon-file"></i> unpublish</a></li>
-          <li><a href="#" class="button  small  secondary"> <i class="icon-trash"></i></a></li>
-        </ul>
-      </div>
+          <li><a href="#" class="button  small  secondary post-edit"> <i class="icon-edit"></i> edit</a></li>
+          <li><a href="#" class="button  small  secondary post-set"> <i class="icon-plus-sign"></i> set</a></li>
+          <li><a href="#" class="button  small  secondary post-unpublish"> <i class="icon-file"></i> unpublish</a></li>
+          <li><a href="#" class="button  small  secondary post-delete"> <i class="icon-trash"></i></a></li>
+        </ul> <!-- end .list-view-post-edit -->
+      </div> <!-- end .list-view-post-edit-wrapper .hide-for-medium-down -->
 
-      <div class="show-for-medium-down list-view-post-edit-wrapper">
+      <div class="list-view-post-edit-wrapper show-for-medium-down">
         <ul class="list-view-post-edit">
-          <li><a href="#" class="button  small  secondary"> <i class="icon-edit"></i></a></li>
-          <li><a href="#" class="button  small  secondary"> <i class="icon-plus-sign"></i></a></li>
-          <li><a href="#" class="button  small  secondary"> <i class="icon-file-alt"></i></a></li>
-          <li><a href="#" class="button  small  secondary"> <i class="icon-trash"></i></a></li>
+          <li><a href="#" class="button  small  secondary post-edit"> <i class="icon-edit"></i></a></li>
+          <li><a href="#" class="button  small  secondary post-set"> <i class="icon-plus-sign"></i></a></li>
+          <li><a href="#" class="button  small  secondary post-unpublish"> <i class="icon-file-alt"></i></a></li>
+          <li><a href="#" class="button  small  secondary post-delete"> <i class="icon-trash"></i></a></li>
         </ul>
 
-      </div> <!-- end .list-view-post-edit-wrapper -->
+      </div> <!-- end .list-view-post-edit-wrapper .show-for-medium-down -->
     </div> <!-- end .list-view-post-admin -->
   </div> <!-- end row -->
 </li> <!-- end .list-view-post -->
@@ -472,6 +473,7 @@
 
 
 
+        </div>
       </section>
       <section id="workspace-panel" role="complementary">
   <div class="workspace-profile">
@@ -505,7 +507,7 @@
     </ul>
   </div>
 
-  <div class="workspace-menu" data-section="accordion">
+  <div class="workspace-menu">
       <section class="active">
         <p id="workspace-menu-posts" class="title  js-title" data-section-title><a href="#"><i class="icon-inbox"></i> Posts</a></p>
 
@@ -529,7 +531,7 @@
         </div>
       </section>
 
-      <section class="disable">
+      <section class="">
         <p id="workspace-menu-tasks" class="title  js-title" data-section-title><a href="#"><i class="icon-tasks"></i> Tasks</a></p>
 
         <div id="workspace-menu-my-tasks" class="content  js-content" data-section-content>
@@ -545,7 +547,7 @@
         </div>
       </section>
 
-      <section class="disable">
+      <section class="">
         <p id="workspace-menu-tools" class="title  js-title" data-section-title><a href="#"><i class="icon-cog"></i> Tools</a></p>
 
         <div id="" class="content  js-content" data-section-content>

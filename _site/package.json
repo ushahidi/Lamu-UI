@@ -11,8 +11,6 @@
     "grunt-contrib-csslint": "~0.1.2",
     "grunt-notify": "~0.2.7",
     "grunt-contrib-clean": "~0.5.0",
-    "matchdep": "~0.1.2",
-    "grunt-casper": "~0.1.1",
-    "grunt-ghost": "~1.0.13"
+    "matchdep": "~0.1.2"
   }
 }
