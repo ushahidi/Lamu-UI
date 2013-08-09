@@ -48,6 +48,28 @@
 
 .post-privacy-status {
   @include grid-column(12);
+  margin-bottom: 20px;
+}
+
+.post-categories-wrapper {
+  @include grid-column(12);
+  button {
+    margin-bottom: 0;
+  }
+  @media #{$small} {
+    button.expand, .button.expand {
+      padding-right: 1.125em;
+      padding-left: 1.125em;
+      width: auto;
+    }
+  }
+}
+
+.post-categories {
+  @include block-grid($per-row: 2);
+  @media #{$small} {
+    @include block-grid($per-row: 1);
+  }
 }
 
 .post-thumbnails-wrapper {
