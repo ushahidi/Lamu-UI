@@ -68,6 +68,10 @@
 
 .panel h4 {
   margin: 0;
+  span {
+    font-size: $base-font-size;
+    font-weight: normal;
+  }
 }
 
 
