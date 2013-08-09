@@ -57,6 +57,13 @@
   }
 }
 
+.list-view-post-body {
+  @include grid-column(12, $collapse: true);
+  @media #{$small} {
+    @include grid-column(10, $offset: 2, $collapse: true);
+  }
+}
+
 .list-view-post-excerpt {
   @include grid-column(12);
   @media #{$small} {

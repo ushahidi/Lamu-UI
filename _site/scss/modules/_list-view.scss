@@ -59,7 +59,16 @@
   }
 }
 
+.list-view-bulk-actions input[type="checkbox"] {
+  float: left;
+}
 
+.list-view-bulk-actions label.select-all span {
+  float: left;
+  margin-top: -3px;
+  font-size: 1em;
+  color: $white;
+}
 
 
 /*------------------------------------*\

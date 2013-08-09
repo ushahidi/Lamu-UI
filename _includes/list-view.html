@@ -1,30 +1,21 @@
 <div class="list-view-bulk-actions  js-list-view-bulk-actions  hidden">
   <div class="row">
-  <ul class="list-view-bulk-actions-list  hide-for-medium-down">
-    <li><a href="#" class="underline" >Select All</a></li>
-    <li><a href="#"> <i class="icon-edit"></i> Edit</a></li>
-    <li><a href="#"> <i class="icon-file-alt"></i> Publish</a></li>
-    <li><a href="#"> <i class="icon-file"></i> Unpublish</a></li>
-    <li><a href="#"> <i class="icon-trash"></i> Delete</a></li>
-    <li><a href="#"> <i class="icon-mail-forward"></i> Assign</a></li>
-    <li><a href="#"> <i class="icon-lock"></i> Privacy</a></li>
-  </ul> <!-- end .list-view-bulk-actions-list .hide-for-medium-down-->
-
-  <ul class="list-view-bulk-actions-list  show-for-medium-down">
-    <li>
-      <form>
-        <label class="visually-hidden" for="select-all">Select All</label>
-        <input type="checkbox" id="select-all">
-          <!-- <span class="custom checkbox"></span> -->
-      </form>
-    </li>
-    <li><a href="#"> <i class="icon-edit"></i></a></li>
-    <li><a href="#"> <i class="icon-file-alt"></i></a></li>
-    <li><a href="#"> <i class="icon-file"></i></a></li>
-    <li><a href="#"> <i class="icon-trash"></i></a></li>
-    <li><a href="#"> <i class="icon-mail-forward"></i></a></li>
-    <li><a href="#"> <i class="icon-lock"></i></a></li>
-  </ul> <!-- end .list-view-bulk-actions-list .show-for-medium-down -->
+    <ul class="list-view-bulk-actions-list">
+      <li>
+        <form>
+          <label class="select-all" for="select-all">
+            <input class="show-for-medium-down" type="checkbox" id="select-all">
+            <span class="hide-for-medium-down underline">Select All</span>
+          </label>
+        </form>
+      </li>
+      <li><a href="#"> <i class="icon-edit"></i> <span class="hide-for-medium-down">Edit</span></a></li>
+      <li><a href="#"> <i class="icon-file-alt"></i> <span class="hide-for-medium-down">Publish</span></a></li>
+      <li><a href="#"> <i class="icon-file"></i> <span class="hide-for-medium-down">Unpublish</span></a></li>
+      <li><a href="#"> <i class="icon-trash"></i> <span class="hide-for-medium-down">Delete</span></a></li>
+      <li><a href="#"> <i class="icon-mail-forward"></i> <span class="hide-for-medium-down">Assign</span></a></li>
+      <li><a href="#"> <i class="icon-lock"></i> <span class="hide-for-medium-down">Privacy</span></a></li>
+    </ul> <!-- end .list-view-bulk-actions-list .hide-for-medium-down-->
   </div> <!-- end .row -->
 </div> <!-- end .list-view-bulk-actions -->
 

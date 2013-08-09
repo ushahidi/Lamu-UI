@@ -17,7 +17,7 @@
         <![endif]-->
 
         <!-- cachebusted global.css -->
-        <link rel="stylesheet" href="/css/global.css?1375463735">
+        <link rel="stylesheet" href="/css/global.css?1376063237">
 
         <!-- Font Awesome CSS CDN -->
         <link href="//netdna.bootstrapcdn.com/font-awesome/3.2.1/css/font-awesome.css" rel="stylesheet">
@@ -34,18 +34,8 @@
           <noscript><link rel="stylesheet" href="[fallback css]" /></noscript>
         <![endif]-->
 
-        <!-- Place Typekit script here -->
-        <!-- This allow fonts to load asynchronously, but requires custom CSS. The custom css can be found in scss/base/_general.scss-->
-        <script type="text/javascript">
-          (function() {
-            var config = {
-              kitId: 'nmg4nns',
-              scriptTimeout: 3000
-            };
-            var h=document.getElementsByTagName("html")[0];h.className+=" wf-loading";var t=setTimeout(function(){h.className=h.className.replace(/(\s|^)wf-loading(\s|$)/g," ");h.className+=" wf-inactive"},config.scriptTimeout);var tk=document.createElement("script"),d=false;tk.src='//use.typekit.net/'+config.kitId+'.js';tk.type="text/javascript";tk.async="true";tk.onload=tk.onreadystatechange=function(){var a=this.readyState;if(d||a&&a!="complete"&&a!="loaded")return;d=true;clearTimeout(t);try{Typekit.load(config)}catch(b){}};var s=document.getElementsByTagName("script")[0];s.parentNode.insertBefore(tk,s)
-          })();
-        </script>
-        <!-- end Typekit script -->
+        <!-- Google Font -->
+        <link href='http://fonts.googleapis.com/css?family=Montserrat:400,700' rel='stylesheet' type='text/css'>
 
     </head>
 
@@ -249,31 +239,22 @@
 
 <div class="list-view-bulk-actions  js-list-view-bulk-actions  hidden">
   <div class="row">
-  <ul class="list-view-bulk-actions-list  hide-for-medium-down">
-    <li><a href="#" class="underline" >Select All</a></li>
-    <li><a href="#"> <i class="icon-edit"></i> Edit</a></li>
-    <li><a href="#"> <i class="icon-file-alt"></i> Publish</a></li>
-    <li><a href="#"> <i class="icon-file"></i> Unpublish</a></li>
-    <li><a href="#"> <i class="icon-trash"></i> Delete</a></li>
-    <li><a href="#"> <i class="icon-mail-forward"></i> Assign</a></li>
-    <li><a href="#"> <i class="icon-lock"></i> Privacy</a></li>
-  </ul> <!-- end .list-view-bulk-actions-list .hide-for-medium-down-->
-
-  <ul class="list-view-bulk-actions-list  show-for-medium-down">
-    <li>
-      <form>
-        <label class="visually-hidden" for="select-all">Select All</label>
-        <input type="checkbox" id="select-all">
-          <!-- <span class="custom checkbox"></span> -->
-      </form>
-    </li>
-    <li><a href="#"> <i class="icon-edit"></i></a></li>
-    <li><a href="#"> <i class="icon-file-alt"></i></a></li>
-    <li><a href="#"> <i class="icon-file"></i></a></li>
-    <li><a href="#"> <i class="icon-trash"></i></a></li>
-    <li><a href="#"> <i class="icon-mail-forward"></i></a></li>
-    <li><a href="#"> <i class="icon-lock"></i></a></li>
-  </ul> <!-- end .list-view-bulk-actions-list .show-for-medium-down -->
+    <ul class="list-view-bulk-actions-list">
+      <li>
+        <form>
+          <label class="select-all" for="select-all">
+            <input class="show-for-medium-down" type="checkbox" id="select-all">
+            <span class="hide-for-medium-down underline">Select All</span>
+          </label>
+        </form>
+      </li>
+      <li><a href="#"> <i class="icon-edit"></i> <span class="hide-for-medium-down">Edit</span></a></li>
+      <li><a href="#"> <i class="icon-file-alt"></i> <span class="hide-for-medium-down">Publish</span></a></li>
+      <li><a href="#"> <i class="icon-file"></i> <span class="hide-for-medium-down">Unpublish</span></a></li>
+      <li><a href="#"> <i class="icon-trash"></i> <span class="hide-for-medium-down">Delete</span></a></li>
+      <li><a href="#"> <i class="icon-mail-forward"></i> <span class="hide-for-medium-down">Assign</span></a></li>
+      <li><a href="#"> <i class="icon-lock"></i> <span class="hide-for-medium-down">Privacy</span></a></li>
+    </ul> <!-- end .list-view-bulk-actions-list .hide-for-medium-down-->
   </div> <!-- end .row -->
 </div> <!-- end .list-view-bulk-actions -->
 
@@ -321,108 +302,101 @@
 
     <ul class="list-view-posts-list">
       <li class="list-view-post">
-  <div class="row">
-    <div class="list-view-post-image">
+	<div class="row">
+		<div class="list-view-post-image">
 
-    <div class="list-view-select-post  js-list-view-select-post">
-      <form>
-        <label class="visually-hidden" for="select-post">Select Post</label>
-        <input type="checkbox" id="select-post">
-      </form>
-    </div> <!-- end .list-view-select-post -->
-    <img src="/images/mini-coop.png" alt="">
-    </div> <!-- end .list-view-post-image -->
+		<div class="list-view-select-post  js-list-view-select-post">
+			<form>
+				<label class="visually-hidden" for="select-post">Select Post</label>
+				<input type="checkbox" id="select-post">
+			</form>
+		</div> <!-- end .list-view-select-post -->
+		<img src="/images/mini-coop.png" alt="">
+		</div> <!-- end .list-view-post-image -->
 
-    <div class="list-view-post-details">
-      <div class="row">
-        <h5 class="list-view-post-title"><a href="/post-details.html">Mini Cooper spotted in the streets of London. </a> <i class="icon-lock"></i></h5>
-        <div class="list-view-post-time">
-          <p> <i class="icon-time"></i>Today 12:20 pm</p>
-        </div> <!-- end .list-view-post-time -->
-      </div> <!-- end .row -->
-    </div> <!-- end .list-view-post-details -->
+			<div class="list-view-post-details">
+				<div class="row">
+					<h5 class="list-view-post-title"><a href="/post-details.html">Mini Cooper spotted in the streets of London. </a> <i class="icon-lock"></i></h5>
+					<div class="list-view-post-time">
+						<p> <i class="icon-time"></i>Today 12:20 pm</p>
+					</div> <!-- end .list-view-post-time -->
+				</div> <!-- end .row -->
+			</div> <!-- end .list-view-post-details -->
 
-    <div class="list-view-post-excerpt">
-      <p>Sociis natoque penatibus et magnis dis parturient montes, nascetur ridiculus mus. Fusce dapibus <a href="#"><span class="read-more">...&nbsp;Read&nbsp;More</span></a></p>
-    </div> <!-- end .list-view-post-excerpt -->
+		<div class="list-view-post-body">
+			<div class="list-view-post-excerpt">
+				<p>Sociis natoque penatibus et magnis dis parturient montes, nascetur ridiculus mus. Fusce dapibus <a href="#"><span class="read-more">...&nbsp;Read&nbsp;More</span></a></p>
+			</div> <!-- end .list-view-post-excerpt -->
 
-    <div class="list-view-post-admin">
-      <div class="list-view-post-categories">
-        <button class="button  small  secondary"> <i class="icon-circle"></i> Automobiles</button>
-      </div> <!-- end .list-view-post-categories -->
-      <div class="list-view-post-edit-wrapper  hide-for-medium-down">
-        <ul class="list-view-post-edit">
-          <li><a href="#" class="button  small  secondary"> <i class="icon-edit"></i> edit</a></li>
-          <li><a href="#" class="button  small  secondary"> <i class="icon-plus-sign"></i> set</a></li>
-          <li><a href="#" class="button  small  secondary"> <i class="icon-file"></i> unpublish</a></li>
-          <li><a href="#" class="button  small  secondary"> <i class="icon-trash"></i></a></li>
-        </ul> <!-- end .list-view-post-edit -->
-      </div> <!-- end .list-view-post-edit-wrapper .hide-for-medium-down -->
+			<div class="list-view-post-admin">
+				<div class="list-view-post-categories">
+					<button class="button  small  secondary"> <i class="icon-circle"></i> Automobiles</button>
+				</div> <!-- end .list-view-post-categories -->
+				<div class="list-view-post-edit-wrapper">
+					<ul class="list-view-post-edit">
+						<li><a href="#" class="button  small  secondary"> <i class="icon-edit"></i> <span class="hide-for-small"> edit</span></a></li>
+						<li><a href="#" class="button  small  secondary"> <i class="icon-plus-sign"></i> <span class="hide-for-small"> set</span></a></li>
+						<li><a href="#" class="button  small  secondary"> <i class="icon-file"></i> <span class="hide-for-small"> unpublish</span></a></li>
+						<li><a href="#" class="button  small  secondary"> <i class="icon-trash"></i></a></li>
+					</ul> <!-- end .list-view-post-edit -->
+				</div> <!-- end .list-view-post-e dit-wrapper .hide-for-small -->
+			</div> <!-- end .list-view-post-admin -->
+		</div> <!-- end .list-view-post-body -->
 
-      <div class="list-view-post-edit-wrapper show-for-medium-down">
-        <ul class="list-view-post-edit">
-          <li><a href="#" class="button  small  secondary"> <i class="icon-edit"></i></a></li>
-          <li><a href="#" class="button  small  secondary"> <i class="icon-plus-sign"></i></a></li>
-          <li><a href="#" class="button  small  secondary"> <i class="icon-file-alt"></i></a></li>
-          <li><a href="#" class="button  small  secondary"> <i class="icon-trash"></i></a></li>
-        </ul>
-
-      </div> <!-- end .list-view-post-edit-wrapper .show-for-medium-down -->
-    </div> <!-- end .list-view-post-admin -->
-  </div> <!-- end .row -->
+	</div> <!-- end .row -->
 </li> <!-- end .list-view-post -->
 
       <!-- NOTE: this provide a different list view post image, just for demo purposes, delete file in production -->
       <li class="list-view-post">
-  <div class="row">
-    <div class="list-view-post-image">
+	<div class="row">
+		<div class="list-view-post-image">
 
-    <div class="list-view-select-post  js-list-view-select-post">
-      <form>
-        <label class="visually-hidden" for="select-post">Select Post</label>
-        <input type="checkbox" id="select-post">
-      </form>
-    </div>
-    <img src="/images/barbican.png" alt="">
-    </div> <!-- end .list-view-post-avatar -->
+		<div class="list-view-select-post  js-list-view-select-post">
+			<form>
+				<label class="visually-hidden" for="select-post">Select Post</label>
+				<input type="checkbox" id="select-post">
+			</form>
+		</div>
+		<img src="/images/barbican.png" alt="">
+		</div> <!-- end .list-view-post-avatar -->
 
-    <div class="list-view-post-details">
-      <div class="row">
-        <h5 class="list-view-post-title"><a href="#">Construction to begin on the highly anticipated Barbican Estate. </a> <i class="icon-lock"></i></h5>
-        <div class="list-view-post-time">
-          <p> <i class="icon-time"></i>Today 12:20 pm</p>
-        </div> <!-- end .list-view-post-time -->
-      </div> <!-- end .row -->
-    </div> <!-- end .list-view-post-details -->
+		<div class="list-view-post-details">
+			<div class="row">
+				<h5 class="list-view-post-title"><a href="#">Construction to begin on the highly anticipated Barbican Estate. </a> <i class="icon-lock"></i></h5>
+				<div class="list-view-post-time">
+					<p> <i class="icon-time"></i>Today 12:20 pm</p>
+				</div> <!-- end .list-view-post-time -->
+			</div> <!-- end .row -->
+		</div> <!-- end .list-view-post-details -->
 
-    <div class="list-view-post-excerpt">
-      <p>Sociis natoque penatibus et magnis dis parturient montes, nascetur ridiculus mus. Fusce dapibus <a href="#"><span class="read-more">...&nbsp;Read&nbsp;More</span></a></p>
-    </div> <!-- end .list-view-post-excerpt -->
+		<div class="list-view-post-excerpt">
+			<p>Sociis natoque penatibus et magnis dis parturient montes, nascetur ridiculus mus. Fusce dapibus <a href="#"><span class="read-more">...&nbsp;Read&nbsp;More</span></a></p>
+		</div> <!-- end .list-view-post-excerpt -->
 
-    <div class="list-view-post-admin">
-      <div class="list-view-post-categories">
-        <button class="button  small  secondary"> <i class="icon-circle"></i> Architecture</button>
-      </div>
-      <div class="hide-for-medium-down  list-view-post-edit-wrapper">
-        <ul class="list-view-post-edit">
-          <li><a href="#" class="button  small  secondary"> <i class="icon-edit"></i> edit</a></li>
-          <li><a href="#" class="button  small  secondary"> <i class="icon-plus-sign"></i> set</a></li>
-          <li><a href="#" class="button  small  secondary"> <i class="icon-file"></i> unpublish</a></li>
-          <li><a href="#" class="button  small  secondary"> <i class="icon-trash"></i></a></li>
-        </ul>
-      </div>
+		<div class="list-view-post-admin">
+			<div class="list-view-post-categories">
+				<button class="button  small  secondary"> <i class="icon-circle"></i> Architecture</button>
+			</div>
+			<div class="hide-for-medium-down  list-view-post-edit-wrapper">
+				<ul class="list-view-post-edit">
+					<li><a href="#" class="button  small  secondary"> <i class="icon-edit"></i> edit</a></li>
+					<li><a href="#" class="button  small  secondary"> <i class="icon-plus-sign"></i> set</a></li>
+					<li><a href="#" class="button  small  secondary"> <i class="icon-file"></i> unpublish</a></li>
+					<li><a href="#" class="button  small  secondary"> <i class="icon-trash"></i></a></li>
+				</ul>
+			</div>
 
-      <div class="show-for-medium-down list-view-post-edit-wrapper">
-        <ul class="list-view-post-edit">
-          <li><a href="#" class="button  small  secondary"> <i class="icon-edit"></i></a></li>
-          <li><a href="#" class="button  small  secondary"> <i class="icon-plus-sign"></i></a></li>
-          <li><a href="#" class="button  small  secondary"> <i class="icon-file-alt"></i></a></li>
-          <li><a href="#" class="button  small  secondary"> <i class="icon-trash"></i></a></li>
-        </ul>
+			<div class="show-for-medium-down list-view-post-edit-wrapper">
+				<ul class="list-view-post-edit">
+					<li><a href="#" class="button  small  secondary"> <i class="icon-edit"></i></a></li>
+					<li><a href="#" class="button  small  secondary"> <i class="icon-plus-sign"></i></a></li>
+					<li><a href="#" class="button  small  secondary"> <i class="icon-file-alt"></i></a></li>
+					<li><a href="#" class="button  small  secondary"> <i class="icon-trash"></i></a></li>
+				</ul>
 
-      </div> <!-- end .list-view-post-edit-wrapper -->
-    </div> <!-- end .list-view-post-admin -->
-  </div> <!-- end row -->
+			</div> <!-- end .list-view-post-edit-wrapper -->
+		</div> <!-- end .list-view-post-admin -->
+	</div> <!-- end row -->
 </li> <!-- end .list-view-post -->
 
       <li class="list-view-post">
@@ -587,9 +561,9 @@
     </div>
 
     <footer role="contentinfo">
-  <div class="row">
-    <p>© Copyright Ushahidi, Inc 2013</p>
-  </div>
+	<div class="row">
+		<p>© Copyright Ushahidi, Inc 2013</p>
+	</div>
 </footer>
 
 

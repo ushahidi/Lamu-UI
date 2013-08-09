@@ -87,6 +87,10 @@
   }
 }
 
+.workspace-menu>section.active>.title a {
+	color: $white;
+}
+
 .workspace-menu>section .content {
   &.active {
     background: $section-content-bg-active;

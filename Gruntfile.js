@@ -12,6 +12,11 @@ TODO: need to add html minify for deployment - https://github.com/gruntjs/grunt-
 
 module.exports = function(grunt) {
 
+  /*
+  FIXME: this is not working for some reason
+  */
+  require('matchdep').filterDev('grunt-*').forEach(grunt.loadNpmTasks);
+
 // Initialize Grunt
   grunt.initConfig({
     pkg: grunt.file.readJSON('package.json'),
