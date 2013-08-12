@@ -36,7 +36,7 @@
 }
 
 [role="complementary"] {
-	width: 310px;
+	width: 300px;
 	margin-right: -200%;
 	float: left;
 }
@@ -50,7 +50,7 @@
 \*------------------------------------*/
 
 .active-workspace [role="main"], .active-workspace #mainRegion {
-	margin-left: -310px;
+	margin-left: -300px;
 	@media #{$medium-up} {
 		margin-left: -300px;
 	}
