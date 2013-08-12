@@ -12,17 +12,93 @@
 	$CUSTOM DROPDOWNS
 \*------------------------------------*/
 
-.search-bar form.custom .custom.dropdown {
-	@media #{$medium} {
-		margin-bottom: 0;
+input[type="text"] {
+	padding: 20px;
+}
+
+form.custom .custom.dropdown {
+	height: 3em;
+	-webkit-border-radius: $global-radius;
+		-moz-border-radius: $global-radius;
+			border-radius: $global-radius;
+	.current {
+	margin-top: .4em;
+	margin-left: 1.4em;
+	}
+	.selector {
+	height: 3.3125em;
+	}
+	@media #{$small} {
+		border-radius: 0px;
 	}
 }
 
+.postfix.button {
+	height: 3em;
+	border-radius: $global-radius;
+	@media #{$medium-up} {
+		border-radius: 0 $global-radius $global-radius 0;
+	}
+}
+
+
+
+
+/*------------------------------------*\
+		$SEARCH BAR
+\*------------------------------------*/
+
+.search-bar input[type="text"] {
+	-webkit-border-radius: $global-radius;
+		-moz-border-radius: $global-radius;
+			border-radius: $global-radius;
+	@media #{$medium-up} {
+		-webkit-border-radius: 0px;
+			-moz-border-radius: 0px;
+				border-radius: 0px;
+	}
+}
+
+.search-bar form.custom .custom.dropdown {
+	-webkit-border-radius: $global-radius;
+		-moz-border-radius: $global-radius;
+			border-radius: $global-radius;
+	@media #{$medium} {
+		margin-bottom: 0;
+	}
+	@media #{$medium-up} {
+		-webkit-border-radius: 0px;
+			-moz-border-radius: 0px;
+				border-radius: 0px;
+	}
+}
+
+
+
+
+/*------------------------------------*\
+		$LIST VIEW FILTER
+\*------------------------------------*/
+
 .list-view-filter form.custom .custom.dropdown {
+	-webkit-border-radius: $global-radius;
+		-moz-border-radius: $global-radius;
+			border-radius: $global-radius;
 	@media #{$small} {
 		margin-bottom: 0;
 	}
 }
+
+form.custom .list-view-filter-count .custom.dropdown .current {
+	margin-left: 0.4em;
+}
+
+
+
+
+/*------------------------------------*\
+		$PSEUDO ELEMENTS
+\*------------------------------------*/
 
 form.custom .custom.dropdown ul li:hover {
 	background-color: $blueGray;

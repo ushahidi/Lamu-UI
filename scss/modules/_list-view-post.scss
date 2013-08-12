@@ -46,14 +46,14 @@
 .list-view-post-time {
 	@include grid-column(12);
 	font-size: 15px;
+	p {
+		float: left;
+	}
 	@media #{$small} {
 		@include grid-column(4);
 		p {
 			float: right;
 		}
-	}
-	p {
-		float: left;
 	}
 }
 
@@ -96,9 +96,18 @@
 }
 
 .list-view-post-categories {
-	@include block-grid($per-row: 2);
-	@media #{$small} {
-		@include block-grid($per-row: 2);
+	margin: 0;
+	a {
+		color: $subheader-font-color
+	}
+	li {
+		display: inline;
+		font-size: $small-font-size;
+		padding-right: 5px;
+	}
+	.icon-circle {
+		color: $alert-color;
+		padding-right: 5px;
 	}
 }
 
@@ -127,4 +136,8 @@
 		@include block-grid($per-row: false, $spacing: emCalc(20px));
 		float: right;
 	}
+}
+
+.button.small.secondary.post-set:hover {
+	background-color: $alert-color;
 }

@@ -22,3 +22,20 @@
 		}
 	}
 }
+
+.post-title-categories {
+	ul {
+		margin: 0;
+		a {
+			color: $subheader-font-color
+		}
+		li {
+			display: inline;
+			font-size: $small-font-size;
+			padding-right: 5px;
+		}
+	}
+	.icon-circle {
+		color: $alert-color;
+	}
+}
