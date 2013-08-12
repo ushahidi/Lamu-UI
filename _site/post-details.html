@@ -2,524 +2,524 @@
 <!--[if IE 8]>         <html class="no-js lt-ie9" lang="en" > <![endif]-->
 <!--[if gt IE 8]><!--> <html class="no-js" lang="en" > <!--<![endif]-->
 
-    <head>
-        <meta charset="utf-8">
-        <meta http-equiv="X-UA-Compatible" content="IE=edge,chrome=1">
-        <title>Ushahidi 3.0 - Lamu</title>
-        <meta name="description" content="Ushahidi Platform 3.0">
-        <!-- Mobile Viewport meta tags -->
-        <meta name="viewport" content="width=device-width, initial-scale=1.0">
-        <meta name="apple-mobile-web-app-capable" content="yes" />
-        <!-- Leaflet CSS CDN -->
-        <link rel="stylesheet" href="http://cdn.leafletjs.com/leaflet-0.5.1/leaflet.css" />
-        <!--[if lte IE 8]>
-            <link rel="stylesheet" href="http://cdn.leafletjs.com/leaflet-0.5.1/leaflet.ie.css" />
-        <![endif]-->
+		<head>
+				<meta charset="utf-8">
+				<meta http-equiv="X-UA-Compatible" content="IE=edge,chrome=1">
+				<title>Ushahidi 3.0 - Lamu</title>
+				<meta name="description" content="Ushahidi Platform 3.0">
+				<!-- Mobile Viewport meta tags -->
+				<meta name="viewport" content="width=device-width, initial-scale=1.0">
+				<meta name="apple-mobile-web-app-capable" content="yes" />
+				<!-- Leaflet CSS CDN -->
+				<link rel="stylesheet" href="http://cdn.leafletjs.com/leaflet-0.5.1/leaflet.css" />
+				<!--[if lte IE 8]>
+						<link rel="stylesheet" href="http://cdn.leafletjs.com/leaflet-0.5.1/leaflet.ie.css" />
+				<![endif]-->
 
-        <!-- cachebusted global.css -->
-        <link rel="stylesheet" href="/css/global.css?1376080033">
+				<!-- cachebusted global.css -->
+				<link rel="stylesheet" href="/css/global.css?1376324289">
 
-        <!-- Font Awesome CSS CDN -->
-        <link href="//netdna.bootstrapcdn.com/font-awesome/3.2.1/css/font-awesome.css" rel="stylesheet">
+				<!-- Font Awesome CSS CDN -->
+				<link href="//netdna.bootstrapcdn.com/font-awesome/3.2.1/css/font-awesome.css" rel="stylesheet">
 
-        <!-- Require.js | the data-main attribute is our entry point, all requires are relative to this entry point -->
-        <script data-main="/js/main.js" src="/js/vendor/requirejs/require.js"></script>
+				<!-- Require.js | the data-main attribute is our entry point, all requires are relative to this entry point -->
+				<script data-main="/js/main.js" src="/js/vendor/requirejs/require.js"></script>
 
-        <!-- Custom Modernizr Build - add, subtract and rebuild at end of project or use Gruntjs mondernizr for custom build -->
-        <script src="/js/custom.modernizr.js"></script>
+				<!-- Custom Modernizr Build - add, subtract and rebuild at end of project or use Gruntjs mondernizr for custom build -->
+				<script src="/js/custom.modernizr.js"></script>
 
-        <!-- cross browser CSS3 pseudo-classes and attribute selectors with Selectivizr -->
-        <!--[if (gte IE 6)&(lte IE 8)]>
-          <script type="text/javascript" src="js/vendor/selectivizr/selectivizr.js"></script>
-          <noscript><link rel="stylesheet" href="[fallback css]" /></noscript>
-        <![endif]-->
+				<!-- cross browser CSS3 pseudo-classes and attribute selectors with Selectivizr -->
+				<!--[if (gte IE 6)&(lte IE 8)]>
+					<script type="text/javascript" src="js/vendor/selectivizr/selectivizr.js"></script>
+					<noscript><link rel="stylesheet" href="[fallback css]" /></noscript>
+				<![endif]-->
 
-        <!-- Google Font -->
-        <link href='http://fonts.googleapis.com/css?family=Montserrat:400,700' rel='stylesheet' type='text/css'>
+				<!-- Google Font -->
+				<link href='http://fonts.googleapis.com/css?family=Montserrat:400,700' rel='stylesheet' type='text/css'>
 
-    </head>
+		</head>
 
-    <body id="js-off-canvas" class="off-canvas">
-        <!--[if lt IE 7]>
-            <p class="chromeframe">You are using an <strong>outdated</strong> browser. Please <a href="http://browsehappy.com/">upgrade your browser</a> or <a href="http://www.google.com/chromeframe/?redirect=true">activate Google Chrome Frame</a> to improve your experience.</p>
-        <![endif]-->
+		<body id="js-off-canvas" class="off-canvas">
+				<!--[if lt IE 7]>
+						<p class="chromeframe">You are using an <strong>outdated</strong> browser. Please <a href="http://browsehappy.com/">upgrade your browser</a> or <a href="http://www.google.com/chromeframe/?redirect=true">activate Google Chrome Frame</a> to improve your experience.</p>
+				<![endif]-->
 
 
-    <div class="content-wrapper  js-content-wrapper">
-      <section id="main" role="main">
-        <header role="banner">
-  <nav role="navigation" class="top-bar" data-options="is_hover:false">
-    <ul class="title-area">
-      <!-- retina ready logo is a css background image -->
-      <li class="name  hide-for-small">
-        <div class="logo-image"></div>
-        <h1><a href="/">Deployment Name</a></h1>
-      </li>
-    </ul>
+		<div class="content-wrapper  js-content-wrapper">
+			<section id="main" role="main">
+				<header role="banner">
+	<nav role="navigation" class="top-bar" data-options="is_hover:false">
+		<ul class="title-area">
+			<!-- retina ready logo is a css background image -->
+			<li class="name  hide-for-small">
+				<div class="logo-image"></div>
+				<h1><a href="/">Deployment Name</a></h1>
+			</li>
+		</ul>
 
-    <!-- TODO: figure out mobile nav and subnav -->
-    <!-- TODO: work out active styles -->
+		<!-- TODO: figure out mobile nav and subnav -->
+		<!-- TODO: work out active styles -->
 
-    <section class="top-bar-section">
-      <!-- Left Nav Section -->
-      <ul class="left">
-        <li class="divider"></li>
-        <li class="js-views-menu-link  hide-for-medium-down"><a class="views" href="#"><i class="icon-eye-open  icon-large"></i> VIEWS</a></li>
-        <li class="js-views-menu-link-mobile  show-for-medium-down"><a class="views" href="#"><i class="icon-eye-open"></i><!-- icon only --></a></li>
-        <li class="divider"></li>
-        <li class="js-sets-menu-link  hide-for-medium-down"><a class="sets" href="#"><i class="icon-th-large  icon-large"></i> SETS</a></li>
-        <li class="js-sets-menu-link-mobile  show-for-medium-down"><a class="sets" href="#"><i class="icon-th-large"></i><!-- icon only --></a></li>
-        <li class="divider"></li>
+		<section class="top-bar-section">
+			<!-- Left Nav Section -->
+			<ul class="left">
+				<li class="divider"></li>
+				<li class="js-views-menu-link  hide-for-medium-down"><a class="views" href="#"><i class="icon-eye-open  icon-large"></i> VIEWS</a></li>
+				<li class="js-views-menu-link-mobile  show-for-medium-down"><a class="views" href="#"><i class="icon-eye-open"></i><!-- icon only --></a></li>
+				<li class="divider"></li>
+				<li class="js-sets-menu-link  hide-for-medium-down"><a class="sets" href="#"><i class="icon-th-large  icon-large"></i> SETS</a></li>
+				<li class="js-sets-menu-link-mobile  show-for-medium-down"><a class="sets" href="#"><i class="icon-th-large"></i><!-- icon only --></a></li>
+				<li class="divider"></li>
 
-      </ul>
+			</ul>
 
-      <!-- Right Nav Section -->
-      <ul class="right">
-        <li class="create-post  hide-for-medium-down"><a id="create-post-button" class="create-post-button" href="#" data-reveal-id="createPost"><i class="icon-plus  icon-large"></i> CREATE</a></li>
-        <li class="create-post  show-for-medium-down"><a id="create-post-button-small" class="create-post-button" href="#" data-reveal-id="createPost"><i class="icon-plus"></i><!-- icon only --></a></li>
-        <li class="js-workspace-panel-button  hide-for-medium-down"><a class="workspace-panel-button  inverse" href="#workspace-panel"><i class="icon-dashboard  icon-large"></i> WORKSPACE</a></li>
-        <li class="js-workspace-panel-button-small  show-for-medium-down"><a class="workspace-panel-button  inverse" href="#workspace-panel"><i class="icon-dashboard"></i><!-- icon only --></a></li>
-      </ul>
-    </section>
-  </nav>
+			<!-- Right Nav Section -->
+			<ul class="right">
+				<li class="create-post  hide-for-medium-down"><a id="create-post-button" class="create-post-button" href="#" data-reveal-id="createPost"><i class="icon-plus  icon-large"></i> CREATE</a></li>
+				<li class="create-post  show-for-medium-down"><a id="create-post-button-small" class="create-post-button" href="#" data-reveal-id="createPost"><i class="icon-plus"></i><!-- icon only --></a></li>
+				<li class="js-workspace-panel-button  hide-for-medium-down"><a class="workspace-panel-button  inverse" href="#workspace-panel"><i class="icon-dashboard  icon-large"></i> WORKSPACE</a></li>
+				<li class="js-workspace-panel-button-small  show-for-medium-down"><a class="workspace-panel-button  inverse" href="#workspace-panel"><i class="icon-dashboard"></i><!-- icon only --></a></li>
+			</ul>
+		</section>
+	</nav>
 </header>
 
 <!-- subnavs need to be outside of header and above map-wrapper-->
 <nav role="sub-navigation" class="js-views-menu">
-  <ul>
-    <li><a href="#">Maps</a></li>
-    <li><a href="#">Lists</a></li>
-    <li><a href="#">Visualizations</a></li>
-    <li><a href="#">Media</a></li>
-  </ul>
+	<ul>
+		<li><a href="#">Maps</a></li>
+		<li><a href="#">Lists</a></li>
+		<li><a href="#">Visualizations</a></li>
+		<li><a href="#">Media</a></li>
+	</ul>
 </nav>
 
 <nav role="sub-navigation" class="js-sets-menu">
-  <ul>
-    <li><a href="/sets.html">Set #1</a></li>
-    <li><a href="#">Set #2</a></li>
-    <li><a href="#">Set #3</a></li>
-    <li><a href="#">Set #4</a></li>
-  </ul>
+	<ul>
+		<li><a href="/sets.html">Set #1</a></li>
+		<li><a href="#">Set #2</a></li>
+		<li><a href="#">Set #3</a></li>
+		<li><a href="#">Set #4</a></li>
+	</ul>
 </nav>
 
 
 <!-- on mobile devices deployment name is moved below topbar nav for better layout-->
 <li class="name-small  show-for-small">
-  <div class="logo-image"></div>
-  <h4><a href="/">Deployment Name</a></h4>
+	<div class="logo-image"></div>
+	<h4><a href="/">Deployment Name</a></h4>
 </li>
 
-        <div id="mainRegion">
-          <article id="leaflet-marker-pane" class="post-overlay" data-dropdown-content>
+				<div id="mainRegion">
+					<article id="leaflet-marker-pane" class="post-overlay" data-dropdown-content>
 
-  <div class="post-header">
-    <div class="row">
-      <div class="post-category-marker">
-        <img src="/images/category-icon.png" alt="">
-      </div>
+	<div class="post-header">
+		<div class="row">
+			<div class="post-category-marker">
+				<img src="/images/category-icon.png" alt="">
+			</div>
 
-      <div class="post-title">
-        <h6><a href="/post-details.html">Mini Cooper spotted in the streets of London.</a></h6>
-        <div class="row">
-          <div class="post-title-tag">
-            <h6 class="subheader">automobiles</h6>
-          </div>
-        </div>
-      </div>
+			<div class="post-title">
+				<h6><a href="/post-details.html">Mini Cooper spotted in the streets of London.</a></h6>
+				<div class="row">
+					<div class="post-title-tag">
+						<h6 class="subheader">automobiles</h6>
+					</div>
+				</div>
+			</div>
 
-      <div class="post-actions">
-        <button class="small  secondary  button"> <i class="icon-edit"></i>edit</button>
-        <button class="small  secondary  button"> <i class="icon-plus-sign"></i>set</button>
-      </div>
-    </div>
-  </div>
+			<div class="post-actions">
+				<button class="small  secondary  button"> <i class="icon-edit"></i>edit</button>
+				<button class="small  secondary  button"> <i class="icon-plus-sign"></i>set</button>
+			</div>
+		</div>
+	</div>
 
-  <div class="post-body">
-    <div class="row">
+	<div class="post-body">
+		<div class="row">
 
-      <div class="post-image">
-        <img src="/images/mini-coop.jpg" alt="">
-      </div>
+			<div class="post-image">
+				<img src="/images/mini-coop.jpg" alt="">
+			</div>
 
-      <div class="post-details">
+			<div class="post-details">
 
-        <div class="post-author">
-          <h6><small><span class= "underline"><a href="">DUDE BRO</a> </span>ADDED A POST</small></h6>
-        </div>
+				<div class="post-author">
+					<h6><small><span class= "underline"><a href="">DUDE BRO</a> </span>ADDED A POST</small></h6>
+				</div>
 
-        <div class="post-excerpt">
-          <p>Cras justo odio, dapibus ac facilisis in, egestas eget quam. Donec ullamcorper nulla non metus auctor fringilla.</p>
-          <hr>
-        </div>
+				<div class="post-excerpt">
+					<p>Cras justo odio, dapibus ac facilisis in, egestas eget quam. Donec ullamcorper nulla non metus auctor fringilla.</p>
+					<hr>
+				</div>
 
 
-      </div> <!-- end .post-details -->
+			</div> <!-- end .post-details -->
 
-      <div class="row">
+			<div class="row">
 
-        <div class="post-location-meta">
-          <h5><small> <i class="icon-map-marker"></i><span class="post-location  underline" ><a href=""> London, UK</a></span></small></h5>
-        </div>
+				<div class="post-location-meta">
+					<h5><small> <i class="icon-map-marker"></i><span class="post-location  underline" ><a href=""> London, UK</a></span></small></h5>
+				</div>
 
-        <div class="post-time-meta">
-          <h5><small> <i class="icon-time"></i><strong class="post-time" > 1 hour ago</strong></small></h5>
-        </div>
+				<div class="post-time-meta">
+					<h5><small> <i class="icon-time"></i><strong class="post-time" > 1 hour ago</strong></small></h5>
+				</div>
 
-        <div class="post-details-button">
-          <button class="small  success  button"><i class="icon-lock"></i>  details</button>
-        </div>
+				<div class="post-details-button">
+					<button class="small  success  button"><i class="icon-lock"></i>  details</button>
+				</div>
 
-      </div>
+			</div>
 
-    </div> <!-- end .row -->
-  </div> <!-- end .post-body -->
+		</div> <!-- end .row -->
+	</div> <!-- end .post-body -->
 
 </article>
 
 
 <div id="map" class="map  js-map  post-details-map"></div>
 <article class="body-wrapper">
-  <div class="row">
+	<div class="row">
 
-  <section class="post-details">
-  <div class="post-header">
-    <div class="post-category-marker">
-      <img src="/images/category-icon.png" alt="">
-    </div> <!-- end .post-category-marker -->
+	<section class="post-details">
+	<div class="post-header">
+		<div class="post-category-marker">
+			<img src="/images/category-icon.png" alt="">
+		</div> <!-- end .post-category-marker -->
 
-    <div class="post-title">
-      <h6>Mini Cooper spotted in the streets of London.</h6>
-      <div class="row">
-        <div class="post-title-tag">
-          <h6 class="subheader">Automobiles</h6>
-        </div>
-      </div>
-    </div> <!-- end .post-title -->
+		<div class="post-title">
+			<h6>Mini Cooper spotted in the streets of London.</h6>
+			<div class="row">
+				<div class="post-title-tag">
+					<h6 class="subheader">Automobiles</h6>
+				</div>
+			</div>
+		</div> <!-- end .post-title -->
 
-    <div class="post-actions">
-      <button class="small  secondary  button"> <i class="icon-edit"></i>edit</button>
-      <button class="small  secondary  button"> <i class="icon-plus-sign"></i>set</button>
-    </div> <!-- end .post-actions -->
-  </div> <!-- end .post-header -->
+		<div class="post-actions">
+			<button class="small  secondary  button"> <i class="icon-edit"></i>edit</button>
+			<button class="small  secondary  button"> <i class="icon-plus-sign"></i>set</button>
+		</div> <!-- end .post-actions -->
+	</div> <!-- end .post-header -->
 
-  <div class="post-body">
-    <div class="post-image">
-      <img src="/images/mini-coop.jpg" alt="">
+	<div class="post-body">
+		<div class="post-image">
+			<img src="/images/mini-coop.jpg" alt="">
 
-      <div class="row">
+			<div class="row">
 
-        <div class="post-location-meta">
-          <h5><small> <i class="icon-map-marker"></i><span class="post-location  underline" ><a href=""> London, UK</a></span></small></h5>
-        </div> <!-- end .post-location-meta -->
+				<div class="post-location-meta">
+					<h5><small> <i class="icon-map-marker"></i><span class="post-location  underline" ><a href=""> London, UK</a></span></small></h5>
+				</div> <!-- end .post-location-meta -->
 
-        <div class="post-time-meta">
-          <h5><small> <i class="icon-time"></i><strong class="post-time" > 1 hour ago</strong></small></h5>
-        </div> <!-- end .post-time-meta -->
+				<div class="post-time-meta">
+					<h5><small> <i class="icon-time"></i><strong class="post-time" > 1 hour ago</strong></small></h5>
+				</div> <!-- end .post-time-meta -->
 
-        <div class="post-privacy-status">
-          <h5><small> <i class="icon-lock"></i><strong class="post-time" > Private</strong></small></h5>
-        </div> <!-- end .post-privacy-status -->
+				<div class="post-privacy-status">
+					<h5><small> <i class="icon-lock"></i><strong class="post-time" > Private</strong></small></h5>
+				</div> <!-- end .post-privacy-status -->
 
-        <div class="post-categories-wrapper">
-          <ul class="post-categories">
-            <li><button class="button  small  secondary  expand"> <i class="icon-circle"></i> Automobiles</button></li>
-            <li><button class="button  small  secondary  expand"> <i class="icon-circle"></i> Transport</button></li>
-            <li><button class="button  small  secondary  expand"> <i class="icon-circle"></i> London</button></li>
-            <li><button class="button  small  secondary  expand"> <i class="icon-circle"></i> Retro</button></li>
-          </ul>
-        </div> <!-- end .post-categories-wrapper -->
+				<div class="post-categories-wrapper">
+					<ul class="post-categories">
+						<li><button class="button  small  secondary  expand"> <i class="icon-circle"></i> Automobiles</button></li>
+						<li><button class="button  small  secondary  expand"> <i class="icon-circle"></i> Transport</button></li>
+						<li><button class="button  small  secondary  expand"> <i class="icon-circle"></i> London</button></li>
+						<li><button class="button  small  secondary  expand"> <i class="icon-circle"></i> Retro</button></li>
+					</ul>
+				</div> <!-- end .post-categories-wrapper -->
 
-      </div> <!-- end .row -->
+			</div> <!-- end .row -->
 
-    </div> <!-- end .post-body -->
+		</div> <!-- end .post-body -->
 
-    <div class="post-details">
+		<div class="post-details">
 
-      <div class="post-author">
-        <h6><small><span class= "underline"><a href="">DUDE BRO</a> </span>ADDED A POST</small></h6>
-      </div> <!-- end .post-author -->
+			<div class="post-author">
+				<h6><small><span class= "underline"><a href="">DUDE BRO</a> </span>ADDED A POST</small></h6>
+			</div> <!-- end .post-author -->
 
-      <div class="post-excerpt">
-        <p>Nullam quis risus eget urna mollis ornare vel eu leo. Aenean eu leo quam. Pellentesque ornare sem lacinia quam venenatis vestibulum. Donec ullamcorper nulla non metus auctor fringilla. Vivamus sagittis lacus vel augue laoreet rutrum faucibus dolor auctor.</p>
-        <p>Lorem ipsum dolor sit amet, consectetur adipiscing elit. Nullam quis risus eget urna mollis ornare vel eu leo. Aenean lacinia bibendum nulla sed consectetur. Aenean lacinia bibendum nulla sed consectetur. Cum sociis natoque penatibus et magnis dis parturient montes, nascetur ridiculus mus. Cras mattis consectetur purus sit amet fermentum.</p>
-        <p>Nullam quis risus eget urna mollis ornare vel eu leo. Donec sed odio dui. Donec id elit non mi porta gravida at eget metus. Integer posuere erat a ante venenatis dapibus posuere velit aliquet. Cras justo odio, dapibus ac facilisis in, egestas eget quam. Cras mattis consectetur purus sit amet fermentum. Duis mollis, est non commodo luctus, nisi erat porttitor ligula, eget lacinia odio sem nec elit.</p>
-      </div> <!-- end .post-excerpt -->
+			<div class="post-excerpt">
+				<p>Nullam quis risus eget urna mollis ornare vel eu leo. Aenean eu leo quam. Pellentesque ornare sem lacinia quam venenatis vestibulum. Donec ullamcorper nulla non metus auctor fringilla. Vivamus sagittis lacus vel augue laoreet rutrum faucibus dolor auctor.</p>
+				<p>Lorem ipsum dolor sit amet, consectetur adipiscing elit. Nullam quis risus eget urna mollis ornare vel eu leo. Aenean lacinia bibendum nulla sed consectetur. Aenean lacinia bibendum nulla sed consectetur. Cum sociis natoque penatibus et magnis dis parturient montes, nascetur ridiculus mus. Cras mattis consectetur purus sit amet fermentum.</p>
+				<p>Nullam quis risus eget urna mollis ornare vel eu leo. Donec sed odio dui. Donec id elit non mi porta gravida at eget metus. Integer posuere erat a ante venenatis dapibus posuere velit aliquet. Cras justo odio, dapibus ac facilisis in, egestas eget quam. Cras mattis consectetur purus sit amet fermentum. Duis mollis, est non commodo luctus, nisi erat porttitor ligula, eget lacinia odio sem nec elit.</p>
+			</div> <!-- end .post-excerpt -->
 
-    </div> <!-- end .post-details -->
-    <hr>
-    <p class="click-to-zoom"><small><i class="icon-zoom-in"></i> click images to zoom</small></p>
-    <div class="post-thumbnails-wrapper">
-      <ul class="post-thumbnails  js-lightbox-gallery">
-        <li><a href="/images/mini-coop.jpg"><img src="/images/mini-coop.jpg" alt=""></a></li>
-        <li><a href="/images/mini-coop-2.jpg"><img src="/images/mini-coop-2.jpg" alt=""></a></li>
-        <li><a href="/images/mini-coop-3.jpg"><img src="/images/mini-coop-3.jpg" alt=""></a></li>
-        <li><a href="/images/mini-coop-4.jpg"><img src="/images/mini-coop-4.jpg" alt=""></a></li>
-      </ul>
-    </div> <!-- end .post-thumbnails-wrapper -->
-  </div> <!-- end .post-body -->
+		</div> <!-- end .post-details -->
+		<hr>
+		<p class="click-to-zoom"><small><i class="icon-zoom-in"></i> click images to zoom</small></p>
+		<div class="post-thumbnails-wrapper">
+			<ul class="post-thumbnails  js-lightbox-gallery">
+				<li><a href="/images/mini-coop.jpg"><img src="/images/mini-coop.jpg" alt=""></a></li>
+				<li><a href="/images/mini-coop-2.jpg"><img src="/images/mini-coop-2.jpg" alt=""></a></li>
+				<li><a href="/images/mini-coop-3.jpg"><img src="/images/mini-coop-3.jpg" alt=""></a></li>
+				<li><a href="/images/mini-coop-4.jpg"><img src="/images/mini-coop-4.jpg" alt=""></a></li>
+			</ul>
+		</div> <!-- end .post-thumbnails-wrapper -->
+	</div> <!-- end .post-body -->
 </section> <!-- end .post -->
 
 
-  <aside class="related-posts">
-  <div class="post-header">
-    <h6>Related Posts</h6>
-  </div> <!-- end .related-posts-header -->
+	<aside class="related-posts">
+	<div class="post-header">
+		<h6>Related Posts</h6>
+	</div> <!-- end .related-posts-header -->
 
-  <div class="related-posts-body">
-    <div class="related-post-module-wrapper">
-  <div class="related-post-image">
-    <!-- FIXME: color coded category icon - need a responsive & dynamic solution here -->
-    <!-- <div class="post-category-notification-red"></div> -->
-    <img src="/images/mini-coop.png" alt="">
-  </div> <!-- end .list-view-post-avatar -->
+	<div class="related-posts-body">
+		<div class="related-post-module-wrapper">
+	<div class="related-post-image">
+		<!-- FIXME: color coded category icon - need a responsive & dynamic solution here -->
+		<!-- <div class="post-category-notification-red"></div> -->
+		<img src="/images/mini-coop.png" alt="">
+	</div> <!-- end .list-view-post-avatar -->
 
-  <div class="related-post-details">
-    <div class="row">
-          <!-- NOTE: this title will break layout if more than -->
-      <h5 class="related-post-title"><a href="/post-details.html">Mini Cooper spotted ... </a></h5>
-      <div class="related-post-time">
-        <small> <i class="icon-time"></i>7 hours ago</small>
-      </div> <!-- end .list-view-post-time -->
-    </div> <!-- end .row -->
-  </div> <!-- end .list-view-post-details -->
+	<div class="related-post-details">
+		<div class="row">
+					<!-- NOTE: this title will break layout if more than -->
+			<h5 class="related-post-title"><a href="/post-details.html">Mini Cooper spotted ... </a></h5>
+			<div class="related-post-time">
+				<small> <i class="icon-time"></i>7 hours ago</small>
+			</div> <!-- end .list-view-post-time -->
+		</div> <!-- end .row -->
+	</div> <!-- end .list-view-post-details -->
 
-  <div class="related-post-excerpt">
-    <p>Sociis natoque penatibus et magnis dis parturient montes, nascetur ridiculus mus. Fusce dapibus <a href="#"><span class="read-more">...&nbsp;Read&nbsp;More</span></a></p>
-  </div> <!-- end .list-view-post-excerpt -->
+	<div class="related-post-excerpt">
+		<p>Sociis natoque penatibus et magnis dis parturient montes, nascetur ridiculus mus. Fusce dapibus <a href="#"><span class="read-more">...&nbsp;Read&nbsp;More</span></a></p>
+	</div> <!-- end .list-view-post-excerpt -->
 </div>
 
-    <div class="related-post-module-wrapper">
-  <div class="related-post-image">
-    <!-- FIXME: color coded category icon - need a responsive & dynamic solution here -->
-    <!-- <div class="post-category-notification-red"></div> -->
-    <img src="/images/mini-coop.png" alt="">
-  </div> <!-- end .list-view-post-avatar -->
+		<div class="related-post-module-wrapper">
+	<div class="related-post-image">
+		<!-- FIXME: color coded category icon - need a responsive & dynamic solution here -->
+		<!-- <div class="post-category-notification-red"></div> -->
+		<img src="/images/mini-coop.png" alt="">
+	</div> <!-- end .list-view-post-avatar -->
 
-  <div class="related-post-details">
-    <div class="row">
-          <!-- NOTE: this title will break layout if more than -->
-      <h5 class="related-post-title"><a href="/post-details.html">Mini Cooper spotted ... </a></h5>
-      <div class="related-post-time">
-        <small> <i class="icon-time"></i>7 hours ago</small>
-      </div> <!-- end .list-view-post-time -->
-    </div> <!-- end .row -->
-  </div> <!-- end .list-view-post-details -->
+	<div class="related-post-details">
+		<div class="row">
+					<!-- NOTE: this title will break layout if more than -->
+			<h5 class="related-post-title"><a href="/post-details.html">Mini Cooper spotted ... </a></h5>
+			<div class="related-post-time">
+				<small> <i class="icon-time"></i>7 hours ago</small>
+			</div> <!-- end .list-view-post-time -->
+		</div> <!-- end .row -->
+	</div> <!-- end .list-view-post-details -->
 
-  <div class="related-post-excerpt">
-    <p>Sociis natoque penatibus et magnis dis parturient montes, nascetur ridiculus mus. Fusce dapibus <a href="#"><span class="read-more">...&nbsp;Read&nbsp;More</span></a></p>
-  </div> <!-- end .list-view-post-excerpt -->
+	<div class="related-post-excerpt">
+		<p>Sociis natoque penatibus et magnis dis parturient montes, nascetur ridiculus mus. Fusce dapibus <a href="#"><span class="read-more">...&nbsp;Read&nbsp;More</span></a></p>
+	</div> <!-- end .list-view-post-excerpt -->
 </div>
 
-    <div class="related-post-module-wrapper">
-  <div class="related-post-image">
-    <!-- FIXME: color coded category icon - need a responsive & dynamic solution here -->
-    <!-- <div class="post-category-notification-red"></div> -->
-    <img src="/images/mini-coop.png" alt="">
-  </div> <!-- end .list-view-post-avatar -->
+		<div class="related-post-module-wrapper">
+	<div class="related-post-image">
+		<!-- FIXME: color coded category icon - need a responsive & dynamic solution here -->
+		<!-- <div class="post-category-notification-red"></div> -->
+		<img src="/images/mini-coop.png" alt="">
+	</div> <!-- end .list-view-post-avatar -->
 
-  <div class="related-post-details">
-    <div class="row">
-          <!-- NOTE: this title will break layout if more than -->
-      <h5 class="related-post-title"><a href="/post-details.html">Mini Cooper spotted ... </a></h5>
-      <div class="related-post-time">
-        <small> <i class="icon-time"></i>7 hours ago</small>
-      </div> <!-- end .list-view-post-time -->
-    </div> <!-- end .row -->
-  </div> <!-- end .list-view-post-details -->
+	<div class="related-post-details">
+		<div class="row">
+					<!-- NOTE: this title will break layout if more than -->
+			<h5 class="related-post-title"><a href="/post-details.html">Mini Cooper spotted ... </a></h5>
+			<div class="related-post-time">
+				<small> <i class="icon-time"></i>7 hours ago</small>
+			</div> <!-- end .list-view-post-time -->
+		</div> <!-- end .row -->
+	</div> <!-- end .list-view-post-details -->
 
-  <div class="related-post-excerpt">
-    <p>Sociis natoque penatibus et magnis dis parturient montes, nascetur ridiculus mus. Fusce dapibus <a href="#"><span class="read-more">...&nbsp;Read&nbsp;More</span></a></p>
-  </div> <!-- end .list-view-post-excerpt -->
+	<div class="related-post-excerpt">
+		<p>Sociis natoque penatibus et magnis dis parturient montes, nascetur ridiculus mus. Fusce dapibus <a href="#"><span class="read-more">...&nbsp;Read&nbsp;More</span></a></p>
+	</div> <!-- end .list-view-post-excerpt -->
 </div>
 
-  </div>
+	</div>
 
 </aside> <!-- end .related-posts -->
 
 
-  </div>
+	</div>
 </article>
 
 
 
-        </div>
-      </section>
-      <aside id="workspace-panel" role="complementary">
-  <div class="workspace-profile">
-    <div id="workspace-avatar" class="workspace-avatar"></div>
-    <div class="workspace-edit">
-      <!-- NOTE: need dynamic usernames/roles here -->
-      <h5 id="username" class="username">Dude Bro</h5>
-      <p id="workspace-role" class="workspace-role" >Super Admin</p>
+				</div>
+			</section>
+			<aside id="workspace-panel" role="complementary">
+	<div class="workspace-profile">
+		<div id="workspace-avatar" class="workspace-avatar"></div>
+		<div class="workspace-edit">
+			<!-- NOTE: need dynamic usernames/roles here -->
+			<h5 id="username" class="username">Dude Bro</h5>
+			<p id="workspace-role" class="workspace-role" >Super Admin</p>
 
-      <ul class="inline-list">
-        <li><small><a href="#" id="edit-profile" >Edit Profile</a></small></li>
-        <li><small><a href="#" id="logout" >Logout</a></small></li>
-      </ul>
-    </div>
-  </div>
+			<ul class="inline-list">
+				<li><small><a href="#" id="edit-profile" >Edit Profile</a></small></li>
+				<li><small><a href="#" id="logout" >Logout</a></small></li>
+			</ul>
+		</div>
+	</div>
 
-  <div class="workspace-stats-wrapper">
-    <ul class="workspace-stats">
-      <li id="posts-stats" class="panel  post-stats">
-        <h4 id="posts-stats-value">1500 <span>posts</span></h4>
-      </li>
-      <li id="users-stats" class="panel  user-stats">
-          <h4 id="users-stats-value">138 <span>users</span></h4>
-      </li>
-      <li id="views-stats" class="panel  views-stats">
-          <h4 id="views-stats-value">52416 <span>views</span></h4>
-      </li>
-    </ul>
-  </div>
+	<div class="workspace-stats-wrapper">
+		<ul class="workspace-stats">
+			<li id="posts-stats" class="panel  post-stats">
+				<h4 id="posts-stats-value">1500 <span>posts</span></h4>
+			</li>
+			<li id="users-stats" class="panel  user-stats">
+					<h4 id="users-stats-value">138 <span>users</span></h4>
+			</li>
+			<li id="views-stats" class="panel  views-stats">
+					<h4 id="views-stats-value">52416 <span>views</span></h4>
+			</li>
+		</ul>
+	</div>
 
-  <div class="workspace-menu">
-      <section class="active">
-        <p id="workspace-menu-posts" class="title  js-title" data-section-title><a href="#"><i class="icon-inbox"></i> Posts</a></p>
+	<div class="workspace-menu">
+			<section class="active">
+				<p id="workspace-menu-posts" class="title  js-title" data-section-title><a href="#"><i class="icon-inbox"></i> Posts</a></p>
 
-        <div id="workspace-menu-all-posts" class="content  js-content" data-section-content>
-          <a href="#"><p><i class="icon-calendar"></i> All Posts <span class="round  secondary  label">1500</span></p></a>
-        </div>
-
-
-        <div id="workspace-menu-awaiting-review" class="content  js-content" data-section-content>
-          <a href="#"><p><i class="icon-star-empty"></i> Awaiting Review <span class="round  secondary  label">27</span></p></a>
-        </div>
+				<div id="workspace-menu-all-posts" class="content  js-content" data-section-content>
+					<a href="#"><p><i class="icon-calendar"></i> All Posts <span class="round  secondary  label">1500</span></p></a>
+				</div>
 
 
-        <div id="workspace-menu-published" class="content  js-content" data-section-content>
-          <a href="#"><p><i class="icon-file-alt"></i> Published <span class="round  success  label">413</span></p></a>
-        </div>
+				<div id="workspace-menu-awaiting-review" class="content  js-content" data-section-content>
+					<a href="#"><p><i class="icon-star-empty"></i> Awaiting Review <span class="round  secondary  label">27</span></p></a>
+				</div>
 
 
-        <div id="workspace-menu-unpublished" class="content  js-content" data-section-content>
-          <a href="#"><p><i class="icon-file"></i> Unpublished <span class="round  alert  label">1,060</span></p></a>
-        </div>
-      </section>
+				<div id="workspace-menu-published" class="content  js-content" data-section-content>
+					<a href="#"><p><i class="icon-file-alt"></i> Published <span class="round  success  label">413</span></p></a>
+				</div>
 
-      <section class="">
-        <p id="workspace-menu-tasks" class="title  js-title" data-section-title><a href="#"><i class="icon-tasks"></i> Tasks</a></p>
 
-        <div id="workspace-menu-my-tasks" class="content  js-content" data-section-content>
-          <a href="#"><p><i class="icon-pencil"></i> My Tasks <span class="round  secondary  label">75</span></p></a>
-        </div>
+				<div id="workspace-menu-unpublished" class="content  js-content" data-section-content>
+					<a href="#"><p><i class="icon-file"></i> Unpublished <span class="round  alert  label">1,060</span></p></a>
+				</div>
+			</section>
 
-        <div id="workspace-menu-todo" class="content  js-content" data-section-content>
-          <a href="#"><p><i class="icon-check-empty"></i> To Do <span class="round  label">39</span></p></a>
-        </div>
+			<section class="">
+				<p id="workspace-menu-tasks" class="title  js-title" data-section-title><a href="#"><i class="icon-tasks"></i> Tasks</a></p>
 
-        <div id="workspace-menu-completed" class="content  js-content" data-section-content>
-          <a href="#"><p><i class="icon-check"></i> Completed <span class="round  success  label">36</span></p></a>
-        </div>
-      </section>
+				<div id="workspace-menu-my-tasks" class="content  js-content" data-section-content>
+					<a href="#"><p><i class="icon-pencil"></i> My Tasks <span class="round  secondary  label">75</span></p></a>
+				</div>
 
-      <section class="">
-        <p id="workspace-menu-tools" class="title  js-title" data-section-title><a href="#"><i class="icon-cog"></i> Tools</a></p>
+				<div id="workspace-menu-todo" class="content  js-content" data-section-content>
+					<a href="#"><p><i class="icon-check-empty"></i> To Do <span class="round  label">39</span></p></a>
+				</div>
 
-        <div id="" class="content  js-content" data-section-content>
-          <p>Tools stuff goes here :)</p>
-        </div>
-      </section>
-  </div>
+				<div id="workspace-menu-completed" class="content  js-content" data-section-content>
+					<a href="#"><p><i class="icon-check"></i> Completed <span class="round  success  label">36</span></p></a>
+				</div>
+			</section>
+
+			<section class="">
+				<p id="workspace-menu-tools" class="title  js-title" data-section-title><a href="#"><i class="icon-cog"></i> Tools</a></p>
+
+				<div id="" class="content  js-content" data-section-content>
+					<p>Tools stuff goes here :)</p>
+				</div>
+			</section>
+	</div>
 
 </aside>
 
 
 
-    </div>
+		</div>
 
-    <footer role="contentinfo">
-  <div class="row">
-    <p>Powered by Ushahidi. © Copyright {Deployer Name}, 2013</p>
-  </div>
+		<footer role="contentinfo">
+	<div class="row">
+		<p>Powered by Ushahidi. © Copyright {Deployer Name}, 2013</p>
+	</div>
 </footer>
 
 
-        <!-- Place Google Analytics script here -->
-        <script type="text/javascript">
-          var GoSquared = {};
-          GoSquared.acct = "GSN-582644-T";
-          (function(w){
-            function gs(){
-              w._gstc_lt = +new Date;
-              var d = document, g = d.createElement("script");
-              g.type = "text/javascript";
-              g.src = "//d1l6p2sc9645hc.cloudfront.net/tracker.js";
-              var s = d.getElementsByTagName("script")[0];
-              s.parentNode.insertBefore(g, s);
-            }
-            w.addEventListener ?
-              w.addEventListener("load", gs, false) :
-              w.attachEvent("onload", gs);
-          })(window);
-        </script>
-        <!-- end Google Analytics script -->
+				<!-- Place Google Analytics script here -->
+				<script type="text/javascript">
+					var GoSquared = {};
+					GoSquared.acct = "GSN-582644-T";
+					(function(w){
+						function gs(){
+							w._gstc_lt = +new Date;
+							var d = document, g = d.createElement("script");
+							g.type = "text/javascript";
+							g.src = "//d1l6p2sc9645hc.cloudfront.net/tracker.js";
+							var s = d.getElementsByTagName("script")[0];
+							s.parentNode.insertBefore(g, s);
+						}
+						w.addEventListener ?
+							w.addEventListener("load", gs, false) :
+							w.attachEvent("onload", gs);
+					})(window);
+				</script>
+				<!-- end Google Analytics script -->
 
-    <!-- has to be right above the closing </body> tag -->
-    <section id="createPost" class="reveal-modal">
-    <div class="create-post-header">
-      <h4>Create a Post</h4>
-      <a class="close-reveal-modal">&#215;</a>
-    </div> <!-- end create-post-header -->
+		<!-- has to be right above the closing </body> tag -->
+		<section id="createPost" class="reveal-modal">
+		<div class="create-post-header">
+			<h4>Create a Post</h4>
+			<a class="close-reveal-modal">&#215;</a>
+		</div> <!-- end create-post-header -->
 
-  <div class="create-post-wrapper">
-    <section class="create-post-options">
-      <form role="search" id="search-form" class="custom" action="">
+	<div class="create-post-wrapper">
+		<section class="create-post-options">
+			<form role="search" id="search-form" class="custom" action="">
 
-        <h6>Title</h6>
-        <input type="text" placeholder="Enter a title">
+				<h6>Title</h6>
+				<input type="text" placeholder="Enter a title">
 
-        <h6>Description</h6>
-        <textarea name="post-description" id="post-description" placeholder="Enter a short description" cols="30" rows="30"></textarea>
+				<h6>Description</h6>
+				<textarea name="post-description" id="post-description" placeholder="Enter a short description" cols="30" rows="30"></textarea>
 
-        <h6>Location</h6>
-        <select id="customDropdown" >
-          <option selected DISABLED>Choose a location</option>
-          <option>United States</option>
-          <option>Kenya</option>
-          <option>South Africa</option>
-          <option>New Zealand</option>
-        </select>
-        <div class="create-post-location-map"></div>
+				<h6>Location</h6>
+				<select id="customDropdown" >
+					<option selected DISABLED>Choose a location</option>
+					<option>United States</option>
+					<option>Kenya</option>
+					<option>South Africa</option>
+					<option>New Zealand</option>
+				</select>
+				<div class="create-post-location-map"></div>
 
-        <h6>Categories</h6>
-        <select id="customDropdown" >
-          <option selected DISABLED>Choose a category</option>
-          <option>Voting Issues</option>
-          <option>Security</option>
-          <option>Urgent</option>
-        </select>
+				<h6>Categories</h6>
+				<select id="customDropdown" >
+					<option selected DISABLED>Choose a category</option>
+					<option>Voting Issues</option>
+					<option>Security</option>
+					<option>Urgent</option>
+				</select>
 
-      </form> <!-- end form -->
-    </section> <!-- end create-post-options -->
+			</form> <!-- end form -->
+		</section> <!-- end create-post-options -->
 
-    <section class="media-bar-wrap">
-      <div class="media-bar">
-        <div class="media-bar-row">
+		<section class="media-bar-wrap">
+			<div class="media-bar">
+				<div class="media-bar-row">
 
-            <div class="media-bar-uploads-wrap">
-              <ul class="media-bar-uploads">
-                <li id="upload-location" class="select-icon upload-location"><a href="#"><i class="icon-map-marker"></i></a></li>
-                <li id="upload-image" class="select-icon upload-image"><a href="#"><i class="icon-picture"></i></a></li>
-                <li id="upload-video" class="select-icon upload-video"><a href="#"><i class="icon-facetime-video"></i></a></li>
-                <li id="upload-link" class="select-icon upload-link"><a href="#"><i class="icon-link"></i></a></li>
-                <li id="upload-audio" class="select-icon upload-audio"><a href="#"><i class="icon-microphone"></i></a></li>
-              </ul>
-            </div>
+						<div class="media-bar-uploads-wrap">
+							<ul class="media-bar-uploads">
+								<li id="upload-location" class="select-icon upload-location"><a href="#"><i class="icon-map-marker"></i></a></li>
+								<li id="upload-image" class="select-icon upload-image"><a href="#"><i class="icon-picture"></i></a></li>
+								<li id="upload-video" class="select-icon upload-video"><a href="#"><i class="icon-facetime-video"></i></a></li>
+								<li id="upload-link" class="select-icon upload-link"><a href="#"><i class="icon-link"></i></a></li>
+								<li id="upload-audio" class="select-icon upload-audio"><a href="#"><i class="icon-microphone"></i></a></li>
+							</ul>
+						</div>
 
-            <div class="create-post-submit">
-              <button type="submit" class="button  success  expand" form="search-form">Submit</button>
-            </div>
+						<div class="create-post-submit">
+							<button type="submit" class="button  success  expand" form="search-form">Submit</button>
+						</div>
 
-        </div> <!-- end media-bar-row -->
-      </div> <!-- end media bar -->
-    </section> <!-- end media-bar-wrap -->
+				</div> <!-- end media-bar-row -->
+			</div> <!-- end media bar -->
+		</section> <!-- end media-bar-wrap -->
 
-  </div> <!-- end create-post-wrapper -->
+	</div> <!-- end create-post-wrapper -->
 </section> <!-- end reveal-modal -->
 
-    </body>
+		</body>
 </html>
 
 
