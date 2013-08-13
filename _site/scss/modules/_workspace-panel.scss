@@ -28,7 +28,7 @@
 	float: left;
 }
 
-.workspace-edit {
+.workspace-admin {
 	float: left;
 	margin: 21px 0 0 7px;
 	.username {
@@ -37,9 +37,15 @@
 		line-height: 1;
 	}
 	.workspace-role {
-		font-size: 13px;
-		margin: 0;
+		font-size: 14px;
+		margin: 0 0 10px 0;
 		line-height: 1;
+	}
+	ul {
+		margin-bottom: 0.0625em;
+	}
+	.edit-profile, .logout {
+		font-size: 14px;
 	}
 }
 
@@ -62,14 +68,20 @@
 }
 
 .workspace-stats li.panel {
-	padding: 10px 10px 10px 20px;
+	padding: 10px;
 	margin: 0;
 }
 
-.panel h4 {
+.workspace-stats .panel h5 {
 	margin: 0;
-	span {
+	i {
+		position: relative;
+		top: -2px;
 		font-size: $base-font-size;
+		padding-right: 3px;
+	}
+	span {
+		font-size: 14px;
 		font-weight: normal;
 	}
 }

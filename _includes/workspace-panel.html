@@ -2,14 +2,14 @@
   <h1 class="visually-hidden">Workspace</h1>
   <div class="workspace-profile">
     <div id="workspace-avatar" class="workspace-avatar"></div>
-    <div class="workspace-edit">
+    <div class="workspace-admin">
       <!-- NOTE: need dynamic usernames/roles here -->
       <h5 id="username" class="username">Dude Bro</h5>
       <p id="workspace-role" class="workspace-role" >Super Admin</p>
 
       <ul class="inline-list">
-        <li><small><a href="#" id="edit-profile" >Edit Profile</a></small></li>
-        <li><small><a href="#" id="logout" >Logout</a></small></li>
+        <li><a href="#" id="edit-profile" class="edit-profile" >Edit Profile</a></li>
+        <li><a href="#" id="logout" class="logout" >Logout</a></li>
       </ul>
     </div>
   </div>
@@ -17,13 +17,13 @@
   <div class="workspace-stats-wrapper">
     <ul class="workspace-stats">
       <li id="posts-stats" class="panel  post-stats">
-        <h4 id="posts-stats-value">1500 <span>posts</span></h4>
+        <h5 id="posts-stats-value"><i class="icon-calendar"></i> 1500 <span>posts</span></h5>
       </li>
       <li id="users-stats" class="panel  user-stats">
-          <h4 id="users-stats-value">138 <span>users</span></h4>
+          <h5 id="users-stats-value"><i class="icon-group"></i> 138 <span>users</span></h5>
       </li>
       <li id="views-stats" class="panel  views-stats">
-          <h4 id="views-stats-value">52416 <span>views</span></h4>
+          <h5 id="views-stats-value"><i class="icon-bar-chart"></i> 52416 <span>views</span></h5>
       </li>
     </ul>
   </div>
