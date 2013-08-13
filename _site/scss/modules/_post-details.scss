@@ -67,8 +67,16 @@
 
 .post-categories {
 	@include block-grid($per-row: 2);
+	margin: 0;
+	a {
+		color: $subheader-font-color
+	}
+	li {
+		font-size: $small-font-size;
+	}
 	@media #{$small} {
 		@include block-grid($per-row: 1);
+		margin: 0;
 	}
 }
 

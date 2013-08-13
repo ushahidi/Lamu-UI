@@ -182,6 +182,7 @@ $subheader-bottom-margin: .5em;
 // <small> styling
 
 $small-font-size: 70%;
+$medium-font-size: 80%;
 $small-font-color: lighten($header-font-color, 30%);
 
 // Paragraphs
@@ -365,7 +366,7 @@ $button-function-factor: 10%;
 
 // Button border styles.
 
-$button-border-width: 1px;
+$button-border-width: 0px;
 $button-border-style: solid;
 $button-border-color: darken($primary-color, $button-function-factor);
 

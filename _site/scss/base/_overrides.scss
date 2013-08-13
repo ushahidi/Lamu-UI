@@ -39,3 +39,7 @@ button.secondary:hover, button.secondary:focus, .button.secondary:hover, .button
 	color: $white;
 	@include transition (background-color 0ms ease-in-out);
 }
+
+.button.secondary:hover {
+	background-color: $alert-color;
+}

@@ -76,7 +76,7 @@
 
 .list-view-post-admin {
 	@include grid-column(12);
-	margin-top: 20px;
+	margin: 20px 0;
 	i {
 		padding: 0;
 	}
@@ -84,15 +84,17 @@
 
 .list-view-post-categories-wrapper {
 	@include grid-column(12, $collapse: true);
-	@media #{$small} {
-		@include grid-column(6, $collapse: true);
+	h6 {
+		margin: 0;
 	}
 	button {
 		margin-bottom: 0;
 		i {
-			color: $alert-color;
 			padding-right: 5px;
 		}
+	}
+	@media #{$small} {
+		@include grid-column(6, $collapse: true);
 	}
 }
 
@@ -140,8 +142,4 @@
 			padding-bottom: 3px;
 		}
 	}
-}
-
-.button.small.secondary.post-set:hover {
-	background-color: $alert-color;
 }
