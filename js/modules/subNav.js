@@ -11,9 +11,8 @@ var $viewsMenuLink = $('.js-views-menu-link, .js-views-menu-link-mobile'),
       e.preventDefault();
       $(this).toggleClass('active');
 
-      if ($setsMenu .hasClass('subnav')) {
+      if ($setsMenuLink.hasClass('active')) {
         $setsMenuLink.toggleClass('active');
-        $setsMenu.toggleClass('subnav');
         $viewsMenu.toggleClass('subnav');
       }
       else {
@@ -23,30 +22,28 @@ var $viewsMenuLink = $('.js-views-menu-link, .js-views-menu-link-mobile'),
 
 
     $setsMenuLink.click(function(e) {
-      e.preventDefault();
       $(this).toggleClass('active');
 
       if ($viewsMenu.hasClass('subnav')) {
         $viewsMenuLink.toggleClass('active');
         $viewsMenu.toggleClass('subnav');
-        $setsMenu.toggleClass('subnav');
+        $setsMenuLink.toggleClass('active');
       }
       else {
-        $setsMenu.toggleClass('subnav');
+        $setsMenuLink.toggleClass('active');
       };
   });
 
     $('nav[role="sub-navigation"] ul li').click(function() {
-      console.log($(this).siblings())
+      // console.log($(this).siblings())
       $(this).siblings().removeClass('active');
       $(this).addClass('active');
     });
 
     var activeurl = window.location.pathname;
+    $('a[href="'+ activeurl +'"]').parent('li').addClass('active');
     $('nav[role="sub-navigation"] a[href="'+ activeurl +'"]').parent('li').addClass('active');
-
 });
-
 
 
 
