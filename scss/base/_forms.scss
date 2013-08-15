@@ -3,6 +3,10 @@
 \*------------------------------------*/
 /**
  * CUSTOM DROPDOWNS...............custom form overrides
+ * CREATE POST MODAL...............create post modal styling
+ * SEARCH BAR...............search bar styling
+ * LIST VIEW FILTER...............list view filter styling
+ * PSEUDO ELEMENTS...............pseudo element styling
  */
 
 
@@ -14,6 +18,9 @@
 
 input[type="text"] {
 	padding: 20px;
+	-webkit-border-radius: $global-radius;
+		-moz-border-radius: $global-radius;
+			border-radius: $global-radius;
 }
 
 form.custom .custom.dropdown {
@@ -27,9 +34,6 @@ form.custom .custom.dropdown {
 	}
 	.selector {
 	height: 3.3125em;
-	}
-	@media #{$small} {
-		border-radius: 0px;
 	}
 }
 
@@ -49,9 +53,6 @@ form.custom .custom.dropdown {
 \*------------------------------------*/
 
 .search-bar input[type="text"] {
-	-webkit-border-radius: $global-radius;
-		-moz-border-radius: $global-radius;
-			border-radius: $global-radius;
 	@media #{$medium-up} {
 		-webkit-border-radius: 0px;
 			-moz-border-radius: 0px;
@@ -60,9 +61,6 @@ form.custom .custom.dropdown {
 }
 
 .search-bar form.custom .custom.dropdown {
-	-webkit-border-radius: $global-radius;
-		-moz-border-radius: $global-radius;
-			border-radius: $global-radius;
 	@media #{$medium} {
 		margin-bottom: 0;
 	}
@@ -81,9 +79,6 @@ form.custom .custom.dropdown {
 \*------------------------------------*/
 
 .list-view-filter form.custom .custom.dropdown {
-	-webkit-border-radius: $global-radius;
-		-moz-border-radius: $global-radius;
-			border-radius: $global-radius;
 	@media #{$small} {
 		margin-bottom: 0;
 	}
