@@ -41,6 +41,9 @@
 			@media #{$medium} {
 				padding: 1em;
 			}
+	.post-actions .button {
+		border: 0px;
+	}
 }
 
 .post-category-marker {
