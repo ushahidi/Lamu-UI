@@ -62,24 +62,6 @@
 	}
 }
 
-.post-header .post-categories-wrapper {
-	@include grid-column(12);
-	@media #{$small} {
-		@include grid-column(12);
-	}
-/*	.post-categories {
-		margin: 0;
-		a {
-			color: $subheader-font-color
-		}
-		li {
-			display: inline;
-			font-size: $small-font-size;
-			padding-right: 5px;
-		}
-	}*/
-}
-
 .post-actions-wrapper {
 	@include grid-column(12, $collapse: true);
 	@media #{$small} {
@@ -150,12 +132,18 @@
 	}
 }
 
-.post-location-meta {
-	@include grid-column(12);
-	clear: both;
-	@media #{$small} {
-		@include grid-column(5);
+.post-meta {
+	@include grid-column(12, $collapse: true);
+	p {
+		font-size: $small-font-size;
+		color: $subheader-font-color;
+		margin-bottom: .7em;
 	}
+}
+
+.post-location-meta {
+	@include grid-column(12, $collapse: true);
+	clear: both;
 }
 
 .post-location {
@@ -163,20 +151,43 @@
 }
 
 .post-time-meta {
-	@include grid-column(12);
+	@include grid-column(12, $collapse: true);
+}
+
+.post-privacy-status {
+	@include grid-column(12, $collapse: true);
+	margin-bottom: 20px;
+}
+
+.post-categories {
+	@include grid-column(6, $collapse: true);
+	ul {
+		margin: 0;
+		a {
+			color: $subheader-font-color
+		}
+		li {
+			font-size: $small-font-size;
+			padding-right: 5px;
+			margin-bottom: .7em;
+		}
+	}
 	@media #{$small} {
-		@include grid-column(3);
+		@include grid-column(12, $collapse: true);
 	}
 }
 
 .post-details-button {
-	@include grid-column(5);
+	@include grid-column(5, $collapse: true);
 	margin-top: 10px;
 	float: right;
+	.button {
+		float: right;
+	}
 	@media #{$small} {
-		@include grid-column(4);
+		@include grid-column(4, $collapse: true);
 		margin-top: 7px;
-		button {
+		.button {
 			float: right;
 		}
 	}

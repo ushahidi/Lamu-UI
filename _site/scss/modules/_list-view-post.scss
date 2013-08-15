@@ -49,7 +49,6 @@
 	font-size: 15px;
 	p {
 		float: left;
-		border-bottom: 1px dotted;
 	}
 	@media #{$small} {
 		@include grid-column(4);

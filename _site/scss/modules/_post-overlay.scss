@@ -32,17 +32,10 @@
 	.post-excerpt {
 		font-size: $medium-font-size;
 	}
-}
-
-.post-title-categories {
-	ul {
-		margin: 0;
-		a {
-			color: $subheader-font-color
-		}
-		li {
-			font-size: $small-font-size;
-			padding-right: 5px;
+	.post-meta {
+		@include grid-column(6, $collapse: true);
+		@media #{$small} {
+			@include grid-column(12, $collapse: true);
 		}
 	}
 }

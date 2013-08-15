@@ -366,7 +366,7 @@ $button-function-factor: 10%;
 
 // Button border styles.
 
-$button-border-width: 0px;
+$button-border-width: 1px;
 $button-border-style: solid;
 $button-border-color: darken($primary-color, $button-function-factor);
 
@@ -1036,7 +1036,7 @@ $section-font-size: emCalc(16px);
 
 // Control the color of the background and some size options
 
-$section-content-bg: $white;
+$section-content-bg: darken($white, $section-function-factor);
 $section-content-bg-active: darken($section-content-bg, $section-function-factor);
 $section-vertical-nav-min-width: emCalc(200px);
 $section-vertical-tabs-title-width: emCalc(200px);
