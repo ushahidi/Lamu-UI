@@ -15,6 +15,7 @@
 .more {
 	@include grid-row();
 	text-align: center;
+	margin-bottom: 20px;
 	a {
 		border-bottom: 1px dotted;
 	}
