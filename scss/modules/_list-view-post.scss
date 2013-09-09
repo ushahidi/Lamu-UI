@@ -129,6 +129,9 @@
 		display: inline;
 		float: left;
 		padding: 0 20px 0 0;
+		a {
+			margin-bottom: 0;
+		}
 	}
 	button.expand, .button.expand {
 		padding-right: 1.125em;
@@ -137,6 +140,7 @@
 	@media #{$small} {
 		@include block-grid($per-row: false, $spacing: emCalc(20px));
 		float: right;
+		padding-top: 13px;
 		li {
 			padding-bottom: 3px;
 		}
