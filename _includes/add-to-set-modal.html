@@ -5,14 +5,41 @@
   </div> <!-- end modal-header -->
 
   <div class="modal-wrapper">
+    <ul class="sets-grid">
+      {% include set-module-mini.html %}
+      {% include set-module-mini.html %}
+      {% include set-module-mini.html %}
+      {% include set-module-mini.html %}
+    </ul> <!-- end .sets-grid -->
+
+    <div class="more">
+      <h5><a href="">more</a></h5>
+    </div>
+
+  <div class="selected-sets-wrapper">
+    <ul class="selected-sets">
+      <h5>This post has been added to:</h5>
+      <li>
+        <a href="" class="label  round">London Automobiles</a>
+        <a href=""><i class="icon-remove-circle"></i></a>
+      </li>
+      <li>
+        <a href="" class="label  round">English Pubs</a>
+        <a href=""><i class="icon-remove-circle"></i></a>
+      </li>
+      <li>
+        <a href="" class="label  round">Coffee Shops</a>
+        <a href=""><i class="icon-remove-circle"></i></a>
+      </li>
+    </ul> <!-- end .selected-sets -->
+  </div>
+
   </div> <!-- end modal-wrapper -->
 
   <section class="modal-footer">
-
     <div class="modal-submit">
-      <button type="submit" class="alert  radius  expand  button" form="search-form"><i class="icon-plus  icon-large"></i> Add to Set</button>
+      <button type="submit" class="success  radius  expand  button" form="search-form"><i class="icon-cloud-upload  icon-large"></i> Save Changes</button>
     </div>
-
   </section> <!-- end modal-footer -->
 
 </section> <!-- end reveal-modal -->

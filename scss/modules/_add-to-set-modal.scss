@@ -9,5 +9,36 @@
 
 
  /*-----------------------------------------------------------*\
- 		$CREATE-POST
+ 		$ADD-TO-SET
  \*-----------------------------------------------------------*/
+
+.more {
+	@include grid-row();
+	text-align: center;
+	a {
+		border-bottom: 1px dotted;
+	}
+}
+
+.selected-sets-wrapper {
+	margin-bottom: 20px;
+}
+
+.selected-sets {
+	margin: 0;
+	li {
+		display: inline;
+		margin-right: 10px;
+		a:hover {
+			color: $white;
+		}
+		i {
+			color: $body-font-color;
+			font-size: 18px;
+			padding: 0 0 0 5px;
+		}
+	}
+	.label {
+		padding: 10px;
+	}
+}
