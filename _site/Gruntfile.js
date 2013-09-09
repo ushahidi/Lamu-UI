@@ -21,6 +21,17 @@ module.exports = function(grunt) {
   grunt.initConfig({
     pkg: grunt.file.readJSON('package.json'),
 
+    autoprefixer: {
+        options: {
+            browsers: ['last 2 versions']
+        },
+        prod: {
+            files: {
+                'css/test/style.css': 'css/global.css'
+            }
+        }
+    },
+
     compass: {
       dev: {
         options: {
@@ -79,7 +90,7 @@ module.exports = function(grunt) {
     watch: {
       sass: {
         files: ['scss/**/*.scss'],
-        tasks: ['compass:prod']
+        tasks: ['compass:prod', /*'autoprefixer:prod'*/]
       },
       livereload: {
         options: {
@@ -93,6 +104,7 @@ module.exports = function(grunt) {
   });
 
   // Load the plugin(s)
+  grunt.loadNpmTasks('grunt-autoprefixer');
   grunt.loadNpmTasks('grunt-contrib-compass');
   grunt.loadNpmTasks('grunt-contrib-csslint');
   grunt.loadNpmTasks('grunt-contrib-imagemin');
