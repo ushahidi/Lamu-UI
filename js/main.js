@@ -31,6 +31,7 @@ require([
   'modules/workspaceMenu',
   'modules/subNav',
   'modules/listViewBulkActions',
+  'modules/addToSet',
 
   // FOUNDATION requires
   'foundation',
