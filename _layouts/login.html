@@ -1,0 +1,84 @@
+<!DOCTYPE html>
+<!--[if IE 8]>         <html class="no-js lt-ie9" lang="en" > <![endif]-->
+<!--[if gt IE 8]><!--> <html class="no-js" lang="en" > <!--<![endif]-->
+
+  <head>
+      <meta charset="utf-8">
+      <meta http-equiv="X-UA-Compatible" content="IE=edge,chrome=1">
+      <title>{{site.site_name}}</title>
+      <meta name="description" content="{{site.meta_content}}">
+      <!-- Mobile Viewport meta tags -->
+      <meta name="viewport" content="width=device-width, initial-scale=1.0">
+      <meta name="apple-mobile-web-app-capable" content="yes" />
+      <!-- Leaflet CSS CDN -->
+      <link rel="stylesheet" href="http://cdn.leafletjs.com/leaflet-0.5.1/leaflet.css" />
+      <!--[if lte IE 8]>
+          <link rel="stylesheet" href="http://cdn.leafletjs.com/leaflet-0.5.1/leaflet.ie.css" />
+      <![endif]-->
+
+      <!-- Font Awesome CSS CDN -->
+      <link href="//netdna.bootstrapcdn.com/font-awesome/3.2.1/css/font-awesome.css" rel="stylesheet">
+
+      <!-- cachebusted global.css -->
+      <link rel="stylesheet" href="{{ site.baseurl }}{{ site.css | versioned_url }}">
+
+      <!-- Require.js | the data-main attribute is our entry point, all requires are relative to this entry point -->
+      <script data-main="{{ site.baseurl }}/js/main.js" src="{{ site.baseurl }}/js/vendor/requirejs/require.js"></script>
+
+      <!-- Custom Modernizr Build - add, subtract and rebuild at end of project or use Gruntjs mondernizr for custom build -->
+      <script src="{{ site.baseurl }}/js/custom.modernizr.js"></script>
+
+      <!-- cross browser CSS3 pseudo-classes and attribute selectors with Selectivizr -->
+      <!--[if (gte IE 6)&(lte IE 8)]>
+        <script type="text/javascript" src="js/vendor/selectivizr/selectivizr.js"></script>
+        <noscript><link rel="stylesheet" href="[fallback css]" /></noscript>
+      <![endif]-->
+
+      <!-- Google Font -->
+      <link href='http://fonts.googleapis.com/css?family=Montserrat:400,700' rel='stylesheet' type='text/css'>
+
+  </head>
+
+  <body id="js-off-canvas" class="off-canvas">
+      <!--[if lt IE 7]>
+          <p class="chromeframe">You are using an <strong>outdated</strong> browser. Please <a href="http://browsehappy.com/">upgrade your browser</a> or <a href="http://www.google.com/chromeframe/?redirect=true">activate Google Chrome Frame</a> to improve your experience.</p>
+      <![endif]-->
+
+
+  <div class="content-wrapper  js-content-wrapper">
+    <h1 class="visually-hidden">Main Section</h1>
+    <section id="main" role="main">
+      {% include login/topbar.html %}
+      {{content}}
+    </section>
+  </div>
+
+  {% include footer.html %}
+
+      <!-- Place Google Analytics script here -->
+      <script type="text/javascript">
+        var GoSquared = {};
+        GoSquared.acct = "GSN-582644-T";
+        (function(w){
+          function gs(){
+            w._gstc_lt = +new Date;
+            var d = document, g = d.createElement("script");
+            g.type = "text/javascript";
+            g.src = "//d1l6p2sc9645hc.cloudfront.net/tracker.js";
+            var s = d.getElementsByTagName("script")[0];
+            s.parentNode.insertBefore(g, s);
+          }
+          w.addEventListener ?
+            w.addEventListener("load", gs, false) :
+            w.attachEvent("onload", gs);
+        })(window);
+      </script>
+      <!-- end Google Analytics script -->
+
+  <!-- these have to be right above the closing </body> tag -->
+  {% include create-post-modal.html %}
+  {% include add-to-set-modal.html %}
+  </body>
+</html>
+
+
