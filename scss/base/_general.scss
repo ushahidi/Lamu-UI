@@ -17,6 +17,10 @@
 	*behavior: url(../js/ie/boxsizing.htc);
 }
 
+html, body {
+	height: 100%;
+}
+
 /*Font-Awesome global icon padding*/
 i {
 	padding-right: 10px;
