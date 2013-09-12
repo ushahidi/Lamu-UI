@@ -14,7 +14,12 @@
 /*------------------------------------*\
 		$WORKSPACE PROFILE
 \*------------------------------------*/
- .workspace-profile {
+.workspace-panel {
+	background-color: $midGray;
+	min-height: 100%;
+}
+
+.workspace-profile {
 	@include grid-row;
 	border-top: 1px solid black;
 }

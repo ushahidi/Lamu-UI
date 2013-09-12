@@ -49,8 +49,14 @@
     <h1 class="visually-hidden">Main Section</h1>
     <section id="main" role="main">
       {% include login/topbar.html %}
-      {{content}}
+      <article class="body-wrapper">
+        <div class="row">
+          {{content}}
+        </div>
+      </article>
     </section>
+    <!-- Sticky Footer -->
+    <div class='sticky-footer-root'></div>
   </div>
 
   {% include footer.html %}

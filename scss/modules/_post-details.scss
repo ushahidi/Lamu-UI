@@ -32,7 +32,6 @@
 
 .post-details {
 	@extend .post;
-	margin-bottom: 20px;
 	@media #{$medium} {
 		@include grid-column(8);
 	}
