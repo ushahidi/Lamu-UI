@@ -41,7 +41,7 @@
 		padding-top: 2em;
 	}
 	@media #{$small} {
-		@include grid-column(10, $center: true);
+		@include grid-column(8, $center: true);
 	}
 }
 
@@ -61,8 +61,8 @@
 	input[type="submit"] {
 		margin: 20px 0 10px 0;
  }
-	@media #{$medium} {
-		@include grid-column(6, $collapse: true);
+	@media #{$medium-up} {
+		@include grid-column(5, $collapse: true);
 		border-right: 1px solid $lightGray;
 		border-bottom: 0;
 		padding-right: 20px;
@@ -75,8 +75,8 @@
 
 .social-login {
 	@include grid-column(12, $collapse: true);
-	@media #{$medium} {
-		@include grid-column(6, $collapse: true);
+	@media #{$medium-up} {
+		@include grid-column(7, $collapse: true);
 		padding-left: 20px;
 	}
 }
@@ -99,13 +99,10 @@
 		padding-left: 0;
 	}
 	@media #{$medium} {
-		@include grid-column(12);
-		padding-left: 0;
-	}
-	@media #{$medium-up} {
 		@include grid-column(4);
 		padding-left: 0;
 	}
+
 }
 
 .open-id {

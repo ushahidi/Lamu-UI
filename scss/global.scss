@@ -21,9 +21,9 @@
 @import "compass";
 @import "compass/reset";
 @import "compass/css3";
-/*@import "compass/layout/sticky-footer";
+@import "compass/layout/sticky-footer";
 
-@include sticky-footer(72px, ".content-wrapper", ".sticky-footer-root", ".footer");*/
+@include sticky-footer(72px, ".content-wrapper", ".sticky-footer-root", ".footer");
 
 @import "bourbon/bourbon";
 
