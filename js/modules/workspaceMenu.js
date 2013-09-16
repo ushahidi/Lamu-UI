@@ -1,6 +1,6 @@
 define(['jquery'], function($) {
 
-  $( "h1.js-title" ).click(function(e) {
+  $( ".js-title" ).click(function(e) {
      $(this).parent().toggleClass('active');
      e.preventDefault();
   });
