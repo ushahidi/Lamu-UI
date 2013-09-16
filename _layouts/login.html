@@ -48,15 +48,16 @@
   <div class="content-wrapper  js-content-wrapper">
     <h1 class="visually-hidden">Main Section</h1>
     <section id="main" role="main">
-      {% include topbar.html %}
-      {{content}}
+      {% include login/topbar.html %}
+      <article class="body-wrapper">
+        <div class="row">
+          {{content}}
+        </div>
+      </article>
     </section>
-    {% include workspace-panel.html %}
     <!-- Sticky Footer -->
-    <div class='sticky-footer-root'></div>
+    <!-- <div class='sticky-footer-root'></div> -->
   </div>
-
-  {% include footer.html %}
 
       <!-- Place Google Analytics script here -->
       <script type="text/javascript">

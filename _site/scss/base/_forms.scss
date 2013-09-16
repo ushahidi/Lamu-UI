@@ -16,7 +16,7 @@
 	$CUSTOM DROPDOWNS
 \*------------------------------------*/
 
-input[type="text"] {
+input[type="text"], input[type="email"] {
 	padding: 20px;
 	-webkit-border-radius: $global-radius;
 		-moz-border-radius: $global-radius;

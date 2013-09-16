@@ -16,8 +16,9 @@
 
 
 .content-wrapper {
-	overflow: hidden;
 	@include grid-column(12);
+	overflow: hidden;
+	height: 100%;
 	padding: 0;
 }
 

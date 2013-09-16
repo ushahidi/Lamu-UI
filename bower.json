@@ -9,6 +9,6 @@
     "magnific-popup": "~0.9.2",
     "selectivizr": "~1.0.2",
     "fastclick": "~0.6.9",
-    "hammerjs": "~1.0.5"
+    "hammerjs": "~1.0.5",
   }
 }

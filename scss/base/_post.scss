@@ -32,11 +32,12 @@
 .post-header {
 	@include grid-column(12);
 	background-color: $blueGray;
-	padding: 1em 1em 0 1em;
+	padding: 1em;
 	@extend .box-shadow;
 	z-index: 1;
 	h5, h6 {
 		color: $white;
+		margin: 5px 0;
 	}
 			@media #{$medium} {
 				padding: 1em;
@@ -97,6 +98,7 @@
 	@include grid-column(12);
 	background-color: $white;
 	padding: 1em;
+	margin-bottom: 20px;
 	@extend .box-shadow;
 }
 

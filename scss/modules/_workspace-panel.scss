@@ -14,7 +14,15 @@
 /*------------------------------------*\
 		$WORKSPACE PROFILE
 \*------------------------------------*/
- .workspace-profile {
+
+.workspace-panel {
+	margin-bottom: -9999px;
+	padding-bottom: 9999px;
+	background-color: $midGray;
+	border-left: 3px solid $blueGray;
+}
+
+.workspace-profile {
 	@include grid-row;
 	border-top: 1px solid black;
 }
@@ -129,4 +137,9 @@
     	}
     }
 
+}
+
+
+.workspace-menu>section>.js-title {
+	border: 0;
 }
