@@ -20,7 +20,7 @@
       <link href="//netdna.bootstrapcdn.com/font-awesome/3.2.1/css/font-awesome.css" rel="stylesheet">
 
       <!-- cachebusted global.css -->
-      <link rel="stylesheet" href="/css/global.css?1379346487">
+      <link rel="stylesheet" href="/css/global.css?1379362031">
 
       <!-- Require.js | the data-main attribute is our entry point, all requires are relative to this entry point -->
       <script data-main="/js/main.js" src="/js/vendor/requirejs/require.js"></script>
@@ -341,10 +341,10 @@
 
 				<div class="list-view-post-edit-wrapper">
 					<ul class="list-view-post-edit">
-						<li><a href="#" class="small  secondary  radius  button  post-edit"> <i class="icon-edit"></i> <span class="hide-for-medium-down"</span>edit</a></li>
-						<li><a href="#" class="small  secondary  radius  button  post-set" data-reveal-id="add-to-set"> <i class="icon-plus-sign"></i> <span class="hide-for-medium-down"</span>set</a></li>
-						<li><a href="#" class="small  secondary  radius  button  post-unpublish"> <i class="icon-file"></i> <span class="hide-for-medium-down"</span>unpublish</a></li>
-						<li><a href="#" class="small  secondary  radius  button  post-delete"> <i class="icon-trash"></i></a></li>
+						<li><a href="#" class="small  secondary  radius  button  post-edit" title="edit this post" data-reveal-id="edit-post"> <i class="icon-edit"></i> <span class="hide-for-medium-down"</span>edit</a></li>
+						<li><a href="#" class="small  secondary  radius  button  post-set" title="add this post to a set" data-reveal-id="add-to-set"> <i class="icon-plus-sign"></i> <span class="hide-for-medium-down"</span>set</a></li>
+						<li><a href="#" id="confirm" class="small  secondary  radius  button  post-unpublish" title="unpublish this post"> <i class="icon-file"></i> <span class="hide-for-medium-down"</span>unpublish</a></li>
+						<li><a href="#" class="small  secondary  radius  button  post-delete" title="delete this post"> <i class="icon-trash"></i></a></li>
 					</ul> <!-- end .list-view-post-edit -->
 				</div> <!-- end .list-view-post-edit-wrapper-->
 			</div> <!-- end .list-view-post-admin -->
@@ -392,12 +392,12 @@
 
 			<div class="list-view-post-edit-wrapper">
 				<ul class="list-view-post-edit">
-					<li><a href="#" class="small  secondary  radius  button  post-edit"> <i class="icon-edit"></i> <span class="hide-for-medium-down"</span>edit</a></li>
-					<li><a href="#" class="small  secondary  radius  button  post-set" data-reveal-id="add-to-set"> <i class="icon-plus-sign"></i> <span class="hide-for-medium-down"</span>set</a></li>
-					<li><a href="#" class="small  secondary  radius  button  post-unpublish"> <i class="icon-file"></i> <span class="hide-for-medium-down"</span>unpublish</a></li>
-					<li><a href="#" class="small  secondary  radius  button  post-delete"> <i class="icon-trash"></i></a></li>
+					<li><a href="#" class="small  secondary  radius  button  post-edit" title="edit this post" data-reveal-id="edit-post"> <i class="icon-edit"></i> <span class="hide-for-medium-down"</span>edit</a></li>
+					<li><a href="#" class="small  secondary  radius  button  post-set" title="add this post to a set" data-reveal-id="add-to-set"> <i class="icon-plus-sign"></i> <span class="hide-for-medium-down"</span>set</a></li>
+					<li><a href="#" class="small  secondary  radius  button  post-unpublish" title="unpublish this post"> <i class="icon-file"></i> <span class="hide-for-medium-down"</span>unpublish</a></li>
+					<li><a href="#" class="small  secondary  radius  button  post-delete" title="delete this post"> <i class="icon-trash"></i></a></li>
 				</ul> <!-- end .list-view-post-edit -->
-			</div> <!-- end .list-view-post-edit-wrapper -->
+			</div> <!-- end .list-view-post-edit-wrapper-->
 
 		</div> <!-- end .list-view-post-admin -->
 	</div> <!-- end row -->
@@ -443,12 +443,12 @@
 
 					<div class="list-view-post-edit-wrapper">
 						<ul class="list-view-post-edit">
-							<li><a href="#" class="small  secondary  radius  button  post-edit"> <i class="icon-edit"></i> <span class="hide-for-medium-down"</span>edit</a></li>
-							<li><a href="#" class="small  secondary  radius  button  post-set" data-reveal-id="add-to-set"> <i class="icon-plus-sign"></i> <span class="hide-for-medium-down"</span>set</a></li>
-							<li><a href="#" class="small  secondary  radius  button  post-unpublish"> <i class="icon-file"></i> <span class="hide-for-medium-down"</span>unpublish</a></li>
-							<li><a href="#" class="small  secondary  radius  button  post-delete"> <i class="icon-trash"></i></a></li>
+							<li><a href="#" class="small  secondary  radius  button  post-edit" title="edit this post" data-reveal-id="edit-post"> <i class="icon-edit"></i> <span class="hide-for-medium-down"</span>edit</a></li>
+							<li><a href="#" class="small  secondary  radius  button  post-set" title="add this post to a set" data-reveal-id="add-to-set"> <i class="icon-plus-sign"></i> <span class="hide-for-medium-down"</span>set</a></li>
+							<li><a href="#" class="small  secondary  radius  button  post-unpublish" title="unpublish this post"> <i class="icon-file"></i> <span class="hide-for-medium-down"</span>unpublish</a></li>
+							<li><a href="#" class="small  secondary  radius  button  post-delete" title="delete this post"> <i class="icon-trash"></i></a></li>
 						</ul> <!-- end .list-view-post-edit -->
-					</div> <!-- end .list-view-post-edit-wrapper -->
+					</div> <!-- end .list-view-post-edit-wrapper-->
 
 				</div> <!-- end .list-view-post-admin -->
 	</div> <!-- end row -->
@@ -695,6 +695,24 @@
       <button type="submit" class="alert  radius  expand  button" form="search-form"><i class="icon-plus  icon-large"></i> Create Post</button>
     </div>
 
+  </section> <!-- end modal-footer -->
+
+</section> <!-- end reveal-modal -->
+
+  <section id="edit-post" class="reveal-modal">
+  <div class="modal-header">
+    <h4>Edit Post</h4>
+    <a class="close-reveal-modal">&#215;</a>
+  </div> <!-- end modal-header -->
+
+  <div class="modal-wrapper">
+
+  </div> <!-- end modal-wrapper -->
+
+  <section class="modal-footer">
+    <div class="modal-submit">
+      <button type="submit" class="success  radius  expand  button" form="search-form"><i class="icon-cloud-upload  icon-large"></i> Save Changes</button>
+    </div>
   </section> <!-- end modal-footer -->
 
 </section> <!-- end reveal-modal -->
