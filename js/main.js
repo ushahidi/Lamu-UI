@@ -34,6 +34,7 @@ require([
   'modules/listViewBulkActions',
   'modules/addToSet',
   'modules/alertify',
+  'modules/editText',
 
   // FOUNDATION requires
   'foundation',

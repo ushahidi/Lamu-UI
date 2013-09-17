@@ -1,0 +1,112 @@
+.edit-post section.post-details {
+	@extend .post;
+	h6 {
+		margin-bottom: 15px
+	}
+	@media #{$medium} {
+		@include grid-column(12);
+	}
+}
+
+.edit-post .post-title {
+	@include grid-column(10, $collapse: true);
+}
+
+.close-icon {
+	color: $body-font-color;
+}
+
+.edit-post .post-image {
+	.icon-stack {
+		position: absolute;
+		top: -15px;
+		right: -21px;
+		.icon-circle {
+			color: $white;
+		}
+		[class^="icon-"], [class*=" icon-"] {
+			font-size: 1.5em;
+		}
+	}
+}
+
+.edit-post .post-categories {
+	@include grid-column(12, $collapse: true);
+	.add-a-category a {
+		float: right;
+		margin-top: 6px;
+	}
+	.icon-remove-sign {
+		color: $body-font-color;
+		float: right;
+		font-size: 16px;
+		padding: 0;
+	}
+}
+
+.edit-post .post-excerpt {
+	@media #{$small} {
+		padding-left: 20px;
+	}
+}
+
+textarea {
+	height: 500px;
+}
+
+.edit-post .post-thumbnails-list-item {
+	position: relative;
+	a {
+		color: $body-font-color;
+	}
+	.icon-stack {
+		position: absolute;
+		top: -15px;
+		right: -12px;
+		.icon-circle {
+			color: $white;
+		}
+		[class^="icon-"], [class*=" icon-"] {
+			font-size: 1.2em;
+		}
+	}
+}
+
+
+
+
+
+/*.post-categories-wrapper {
+	@include grid-column(12);
+	button {
+		margin-bottom: 0;
+	}
+	@media #{$small} {
+		button.expand, .button.expand {
+			padding-right: 1.125em;
+			padding-left: 1.125em;
+			width: auto;
+		}
+	}
+}
+
+.post-thumbnails-wrapper {
+	@include grid-column(12, $collapse: true);
+	[data-clearing] li {
+	margin-right: 0;
+	}
+}
+
+.click-to-zoom {
+	margin-bottom: 10px;
+}
+
+.post-thumbnails {
+	@include block-grid($per-row: 2);
+	@media #{$small} {
+		@include block-grid($per-row: 4);
+	}
+	li img {
+		@include thumb;
+	}
+}*/

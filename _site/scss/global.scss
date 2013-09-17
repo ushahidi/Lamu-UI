@@ -149,7 +149,8 @@ NOTE: comment out what I don't use
 
 @import "modules/footer";
 
-/*modules/modal must be called at bottom*/
-@import "modules/modal";
-@import "modules/create-post-modal";
-@import "modules/add-to-set-modal";
+/*modules/modals folder must be called at bottom*/
+@import "modules/modals/modal";
+@import "modules/modals/create-post-modal";
+@import "modules/modals/add-to-set-modal";
+@import "modules/modals/edit-post-modal";
