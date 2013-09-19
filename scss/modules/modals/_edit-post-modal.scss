@@ -1,10 +1,12 @@
 .edit-post section.post-details {
 	@extend .post;
+	padding: 0;
 	h6 {
 		margin-bottom: 15px
 	}
 	@media #{$medium} {
 		@include grid-column(12);
+		padding: 0;
 	}
 }
 
