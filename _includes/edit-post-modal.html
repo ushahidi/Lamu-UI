@@ -1,4 +1,4 @@
-<section id="edit-post" class="edit-post  reveal-modal">
+<section id="edit-post" class="edit-post  js-edit-post  reveal-modal">
   <div class="modal-header">
     <h4>Edit Post</h4>
     <a class="close-reveal-modal">&#215;</a>
@@ -31,7 +31,7 @@
           <div class="post-meta">
             <div class="post-location-meta">
               <h6>Post Details</h6>
-              <p><i class="icon-map-marker"></i><span class="post-location  underline" ><a href=""> London, UK</a></span></p>
+              <p><i class="icon-map-marker"></i><span class="post-location" ><a href=""> London, UK</a></span></p>
             </div> <!-- end .post-location-meta -->
 
             <div class="post-time-meta">
@@ -111,6 +111,36 @@
 
           </ul>
         </div> <!-- end .post-thumbnails-wrapper -->
+
+        <div class="post-wrapper">
+          <div class="post-status">
+            <h6>Post Status</h6>
+            <ul class="post-status-list">
+              <li><i class="icon-thumbs-down"></i> Unverified</li>
+              <li><i class="icon-file-alt"></i> Published</li>
+              <li><i class="icon-lock"></i> Private</li>
+            </ul>
+          </div>
+
+          <div class="post-history">
+            <h6>Post History</h6>
+            <ul class="post-history-list">
+
+              <li class="post-history-list-item">edited by <span class="post-history-name"><a href="#">{User Name}</a></span></li>
+              <div class="post-history-time"><span><i class="icon-time"></i> 3 hours ago</span></div>
+
+              <li class="post-history-list-item">published by <span class="post-history-name"><a href="#">{Admin Display Title}</span></li>
+              <div class="post-history-time"><span><i class="icon-time"></i> 6 hours ago</span></div>
+
+              <li class="post-history-list-item">created by <span class="post-history-name"><a href="#">{Anonymous}</span></li>
+              <div class="post-history-time"><span><i class="icon-time"></i> 14 hours ago</span></div>
+
+            </ul>
+          </div>
+        </div>
+
+
+
       </div> <!-- end .post-body -->
     </section> <!-- end .post -->
 

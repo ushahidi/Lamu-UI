@@ -1,7 +1,7 @@
 define(['jquery'], function($){
 
 // edit post-title
-	$('.post-title').click(
+	$('.js-edit-post .post-title').click(
 	    function(){
 	        var text = $(this).text();
 	        $(this).text('');
@@ -13,14 +13,14 @@ define(['jquery'], function($){
 	    });
 
 // edit post-excerpt
-	$('.post-excerpt').click(
+	$('.js-edit-post .post-excerpt').click(
 	    function(){
 	        var text = $(this).text();
 	        $(this).text('');
 	        $('<textarea />').appendTo($(this)).val(text).blur(
 	            function(){
 	                var newText = $(this).val();
-	                $(this).parent().text(newText).find('textarea');
+	                $(this).parent().text(newText).find('textarea').remove();
 	            });
 	    });
 
