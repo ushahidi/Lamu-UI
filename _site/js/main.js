@@ -7,7 +7,8 @@ require.config({
     "foundation": "foundation/foundation.min",
     "foundation.offCanvas": "foundation/foundation.offCanvas",
     "fastClick": "vendor/fastclick/lib/fastclick",
-    "hammer": "vendor/hammerjs/dist/jquery.hammer.min"
+    "hammer": "vendor/hammerjs/dist/jquery.hammer.min",
+    "alertify": "vendor/alertify/alertify.min",
     // "htmlInspector": "vendor/html-inspector/dist/html-inspector.best-practice.js"
   },
 
@@ -32,6 +33,8 @@ require([
   'modules/subNav',
   'modules/listViewBulkActions',
   'modules/addToSet',
+  'modules/alertify',
+  'modules/editText',
 
   // FOUNDATION requires
   'foundation',
